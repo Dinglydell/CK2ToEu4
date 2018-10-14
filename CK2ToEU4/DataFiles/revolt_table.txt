@@ -1,0 +1,19 @@
+# CK2 Casus Belli = Eu4 Revolt type
+# This is a WIP - none of this actually does anything yet
+
+other_claim_on_liege = pretender_rebels
+claim_on_liege = pretender_rebels
+claim_on_liege_plot = pretender_rebels
+change_seniority_succession_law = noble_rebels
+change_primogeniture_succession_law = noble_rebels
+change_feudal_elective_succession_law = polish_noble_rebels
+depose_liege = noble_rebels
+overthrow_ruler = noble_rebels
+change_gavelkind_succession_law = noble_rebels
+lower_crown_authority_law = particularist_rebels
+lower_tribal_organization_law = particularist_rebels
+cb_faction_independence = nationalist_rebels
+cb_install_antiking = pretender_rebels
+cb_install_khan = pretender_rebels
+increase_council_power_war = particularist_rebels
+powerful_vassal_takeover_war = pretender_rebels

@@ -1,0 +1,705 @@
+## Administrative tech
+adm_ahead_0 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 1
+			}
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 0.5
+		}
+	}
+	adm_tech_cost_modifier = 0.1
+	production_efficiency = 0.05
+	yearly_corruption = -0.01
+}
+adm_ahead_1 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 1.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 1
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 1.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 1
+		}
+	}
+	adm_tech_cost_modifier = 0.25
+	production_efficiency = 0.1
+	yearly_corruption = -0.02
+}
+adm_ahead_2 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 2
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 1.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 2
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 1.5
+		}
+	}
+	adm_tech_cost_modifier = 0.5
+	production_efficiency = 0.15
+	yearly_corruption = -0.03
+}
+adm_ahead_3 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 2.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 2
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 2.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 2
+		}
+	}
+	adm_tech_cost_modifier = 0.8
+	production_efficiency = 0.2
+	yearly_corruption = -0.04
+}
+adm_ahead_4 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 3
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 2.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 3
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 2.5
+		}
+	}
+	adm_tech_cost_modifier = 1.25
+	production_efficiency = 0.25
+	yearly_corruption = -0.05
+}
+adm_ahead_5 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 3.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 3
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 3.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 3
+		}
+	}
+	adm_tech_cost_modifier = 1.75
+	production_efficiency = 0.25
+	yearly_corruption = -0.06
+}
+adm_ahead_6 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 4
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 3.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_adm_ahead_penalty
+				value = 4
+			}
+		
+		}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 3.5
+		}
+	}
+	adm_tech_cost_modifier = 2.5
+	production_efficiency = 0.25
+	yearly_corruption = -0.06
+}
+adm_ahead_7 = {
+	potential = {
+		#NOT = {
+		#	check_variable = {
+		#		which = dt_adm_ahead_penalty
+		#		value = 4.5
+		#	}
+		#
+		#}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 4
+		}
+	}
+	trigger = {
+		#NOT = {
+		#	check_variable = {
+		#		which = dt_adm_ahead_penalty
+		#		value = 4.5
+		#	}
+		#
+		#}
+		check_variable = {
+			which = dt_adm_ahead_penalty
+			value = 4
+		}
+	}
+	adm_tech_cost_modifier = 4
+	production_efficiency = 0.25
+	yearly_corruption = -0.06
+}
+
+
+## Diplomatic tech
+dip_ahead_0 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 1
+			}
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 0.5
+		}
+	}
+	dip_tech_cost_modifier = 0.1
+	trade_efficiency = 0.05
+	yearly_corruption = -0.01
+}
+dip_ahead_1 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 1.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 1
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 1.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 1
+		}
+	}
+	dip_tech_cost_modifier = 0.25
+	trade_efficiency = 0.1
+	yearly_corruption = -0.02
+}
+dip_ahead_2 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 2
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 1.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 2
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 1.5
+		}
+	}
+	dip_tech_cost_modifier = 0.5
+	trade_efficiency = 0.15
+	yearly_corruption = -0.03
+}
+dip_ahead_3 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 2.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 2
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 2.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 2
+		}
+	}
+	dip_tech_cost_modifier = 0.8
+	trade_efficiency = 0.2
+	yearly_corruption = -0.04
+}
+dip_ahead_4 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 3
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 2.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 3
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 2.5
+		}
+	}
+	dip_tech_cost_modifier = 1.25
+	trade_efficiency = 0.25
+	yearly_corruption = -0.05
+}
+dip_ahead_5 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 3.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 3
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 3.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 3
+		}
+	}
+	dip_tech_cost_modifier = 1.75
+	trade_efficiency = 0.25
+	yearly_corruption = -0.06
+}
+dip_ahead_6 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 4
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 3.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_dip_ahead_penalty
+				value = 4
+			}
+		
+		}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 3.5
+		}
+	}
+	dip_tech_cost_modifier = 2.5
+	trade_efficiency = 0.25
+	yearly_corruption = -0.06
+}
+dip_ahead_7 = {
+	potential = {
+		#NOT = {
+		#	check_variable = {
+		#		which = dt_dip_ahead_penalty
+		#		value = 4.5
+		#	}
+		#
+		#}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 4
+		}
+	}
+	trigger = {
+		#NOT = {
+		#	check_variable = {
+		#		which = dt_dip_ahead_penalty
+		#		value = 4.5
+		#	}
+		#
+		#}
+		check_variable = {
+			which = dt_dip_ahead_penalty
+			value = 4
+		}
+	}
+	dip_tech_cost_modifier = 4
+	trade_efficiency = 0.25
+	yearly_corruption = -0.06
+}
+## Military tech
+mil_ahead_0 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 1
+			}
+		}
+	}
+	trigger = {
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 0.5
+		}
+	}
+	mil_tech_cost_modifier = 0.1
+
+}
+mil_ahead_1 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 1.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 1
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 1.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 1
+		}
+	}
+	mil_tech_cost_modifier = 0.25
+
+}
+mil_ahead_2 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 2
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 1.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 2
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 1.5
+		}
+	}
+	mil_tech_cost_modifier = 0.5
+
+}
+mil_ahead_3 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 2.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 2
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 2.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 2
+		}
+	}
+	mil_tech_cost_modifier = 0.8
+	
+}
+mil_ahead_4 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 3
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 2.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 3
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 2.5
+		}
+	}
+	mil_tech_cost_modifier = 1.25
+	
+}
+mil_ahead_5 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 3.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 3
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 3.5
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 3
+		}
+	}
+	mil_tech_cost_modifier = 1.75
+	
+}
+mil_ahead_6 = {
+	potential = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 4
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 3.5
+		}
+	}
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = dt_mil_ahead_penalty
+				value = 4
+			}
+		
+		}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 3.5
+		}
+	}
+	mil_tech_cost_modifier = 2.5
+	
+}
+mil_ahead_7 = {
+	potential = {
+		#NOT = {
+		#	check_variable = {
+		#		which = dt_mil_ahead_penalty
+		#		value = 4.5
+		#	}
+		#
+		#}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 4
+		}
+	}
+	trigger = {
+		#NOT = {
+		#	check_variable = {
+		#		which = dt_mil_ahead_penalty
+		#		value = 4.5
+		#	}
+		#
+		#}
+		check_variable = {
+			which = dt_mil_ahead_penalty
+			value = 4
+		}
+	}
+	mil_tech_cost_modifier = 4
+	
+}

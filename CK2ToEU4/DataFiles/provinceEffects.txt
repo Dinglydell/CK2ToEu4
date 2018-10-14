@@ -1,0 +1,256 @@
+# effects on eu4 provinces
+# TODO: implement all this stuff
+
+
+# centre_of_trade_weight = <value>
+# increases likelyhood of province getting a centre of trade
+# if total value >= 1, centre of trade is added
+# NOTE: at present, provinces with a centre of trade in vanilla EU4 get +0.5 weight
+
+# maybe have national ideas weighted from this too
+
+# stuff on a county level that affects the province
+county = {
+
+	values = {
+		prosperity = {
+			#todo
+		}
+	}
+	
+	hospital = {
+		base_tax = 0.5
+		base_production = 0.5
+		base_manpower = 0.5
+		centre_of_trade_weight = 0.05
+		hospital_building_1 = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_manpower = 0.5
+			centre_of_trade_weight = 0.05
+		}
+		hospital_building_2 = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_manpower = 0.5
+			centre_of_trade_weight = 0.05
+		}
+		hospital_building_3 = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_manpower = 0.5
+			centre_of_trade_weight = 0.05
+		}
+		hospital_building_4 = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_manpower = 0.5
+			centre_of_trade_weight = 0.05
+		}
+		hospital_building_5 = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_manpower = 0.5
+			centre_of_trade_weight = 0.05
+		}
+		leper_colony_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		soup_kitchen_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		chapel_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		translation_house_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		pilgrims_inn_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		pharmacology_laboratory_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		medical_academy_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+		observatory_1 = {
+			base_tax = 0.25
+			base_production = 0.25
+			base_manpower = 0.25
+		}
+	}
+	modifiers = {
+		jewish_settlement_province = {
+			base_production = 1
+		}
+		religious_settlement_province = {
+			base_production = 1
+		}
+		glorious_monument_province = {
+			
+		}
+		scholar_foundation_province = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_tax = 0.5
+		}
+		great_library_province = {
+			base_tax = 0.5
+			base_production = 0.5
+			base_tax = 0.5
+		}
+		center_of_worship_province = {
+			base_tax = 1
+		}
+		trade_route = {
+			base_production = 1
+			centre_of_trade_weight = 0.5
+		}
+		regimental_ground_province = {
+			base_manpower = 1
+		}
+		artisan_workshop = {
+			base_production = 0.5
+		}
+	}
+}
+
+
+
+
+holding = {
+	castle = {
+		base_tax = 0.5
+		base_manpower = 0.5
+	}
+	city = {
+		base_production = 1
+	}
+	temple = {
+		base_tax = 1
+	}
+	tribe = {
+		base_manpower = 0.25
+	}
+	buildings = {
+		ct_wall_q = { # multiplied by level of building (in CK2 code ct_wall_q_1, ct_wall_q_2 etc)
+			fort_level = 0.1
+		}
+		ct_wall = {
+			fort_level = 0.05
+			base_tax = 0.025
+			base_manpower = 0.01
+		}
+		ct_rep_arsenal = {
+			base_manpower = 0.025
+		}
+		ct_training_grounds = {
+			base_manpower = 0.02
+		}
+		ct_barracks = {
+			base_manpower = 0.02
+		}
+		ct_guard = {
+			base_manpower = 0.02
+		}
+		ct_marketplace = {
+			base_production = 0.125
+			centre_of_trade_weight = 0.05
+		}
+		ct_port = {
+			base_tax = 0.0125
+			base_production = 0.025
+			centre_of_trade_weight = 0.025
+		}
+		ct_shipyard = {
+			base_manpower = 0.005
+		}
+		ct_university = {
+			base_tax = 0.025
+			base_production = 0.05
+		}
+		
+		# merchant republic
+		fp_mansion = {
+			centre_of_trade_weight = 0.1
+		
+		}
+		
+		tp_wall_q = {
+			fort_level = 0.1
+		}
+		tp_wall = {
+			fort_level = 0.05
+			base_tax = 0.025
+			base_manpower = 0.01
+		}
+		tp_monastery = {
+			base_manpower = 0.02
+		}
+		tp_barracks = {
+			base_manpower = 0.02
+		}
+		tp_elite_barracks = {
+			base_manpower = 0.02
+		}
+		tp_town = {
+			base_tax = 0.05
+		}
+		tp_shipyard = {
+			base_manpower = 0.005
+		}
+		tp_school = {
+			base_tax = 0.05
+		}
+		
+		ca_wall = {
+			fort_level = 0.1
+			base_tax = 0.05
+			base_manpower = 0.025
+		}
+		ca_wall_q = {
+			fort_level = 0.1
+		}
+		ca_con_wall = {
+			fort_level = 0.1
+			base_tax = 0.05
+			base_manpower = 0.02
+		}
+		ca_keep = {
+			base_manpower = 0.04
+		}
+		ca_militia_barracks = {
+			base_manpower = 0.04
+		}
+		ca_training_grounds = {
+			base_manpower = 0.04
+		}
+		ca_barracks = {
+			base_manpower = 0.04
+		}
+		ca_stable = {
+			base_manpower = 0.04
+		}
+		ca_town = {
+			base_tax = 0.05
+		}
+		ca_shipyard = {
+			base_manpower = 0.01
+		}
+	}
+}

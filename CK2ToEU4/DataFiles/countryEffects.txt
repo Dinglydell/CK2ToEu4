@@ -1,0 +1,1146 @@
+# Effects on eu4 countries
+
+# vassal_threshhold = <num>
+# increases minimum relative power of vassals required for them to show up as EU4 vassals
+
+# gov_<government_type> = <num>
+# increases weight for a certain government type
+# NOTE: at present, this cannot be used for province level conditions
+
+# idea_<modifier>_weight = <num>
+# increases weight for something showing up in national ideas (see nationalIdeas.txt)
+#
+# idea_<modifier>_level = <num>
+# increases strength of modifier for national ideas (see nationalIdeas.txt)
+
+# base values for the things (0 if not specified)
+base = { 
+	idea_discipline_weight = 3
+}
+# TODO: Handle obscure, less tangible ideas such as artillery combat, heavy ship combat etc.
+
+type = {
+	feudal_government = {
+		gov_feudal_monarchy = 5
+		gov_despotic_monarchy = 5
+		gov_administrative_monarchy = 5
+		gov_english_monarchy = 5
+		gov_elective_monarchy = 5
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_merchant_republic = -100
+		gov_oligarchic_republic = -100
+	}
+	muslim_government = {
+		gov_feudal_monarchy = 5
+		gov_despotic_monarchy = 5
+		gov_administrative_monarchy = 5
+		gov_english_monarchy = 5
+		gov_elective_monarchy = 5
+		gov_iqta = 10
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_merchant_republic = -100
+		gov_oligarchic_republic = -100
+	}
+	tribal_government = {
+		gov_tribal_despotism = 5
+		gov_tribal_kingdom = 5
+		gov_tribal_federation = 5
+		gov_theocratic_government = -100
+		gov_feudal_monarchy = -100
+		gov_merchant_republic = -100
+		gov_despotic_monarchy = -100
+		gov_administrative_monarchy = -100
+		gov_english_monarchy = -100
+		gov_elective_monarchy = -100
+		gov_oligarchic_republic = -100
+	}
+	nomadic_government = {
+		gov_steppe_horde = 5
+		gov_theocratic_government = -100
+		gov_feudal_monarchy = -100
+		gov_merchant_republic = -100
+		gov_despotic_monarchy = -100
+		gov_administrative_monarchy = -100
+		gov_english_monarchy = -100
+		gov_elective_monarchy = -100
+		gov_oligarchic_republic = -100
+	}
+	theocracy_government = {
+		gov_theocratic_government = 5
+		gov_feudal_monarchy = -100
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_merchant_republic = -100
+		gov_oligarchic_republic = -100
+		gov_despotic_monarchy = -100
+		gov_administrative_monarchy = -100
+		gov_english_monarchy = -100
+		gov_elective_monarchy = -100
+	}
+	theocratic_feudal_government = {
+		gov_feudal_monarchy = 5
+		gov_despotic_monarchy = 5
+		gov_administrative_monarchy = 5
+		gov_english_monarchy = 5
+		gov_elective_monarchy = 5
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_merchant_republic = -100
+		gov_oligarchic_republic = -100
+	}
+	republic_government = {
+		gov_oligarchic_republic = 10
+		gov_feudal_monarchy = -100
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_despotic_monarchy = -100
+		gov_administrative_monarchy = -100
+		gov_english_monarchy = -100
+		gov_elective_monarchy = -100
+	}
+	merchant_republic_government = {
+		gov_merchant_republic = 10
+		gov_feudal_monarchy = -100
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_despotic_monarchy = -100
+		gov_administrative_monarchy = -100
+		gov_english_monarchy = -100
+		gov_elective_monarchy = -100
+		gov_oligarchic_republic = -100
+	}
+	confucian_bureaucracy = {
+		gov_celestial_empire = 10
+		gov_feudal_monarchy = -100
+		gov_tribal_despotism = -100
+		gov_tribal_kingdom = -100
+		gov_tribal_federation = -100
+		gov_theocratic_government = -100
+		gov_despotic_monarchy = -100
+		gov_administrative_monarchy = -100
+		gov_english_monarchy = -100
+		gov_elective_monarchy = -100
+	}
+}
+
+laws = { # NOT IMPLEMENTED
+	centralization_0 = {
+		vassal_threshhold = -0.1
+		idea_global_autonomy_weight = -2
+		
+		# possibly an idea to have something like this:
+		cultural_unity = -1
+	}
+	centralization_1 = {
+		vassal_threshhold = -0.05
+		idea_global_autonomy_weight = -1
+		gov_despotic_monarchy = -1
+	}
+	centralization_2 = {
+		vassal_threshhold = 0
+	}
+	centralization_3 = {
+		vassal_threshhold = 0.05
+		idea_global_autonomy_weight = 1
+		gov_despotic_monarchy = 1
+	}
+	centralization_4 = {
+		vassal_threshhold = 0.1
+		idea_global_autonomy_weight = 2
+		idea_global_autonomy_level = 0.5
+		gov_despotic_monarchy = 2
+	}
+	
+	# administration without conclave
+	feudal_administration = {
+		vassal_threshhold = 0.25
+		idea_global_autonomy_weight = -1
+		gov_administrative_monarchy = -5
+		gov_feudal_monarchy = 3
+	}
+	imperial_administration = {
+		vassal_threshhold = 0.5
+		idea_global_autonomy_weight = 5
+		idea_global_autonomy_level = 1
+		idea_absolutism_weight = 3
+		idea_absolutism_level = 0.5
+		gov_administrative_monarchy = 5
+		gov_feudal_monarchy = -5
+	}
+	#conclave feudal admin
+	ze_administration_laws_0 = {
+		vassal_threshhold = 0.25
+		idea_global_autonomy_weight = -1
+		gov_administrative_monarchy = -5
+		gov_feudal_monarchy = 5
+	}
+	#conclave late feudal admin
+	ze_administration_laws_1 = {
+		vassal_threshhold = 0.3
+		gov_feudal_monarchy = 3
+		gov_administrative_monarchy = -3
+	}
+	#conclave imperial admin
+	ze_administration_laws_3 = {
+		vassal_threshhold = 0.5
+		idea_global_autonomy_weight = 5
+		idea_global_autonomy_level = 1
+		idea_absolutism_weight = 3
+		idea_absolutism_level = 0.5
+		gov_administrative_monarchy = 5
+		gov_feudal_monarchy = -5
+	}
+	
+	#obligation
+	
+	#feudal
+	tax_levy_law_feudal_0 = { # maximum money focus
+		idea_vassal_income_weight = 4
+		idea_global_manpower_weight = -1
+		idea_vassal_manpower_weight = -2
+		idea_vassal_income_level = 0.2
+		idea_global_tax_weight = 0.15
+	}
+	tax_levy_law_feudal_1 = { # very money focused
+		idea_vassal_income_weight = 3
+		idea_vassal_manpower_weight = -1.5
+		idea_global_manpower_weight = -0.75
+		idea_vassal_income_level = 0.15
+		idea_global_tax_weight = 0.1
+	}
+	tax_levy_law_feudal_2 = { # quite money focused
+		idea_vassal_income_weight = 2
+		idea_vassal_manpower_weight = -1
+		idea_global_manpower_weight = -0.5
+		idea_vassal_income_level = 0.10
+		idea_global_tax_weight = 0.05
+	}
+	tax_levy_law_feudal_3 = { # a bit money focused
+		idea_vassal_income_weight = 1
+		idea_vassal_manpower_weight = -0.5
+		idea_global_manpower_weight = -0.25
+		idea_vassal_income_level = 0.05
+		idea_global_tax_weight = 0.01
+	}
+	tax_levy_law_feudal_4 = { # no focus
+		
+	}
+
+	tax_levy_law_feudal_5 = { # a bit mens focus
+		idea_vassal_income_weight = -1
+		idea_vassal_manpower_weight = 0.5
+		idea_global_manpower_weight = 0.25
+		idea_global_tax_weight = -0.01
+	}
+	tax_levy_law_feudal_6 = { # quite mens focus
+		idea_vassal_income_weight = -2
+		idea_vassal_manpower_weight = 1
+		idea_global_manpower_weight = 0.5
+		idea_global_tax_weight = -0.05
+	}
+	tax_levy_law_feudal_7 = { # very mens focus
+		idea_vassal_income_weight = -3
+		idea_vassal_manpower_weight = 1.5
+		idea_global_manpower_weight = 0.75
+		idea_global_tax_weight = -0.1
+	}
+	tax_levy_law_feudal_8 = { # maximum mens focus
+		idea_vassal_income_weight = -4
+		idea_vassal_manpower_weight = 2
+		idea_global_manpower_weight = 1
+		idea_global_tax_weight = -0.15
+	}
+	
+	#church
+	tax_levy_law_theocracy_0 = { # maximum money focus
+		idea_global_tax_weight = 4
+		idea_global_manpower_weight = -0.4
+	}
+	tax_levy_law_theocracy_1 = { # very money focused
+		idea_global_manpower_weight = -0.3
+		idea_global_tax_weight = 3
+	}
+	tax_levy_law_theocracy_2 = { # quite money focused
+		idea_global_manpower_weight = -0.2
+		idea_global_tax_weight = 2
+	}
+	tax_levy_law_theocracy_3 = { # a bit money focused
+		idea_global_manpower_weight = -0.1
+		idea_global_tax_weight = 1
+	}
+	tax_levy_law_theocracy_4 = { # no focus
+		
+	}
+
+	tax_levy_law_theocracy_5 = { # a bit mens focus
+		idea_global_manpower_weight = 0.1
+		idea_global_tax_weight = -1
+	}
+	tax_levy_law_theocracy_6 = { # quite mens focus
+		idea_global_manpower_weight = 0.2
+		idea_global_tax_weight = -2
+	}
+	tax_levy_law_theocracy_7 = { # very mens focus
+		idea_global_manpower_weight = 0.3
+		idea_global_tax_weight = -3
+	}
+	tax_levy_law_theocracy_8 = { # maximum mens focus
+		idea_global_manpower_weight = 0.4
+		idea_global_tax_weight = -4
+	}
+	
+	
+	#merchants
+	tax_levy_law_republic_0 = { # maximum money focus
+		idea_global_tax_weight = 4
+		idea_global_manpower_weight = -0.4
+	}
+	tax_levy_law_republic_1 = { # very money focused
+		idea_global_manpower_weight = -0.3
+		idea_global_tax_weight = 3
+	}
+	tax_levy_law_republic_2 = { # quite money focused
+		idea_global_manpower_weight = -0.2
+		idea_global_tax_weight = 2
+	}
+	tax_levy_law_republic_3 = { # a bit money focused
+		idea_global_manpower_weight = -0.1
+		idea_global_tax_weight = 1
+	}
+	tax_levy_law_republic_4 = { # no focus
+		
+	}
+
+	tax_levy_law_republic_5 = { # a bit mens focus
+		idea_global_manpower_weight = 0.1
+		idea_global_tax_weight = -1
+	}
+	tax_levy_law_republic_6 = { # quite mens focus
+		idea_global_manpower_weight = 0.2
+		idea_global_tax_weight = -2
+	}
+	tax_levy_law_republic_7 = { # very mens focus
+		idea_global_manpower_weight = 0.3
+		idea_global_tax_weight = -3
+	}
+	tax_levy_law_republic_8 = { # maximum mens focus
+		idea_global_manpower_weight = 0.4
+		idea_global_tax_weight = -4
+	}
+	
+	
+	#tribes
+	tax_levy_law_tribal_0 = { # maximum money focus
+		idea_global_tax_weight = 0.4
+		idea_global_manpower_weight = -4
+	}
+	tax_levy_law_tribal_1 = { # very money focused
+		idea_global_manpower_weight = -3
+		idea_global_tax_weight = 0.3
+	}
+	tax_levy_law_tribal_2 = { # quite money focused
+		idea_global_manpower_weight = -2
+		idea_global_tax_weight = 0.2
+	}
+	tax_levy_law_tribal_3 = { # a bit money focused
+		idea_global_manpower_weight = -1
+		idea_global_tax_weight = 0.1
+	}
+	tax_levy_law_tribal_4 = { # no focus
+		
+	}
+
+	tax_levy_law_tribal_5 = { # a bit mens focus
+		idea_global_manpower_weight = 1
+		idea_global_tax_weight = -0.1
+	}
+	tax_levy_law_tribal_6 = { # quite mens focus
+		idea_global_manpower_weight = 2
+		idea_global_tax_weight = -0.2
+	}
+	tax_levy_law_tribal_7 = { # very mens focus
+		idea_global_manpower_weight = 3
+		idea_global_tax_weight = -0.3
+	}
+	tax_levy_law_tribal_8 = { # maximum mens focus
+		idea_global_manpower_weight = 4
+		idea_global_tax_weight = -0.4
+	}
+	
+	
+	#status of women
+	status_of_women_0 = { # traditional
+		idea_status_of_women_weight = -1000
+	}
+	status_of_women_1 = { # marginal
+		idea_status_of_women_weight = 2
+	}
+	status_of_women_2 = { # not-so-marginal ( don't remember)
+		idea_status_of_women_weight = 4
+		idea_status_of_women_level = 1
+	}
+	status_of_women_3 = { # significant
+		idea_status_of_women_weight = 6
+		idea_status_of_women_level = 2
+	}
+	status_of_women_4 = { # full
+		idea_status_of_women_weight = 8
+		idea_status_of_women_level = 3
+	}
+	
+	# succession gender laws
+	true_cognatic_succession = { # Cognatic
+		idea_status_of_women_weight = 4
+		idea_status_of_women_level = 1
+	}
+	cognatic_succession = {
+		idea_status_of_women_weight = -2
+	}
+	agnatic_succession = {
+		idea_status_of_women_weight = -4
+		idea_status_of_women_level = -1
+	}
+	
+	#succession laws
+	succ_gavelkind = {
+		gov_elective_monarchy = -10
+		gov_tribal_federation = -10
+	}
+	succ_elective_gavelkind = {
+		gov_elective_monarchy = 10
+		gov_tribal_federation = 15
+	}
+	succ_seniority = {
+		gov_elective_monarchy = -10
+		gov_tribal_federation = -10
+	}
+	succ_primogeniture = {
+		gov_elective_monarchy = -10
+		gov_tribal_federation = -10
+	}
+	succ_feudal_elective = {
+		gov_elective_monarchy = 15
+		gov_tribal_federation = 10
+	}
+	succ_tanistry = {
+		gov_elective_monarchy = 15
+		gov_tribal_federation = 15
+	}
+	succ_ultimogeniture = {
+		gov_elective_monarchy = -10
+		gov_tribal_federation = -10
+	}
+	succ_turkish_succession = {
+		gov_ottoman_government = 20
+	}
+	succ_papal_succession = {
+		gov_papal_government = 20
+	}
+	succ_patrician_elective = {
+		gov_merchant_republic = 10
+	}
+	succ_open_elective = {
+		gov_merchant_republic = -10
+	}
+	succ_nomad_succession = {
+		gov_steppe_horde = 10
+	}
+	succ_offmap_succession = {
+		gov_celestial_empire = 50
+	}
+	
+	
+	law_voting_power_0 = { # council abolished
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 2
+	}
+	
+	law_voting_power_1 = { # council empowered
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_english_monarchy = 1
+	}
+	
+	war_voting_power_0 = { # ruler war declarations
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	war_voting_power_1 = { # council war dec
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+		gov_english_monarchy = 1
+	}
+	
+	revoke_title_voting_power_0 = { # ruler revoking
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	
+	revoke_title_voting_power_1 = { # council revoking
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_english_monarchy = 1
+
+	}
+	
+	imprison_voting_power_0 = { # ruler imprisonment
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	imprison_voting_power_1 = { # council imprisonment
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_english_monarchy = 1
+	}
+	
+	grant_title_voting_power_0 = { # ruler grant titles
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	grant_title_voting_power_1 = { # council grants titles
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_english_monarchy = 1
+	}
+	
+	banish_voting_power_0 = { # ruler banish
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	banish_voting_power_1 = { # council banish
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_english_monarchy = 1
+	}
+	
+	execution_voting_power_0 = { # ruler execute
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	execution_voting_power_1 = { # council execute
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		gov_english_monarchy = 1
+	}
+	
+	succession_voting_power_0  = { # no full council rights
+		idea_global_autonomy_weight = 0.5
+		idea_global_autonomy_level = 0.25
+		
+		idea_absolutism_weight = 0.5
+		idea_absolutism_level = 0.25
+		gov_feudal_monarchy = 1
+		gov_despotic_monarchy = 1
+		gov_tribal_despotism = 1
+	}
+	succession_voting_power_1 = { # full council rights
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		
+		idea_absolutism_weight = -0.5
+		# there is a decision I added for english monarchy to convert to constitutional a little earlier than normal
+		gov_english_monarchy = 5
+	}
+	
+	
+}
+
+
+#ck2 provinces affecting country
+province = {
+	modifiers = {
+		jewish_settlement_province = {
+			idea_tolerance_other_weight = 2
+			idea_tolerance_other_level = 0.5
+			idea_trade_efficiency_weight = 1
+			idea_trade_efficiency_level = 0.2
+		}
+		religious_settlement_province = {
+			idea_tolerance_other_weight = 2
+			idea_tolerance_other_level = 0.5
+			idea_trade_efficiency_weight = 1
+			idea_trade_efficiency_level = 0.2
+		}
+		glorious_monument_province = {
+			idea_yearly_prestige_weight = 1
+			idea_yearly_prestige_level = 0.5
+		}
+		scholar_foundation_province = {
+			idea_innovation_strentgh = 0.5
+			idea_innovation_weight = 1
+		}
+		great_library_province = {
+			idea_institution_spread_weight = 1
+			idea_institution_spread_level = 0.5
+		}
+		center_of_worship_province = {
+			idea_tolerance_own_weight = 1
+			idea_global_tax_weight = 1
+		}
+		trade_route = {
+			idea_trade_efficiency_weight = 1
+			idea_trade_efficiency_level = 0.5
+			idea_goods_produced_weight = 1
+			idea_goods_produced_level = 0.5
+		}
+		regimental_ground_province = {
+			idea_global_manpower_weight = 1
+		}
+		artisan_workshop = {
+			idea_goods_produced_weight = 1
+			idea_goods_produced_level = 0.5
+			idea_global_production_weight = 0.5
+		}
+	}
+	
+	hospital = { # hospitals! - divided by num provinces
+		idea_development_cost_weight = 1
+		idea_development_cost_level = 0.5
+		
+		hospital_building_1 = {
+			idea_development_cost_weight = 1
+			idea_development_cost_level = 0.5
+		}
+		hospital_building_2 = {
+			idea_development_cost_weight = 1
+			idea_development_cost_level = 0.5
+		}
+		hospital_building_3 = {
+			idea_development_cost_weight = 1
+			idea_development_cost_level = 0.5
+		}
+		hospital_building_4 = {
+			idea_development_cost_weight = 1
+			idea_development_cost_level = 0.5
+		}
+		hospital_building_5 = {
+			idea_development_cost_weight = 1
+			idea_development_cost_level = 0.5
+		}
+		leper_colony_1 = {
+			idea_development_cost_weight = 2
+			idea_development_cost_level = 0.5
+		}
+		soup_kitchen_1 = {
+			idea_development_cost_weight = 1
+			idea_development_cost_level = 0.5
+			
+			idea_legitimacy_weight = 1
+			idea_legitimacy_level = 0.5
+		}
+		chapel_1 = {
+			idea_development_cost_weight = 0.5
+			idea_development_cost_level = 0.25
+			
+			idea_legitimacy_weight = 1
+			idea_legitimacy_level = 0.5
+		}
+		translation_house_1 = {
+			idea_yearly_prestige_weight = 1
+			idea_yearly_prestige_strength = 0.5
+			
+			idea_adm_innovation_weight = 1
+			idea_adm_innovation_level = 0.5
+			
+			idea_innovation_weight = 1
+			idea_innovation_level = 0.5
+		}
+		pilgrims_inn_1 = {
+			idea_legitimacy_weight = 1
+			idea_legitimacy_level = 0.5
+			
+			idea_yearly_prestige_weight = 1
+			idea_yearly_prestige_strength = 0.5
+		}
+		pharmacology_laboratory_1 = {
+			idea_innovation_weight = 2
+			idea_innovation_level = 1
+			
+			idea_institution_spread_weight = 2
+			idea_institution_spread_level = 1
+			
+			idea_development_cost_weight = 0.5
+			idea_development_cost_level = 0.25
+		}
+		medical_academy_1 = {
+			idea_innovation_weight = 2
+			idea_innovation_level = 1
+			
+			idea_institution_spread_weight = 2
+			idea_institution_spread_level = 1
+			
+			idea_development_cost_weight = 0.5
+			idea_development_cost_level = 0.25
+		}
+		observatory_1 = {
+			idea_innovation_weight = 1
+			idea_innovation_level = 0.5
+			
+			idea_dip_innovation_weight = 1
+			idea_dip_innovation_level = 0.5
+			
+			idea_mil_innovation_weight = 1
+			idea_mil_innovation_level = 0.5
+		}
+	}
+}
+
+holding = { # how a holding affects a country - all weight from this category will be divided by the number of holdings the country owns
+	
+	castle = { # increase mil idea weights
+		idea_global_manpower_weight = 5
+		idea_global_manpower_level = 1
+		
+		idea_infantry_power_weight = 5
+		idea_infantry_power_level = 0.5
+		idea_army_morale_weight = 5
+		idea_army_morale_level = 0.5
+		idea_discipline_weight = 5
+		idea_discipline_level = 0.5
+	}
+	city = { # increase trade/production idea weights
+		idea_global_production_weight = 5
+		idea_global_production_level = 1
+		
+		idea_goods_produced_weight = 5
+		idea_goods_produced_level = 1
+		idea_trade_efficiency_weight = 5
+		idea_trade_efficiency_level = 1
+		idea_trade_power_weight = 5
+		idea_trade_power_level = 5
+	}
+	temple = { # tax & religious tolerance weights
+		idea_global_tax_weight = 5
+		idea_global_tax_level = 1
+		idea_tolerance_own_weight = 5
+		idea_tolerance_own_level = 1
+		
+	}
+	tribe = { # quantity
+		idea_global_manpower_weight = 5
+		idea_global_manpower_level = 1
+	}
+	buildings = {
+		ct_wall_q = { # multiplied by level of building (in CK2 code ct_wall_q_1, ct_wall_q_2 etc)
+			idea_defensiveness_weight = 1
+			idea_defensiveness_level = 0.5
+		}
+		ct_wall = {
+			idea_defensiveness_weight = 0.5
+			idea_global_tax_weight = 0.25
+		}
+		ct_rep_arsenal = {
+			idea_global_manpower_weight = 0.5
+			idea_global_manpower_level = 0.25
+		}
+		ct_training_grounds = {
+			idea_global_manpower_weight = 1
+			idea_global_manpower_level = 0.25
+		}
+		ct_barracks = {
+			idea_global_manpower_weight = 1
+			idea_global_manpower_level = 0.25
+		}
+		ct_guard = {
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.25
+		}
+		ct_marketplace = {
+			idea_global_production_weight = 0.5
+			idea_global_production_level = 0.25
+			idea_goods_produced_weight = 0.5
+			idea_goods_produced_level = 0.25
+		}
+		ct_port = {
+			idea_trade_power_weight = 0.5
+			idea_trade_power_level = 0.25
+			idea_trade_efficiency_weight = 0.5
+			idea_trade_efficiency_level = 0.25
+		}
+		ct_shipyard = {
+			
+			idea_sailors_weight = 0.25
+			idea_sailors_level = 0.125
+			
+			idea_ship_cost_weight = 0.5
+			idea_ship_cost_level = 0.25
+		}
+		ct_university = {
+			idea_institution_spread_weight = 0.5
+			idea_institution_spread_level = 0.25
+			
+			idea_innovation_weight = 0.25
+			idea_innovation_level = 0.15
+			
+			idea_adm_innovation_weight = 0.5
+			idea_adm_innovation_level = 0.25
+		}
+		# merchant republic
+		fp_mansion = {
+			idea_merchants_weight = 10
+			idea_trade_efficiency_weight = 8
+			idea_trade_efficiency_level = 2
+			
+		}
+		
+		tp_wall_q = {
+			idea_defensiveness_weight = 1
+			idea_defensiveness_level = 0.5
+		}
+		tp_wall = {
+			idea_defensiveness_weight = 0.5
+			idea_global_tax_weight = 0.125
+		}
+		tp_monastery = {
+			idea_global_manpower_weight = 1
+			idea_global_manpower_level = 0.25
+		}
+		tp_barracks = {
+			idea_global_manpower_weight = 0.5
+			idea_global_manpower_level = 0.25
+		}
+		tp_elite_barracks = { # quality
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.25
+		}
+		tp_town = {
+			idea_global_tax_weight = 1
+			idea_global_tax_level = 0.5
+		}
+		tp_shipyard = {
+			idea_sailors_weight = 0.25
+			idea_sailors_level = 0.125
+			
+			idea_ship_cost_weight = 0.5
+			idea_ship_cost_level = 0.25
+		}
+		tp_school = {
+			idea_institution_spread_weight = 0.5
+			idea_institution_spread_level = 0.25
+			
+			idea_innovation_weight = 0.25
+			idea_innovation_level = 0.125
+			
+			idea_dip_innovation_weight = 0.5
+			idea_dip_innovation_level = 0.25
+			
+			idea_tolerance_own_level = 0.25
+		}
+		
+		ca_wall = {
+			idea_defensiveness_weight = 0.5
+			idea_global_tax_weight = 0.125
+		}
+		ca_wall_q = {
+			idea_defensiveness_weight = 1
+			idea_defensiveness_level = 0.5
+		}
+		ca_con_wall = {
+			idea_defensiveness_weight = 0.5
+			idea_global_tax_weight = 0.125
+		}
+		ca_keep = {
+			idea_global_manpower_weight = 1
+			idea_global_manpower_level = 0.25
+		}
+		ca_militia_barracks = {
+			idea_global_manpower_weight = 1
+		}
+		ca_training_grounds = {
+			idea_army_morale_weight = 1
+			idea_army_morale_level = 0.5
+			
+			idea_discipline_weight = 1
+			idea_discipline_level = 0.25
+		}
+		ca_barracks = {
+			idea_infantry_power_weight = 1
+			idea_infantry_power_level = 0.5
+		}
+		ca_stable = {
+			idea_global_manpower_weight = 0.5
+			idea_global_manpower_level = 0.25
+			
+			idea_cavalry_power_weight = 0.5
+			idea_cavalry_power_level = 0.25
+		}
+		ca_town = {
+			idea_global_tax_weight = 0.5
+			idea_global_tax_level = 0.25
+		}
+		ca_shipyard = {
+			idea_sailors_weight = 0.25
+			idea_sailors_level = 0.125
+			
+			idea_ship_cost_weight = 0.5
+			idea_ship_cost_level = 0.25
+		}
+		#cutural buildings
+		ca_culture_saxon_english = {
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.125
+			
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+		}
+		
+		ca_culture_scottish = {
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.125
+			
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+		}
+		
+		ca_culture_group_baltic = {
+			idea_infantry_power_weight = 1
+			idea_infantry_power_level = 0.25
+		}
+		
+		ca_culture_group_altaic = {
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+			
+			idea_cavalry_power_weight = 0.5
+			idea_cavalry_power_weight = 0.125
+		}
+		
+		ca_culture_frank_norman_german = {
+			idea_infantry_power_weight = 1
+			idea_infantry_power_level = 0.25
+		}
+		
+		ca_culture_group_iberian = {
+			idea_cavalry_cost_weight = 0.5
+			idea_cavalry_cost_level = 0.125
+			
+			idea_cavalry_power_weight = 0.5
+			idea_cavalry_power_level = 0.125
+		}
+		
+		ca_culture_italian = {
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.125
+			
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+		}
+		
+		ca_culture_russian = {
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.125
+			
+			idea_global_manpower_weight = 0.5
+			idea_global_manpower_level = 0.125
+		}
+		
+		ca_culture_group_north_germanic = {
+			idea_infantry_power_weight = 1
+			idea_infantry_power_level = 0.5
+		}
+		
+		ca_culture_hungarian = {
+			idea_cavalry_power_weight = 1
+			idea_cavalry_power_level = 0.25
+		}
+		
+		ca_culture_group_arabic = {
+			idea_cavalry_power_weight = 1
+			idea_cavalry_power_level = 0.2
+		}
+		
+		ca_culture_group_byzantine = {
+			idea_cavalry_power_weight = 0.5
+			idea_cavalry_power_level = 0.125
+			
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+		}
+		
+		ca_culture_irish = {
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.125
+			
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+		}
+		
+		ca_culture_ethiopian = {
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+			
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+		}
+		
+		ca_culture_somali = {
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+			
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+		}
+		
+		ca_culture_west_african = {
+			idea_discipline_weight = 1
+			idea_discipline_level = 0.25
+		}
+		
+		ca_culture_group_south_slavic = {
+			idea_cavalry_power_weight = 1
+			idea_cavalry_power_level = 0.25
+		}
+		
+		ca_culture_dutch = {
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+			
+			idea_global_manpower_weight = 0.5
+			idea_global_manpower_level = 0.125
+		}
+		
+		ca_culture_nahuatl = {
+			idea_army_morale_weight = 1
+			idea_army_morale_level = 0.25
+			
+			idea_infantry_power_weight = 1
+			idea_infantry_power_level = 0.25
+		}
+		
+		ca_culture_jewish = {
+			idea_army_morale_weight = 1
+			idea_army_morale_level = 0.25
+		}
+		
+		ca_culture_indian = {
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+			
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+		}
+		
+		ca_culture_nubian = {
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+			
+			idea_global_manpower_weight = 0.5
+			idea_global_manpower_level = 0.125
+		}
+		
+		ca_culture_germanic = {
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+			
+			idea_infantry_power_weight = 0.5
+			idea_infantry_power_level = 0.125
+		}
+		
+		ca_culture_pictish = {
+			idea_army_morale_weight = 1
+			idea_army_morale_level = 0.25
+		}
+		
+		ca_culture_suebi = {
+			idea_army_morale_weight = 1
+			idea_army_morale_level = 0.25
+		}
+		
+		ca_culture_moors = {
+			idea_cavalry_power_weight = 1
+			idea_cavalry_power_level = 0.25
+		}
+		
+		ca_culture_chinese_han = {
+			idea_artillery_power_weight = 0.5
+			idea_artillery_power_level = 0.125
+			
+			idea_discipline_weight = 0.5
+			idea_discipline_level = 0.125
+		}
+		
+		ca_culture_altaic_jurchen = {
+			idea_cavalry_power_weight = 0.5
+			idea_cavalry_power_level = 0.125
+			
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+		}
+		
+		ca_culture_tibetan = {
+			idea_infantry_power_weight = 0.5
+			idea_cavalry_power_level = 0.125
+			
+			idea_army_morale_weight = 0.5
+			idea_army_morale_level = 0.125
+		}
+		
+		ca_government_monastery = {
+			idea_innovation_weight = 0.5
+			idea_innovation_level = 0.125
+			idea_dip_innovation_weight = 0.5
+			idea_dip_innovation_level = 0.125
+			
+			idea_institution_spread_weight = 0.5
+			idea_institution_spread_level = 0.125
+		}
+	}
+}

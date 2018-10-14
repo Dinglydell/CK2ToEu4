@@ -1,0 +1,494 @@
+namespace = dynamic_tech
+# determine average tech level weighted by institutions (every 6 months)
+country_event = {
+	id = dynamic_tech.1
+	desc = dynamic_tech.1.d
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_variable = {
+			which = dt_adm_average
+			value = 0
+		}
+		set_variable = {
+			which = dt_dip_average
+			value = 0
+		}
+		set_variable = {
+			which = dt_mil_average
+			value = 0
+		}
+		set_variable = {
+			which = num_country
+			value = 0
+		}
+		every_country = {
+			ROOT = {
+				export_to_variable = { # store tech levels in a variable
+					which = admTech
+					value = adm_tech
+					who = PREV
+				}
+				export_to_variable = {
+					which = dipTech
+					value = dip_tech
+					who = PREV
+				}
+				export_to_variable = {
+					which = milTech
+					value = mil_tech
+					who = PREV
+				}
+				set_variable = { # amount this country is counted. this is reduced if there is a difference in embraced institutions
+					which = country_weight
+					value = 1
+				}
+				set_variable = {
+					which = institution_diff
+					value = 0
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 1
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 1
+					}
+					
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 2
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 2
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 2
+					}
+					
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 3
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 3
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 3
+					}
+					
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 4
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 4
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 4
+					}
+					
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 5
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 5
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 5
+					}
+					
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 6
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 6
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 6
+					}
+					
+				}
+				if = {
+					limit = {
+						OR = {
+							institution_difference = {
+								who = PREV
+								value = 7
+							}
+							PREV = {
+								institution_difference = {
+									who = ROOT
+									value = 7
+								}
+							}
+						}
+					}
+					set_variable = {
+						which = institution_diff
+						value = 7
+					}
+					
+				}
+				multiply_variable = {
+					which = institution_diff
+					which = institution_diff
+				}
+				change_variable = {
+					which = institution_diff
+					value = 1
+				}
+				divide_variable = {
+					which = country_weight
+					which = institution_diff
+				}
+				change_variable = {
+					which = num_country
+					which = country_weight
+				}
+				multiply_variable = { # apply weighting
+					which = admTech
+					which = country_weight
+				}
+				multiply_variable = {
+					which = dipTech
+					which = country_weight
+				}
+				multiply_variable = {
+					which = milTech
+					which = country_weight
+				}
+				# add to overal score
+				subtract_variable = {
+					which = dt_adm_average
+					which = admTech
+				}
+				subtract_variable = {
+					which = dt_dip_average
+					which = dipTech
+				}
+				subtract_variable = {
+					which = dt_mil_average
+					which = milTech
+				}
+			}
+		}
+
+		# divide score by (weighted) number of countries
+		divide_variable = {
+			which = dt_adm_average
+			which = num_country
+		}
+		divide_variable = {
+			which = dt_dip_average
+			which = num_country
+		}
+		divide_variable = {
+			which = dt_mil_average
+			which = num_country
+		}
+		
+		
+	#	country_event = {
+	#		id = dynamic_tech.1
+	#		days = 30
+	#	}
+	}
+	
+	option = {
+		name = dynamic_tech.1.a
+	}
+}
+
+country_event = { # trigger all for the next 4 months
+	id = dynamic_tech.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+        
+		country_event = {
+			id = dynamic_tech.1
+		}
+		country_event = {
+			id = dynamic_tech.3
+		}
+		country_event = {
+			id = dynamic_tech.3
+			days = 30
+		}
+		country_event = {
+			id = dynamic_tech.3
+			days = 60
+		}
+		country_event = {
+			id = dynamic_tech.3
+			days = 90
+		}
+		#country_event = {
+		#	id = dynamic_tech.3
+		#	days = 120
+		#}
+		#country_event = {
+		#	id = dynamic_tech.3
+		#	days = 150
+		#}
+        
+			
+	}
+	option = {
+		name = dynamic_tech.2.a
+	}
+}
+
+country_event = { # monthly calculate my position relative to stored average
+	id = dynamic_tech.3
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_variable = {
+			which = dt_adm_ahead_penalty
+			which = dt_adm_average
+		}
+		set_variable = {
+			which = dt_dip_ahead_penalty
+			which = dt_dip_average
+		}
+		set_variable = {
+			which = dt_mil_ahead_penalty
+			which = dt_mil_average
+		}
+		export_to_variable = { # store my tech levels
+			which = my_adm_tech
+			value = adm_tech
+		}
+		export_to_variable = {
+			which = my_dip_tech
+			value = dip_tech
+		}
+		export_to_variable = {
+			which = my_mil_tech
+			value = mil_tech
+		}
+		
+	
+		change_variable = {
+			which = dt_adm_ahead_penalty
+			which = my_adm_tech
+		}
+		change_variable = {
+			which = dt_dip_ahead_penalty
+			which = my_dip_tech
+		}
+		change_variable = {
+			which = dt_mil_ahead_penalty
+			which = my_mil_tech
+		}
+	}
+	option = {
+		name = dynamic_tech.3.a
+	}
+}
+
+country_event = {
+	id = dynamic_tech.5
+	title = dynamic_tech.5.t
+	desc = dynamic_tech.5.d
+	major = yes
+	picture = INVENTION_eventPicture
+	trigger = {
+		NOT = { has_global_flag = end_of_game }
+		any_country = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				is_great_power = yes
+			
+				else = { 
+					custom_trigger_tooltip = {
+						tooltip = tooltip_top_gp
+						is_great_power = yes
+						NOT = {
+							great_power_rank = 5
+						}
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_every_institution
+				has_institution = feudalism
+				has_institution = renaissance
+				has_institution = new_world_i
+				has_institution = printing_press
+				has_institution = global_trade
+				has_institution = manufactories
+				has_institution = enlightenment
+			}
+			
+			adm_tech = 30
+			dip_tech = 30
+			mil_tech = 30
+			custom_trigger_tooltip = {
+				tooltip = tooltip_capital_prospers_with_manufactory
+				capital_scope = {
+					is_prosperous = yes
+					OR = {
+						has_building = wharf
+						has_building = weapons
+						has_building = textile
+						has_building = plantations
+						has_building = tradecompany
+						has_building = mills
+						has_building = furnace
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				custom_trigger_tooltip = {
+					tooltip = tooltip_provinces_prospering_with_furnace
+					calc_true_if = {
+						all_owned_province = {
+							has_building = furnace
+							is_prosperous = yes
+						}
+					
+						amount = 5
+					}
+					calc_true_if = {
+							all_owned_province = {
+								OR = {
+									has_building = wharf
+									has_building = weapons
+									has_building = textile
+									has_building = plantations
+									has_building = tradecompany
+									has_building = mills
+									#has_building = furnace
+								}
+								#is_prosperous = yes
+							}
+					
+							amount = 10
+						}
+				}
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = tooltip_provinces_prospering_with_any_manufactory
+						calc_true_if = {
+							all_owned_province = {
+								OR = {
+									has_building = wharf
+									has_building = weapons
+									has_building = textile
+									has_building = plantations
+									has_building = tradecompany
+									has_building = mills
+									has_building = furnace
+								}
+								is_prosperous = yes
+							}
+					
+							amount = 5
+						}
+						calc_true_if = {
+							all_owned_province = {
+								OR = {
+									has_building = wharf
+									has_building = weapons
+									has_building = textile
+									has_building = plantations
+									has_building = tradecompany
+									has_building = mills
+									has_building = furnace
+								}
+								#is_prosperous = yes
+							}
+					
+							amount = 20
+						}
+					}
+				}
+			}
+
+			
+		}
+	}
+	
+	immediate = {
+		set_global_flag = end_of_game
+	}
+	
+	option = {
+		name = dynamic_tech.5.a
+		add_prestige = 5
+	}
+}

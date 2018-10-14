@@ -1,0 +1,30 @@
+country_decisions = {
+
+	constitutional_monarchy = {
+		major = yes
+		potential = {
+			government = english_monarchy
+		}
+		allow =  {
+			stability = 1
+			adm_tech = 15
+			is_at_war = no 
+			is_subject = false
+			custom_trigger_tooltip = {
+				tooltip = recently_changed_government_flag_tooltip
+				OR = {
+					NOT = { has_country_flag = recently_changed_government_flag }
+					had_country_flag = { flag = recently_changed_government_flag days = 9125 }
+				}
+			}
+		}
+		effect = {
+			change_government = constitutional_monarchy
+			add_stability = -1
+			set_country_flag = recently_changed_government_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

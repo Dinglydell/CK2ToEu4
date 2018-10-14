@@ -1,0 +1,3 @@
+700.1.1 = { celestial_emperor = MNG } # MNG tag always used for starting emperor
+#1368.1.23 = { celestial_emperor = MNG }
+#1644.10.30 = { celestial_emperor = QNG }

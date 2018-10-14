@@ -1,0 +1,38 @@
+﻿l_english:
+  dynamic_tech.1.d:0 "adm [Root.dt_adm_ahead_penalty.GetValue] - dip [Root.dt_dip_ahead_penalty.GetValue] - mil [Root.dt_mil_ahead_penalty.GetValue]"
+  dynamic_tech.1.a:0 "[Root.dt_adm_ahead_penalty.GetValue] - [Root.dt_dip_ahead_penalty.GetValue] - [Root.dt_mil_ahead_penalty.GetValue]"
+  
+  dt_adm_ahead_penalty:0 "Relative Administrative Technology"
+  dt_dip_ahead_penalty:0 "Relative Diplomatic Technology"
+  dt_mil_ahead_penalty:0 "Relative Military Technology"
+  
+  adm_ahead_0:0 "An edge in Administrative Technology"
+  adm_ahead_1:0 "Slightly ahead of time in Administrative Technology"
+  adm_ahead_2:0 "A little ahead of time in Administrative Technology"
+  adm_ahead_3:0 "Ahead of time in Administrative Technology"
+  adm_ahead_4:0 "Moderately ahead of time in Administrative Technology"
+  adm_ahead_5:0 "Very ahead of time in Administrative Technology"
+  adm_ahead_6:0 "Extremely ahead of time in Administrative Technology"
+  adm_ahead_7:0 "Overwhelmingly ahead of time in Administrative Technology"
+  
+  dip_ahead_0:0 "An edge in Diplomatic Technology"
+  dip_ahead_1:0 "Slightly ahead of time in Diplomatic Technology"
+  dip_ahead_2:0 "A little ahead of time in Diplomatic Technology"
+  dip_ahead_3:0 "Ahead of time in Diplomatic Technology"
+  dip_ahead_4:0 "Moderately ahead of time in Diplomatic Technology"
+  dip_ahead_5:0 "Very ahead of time in Diplomatic Technology"
+  dip_ahead_6:0 "Extremely ahead of time in Diplomatic Technology"
+  dip_ahead_7:0 "Overwhelmingly ahead of time in Diplomatic Technology"
+  
+  mil_ahead_0:0 "An edge in Military Technology"
+  mil_ahead_1:0 "Slightly ahead of time in Military Technology"
+  mil_ahead_2:0 "A little ahead of time in Military Technology"
+  mil_ahead_3:0 "Ahead of time in Military Technology"
+  mil_ahead_4:0 "Moderately ahead of time in Military Technology"
+  mil_ahead_5:0 "Very ahead of time in Military Technology"
+  mil_ahead_6:0 "Extremely ahead of time in Military Technology"
+  mil_ahead_7:0 "Overwhelmingly ahead of time in Military Technology"
+  
+  dynamic_tech.5.t:0 "The Industrial Revolution"
+  dynamic_tech.5.d:0 "Over the last few decades, technological progress in [Root.GetName] has been increasing at an alarming rate. More and more work is being done by machines rather than muscle, and goods are being produced on a massive scale. The industrial revolution has begun."
+  dynamic_tech.5.a:0 "This changes everything."

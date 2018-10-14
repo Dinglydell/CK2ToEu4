@@ -1,0 +1,10 @@
+on_startup = {
+	events = {
+		dynamic_tech.2
+	}
+}
+on_thri_yearly_pulse = {
+	events = {
+		dynamic_tech.2
+	}
+}

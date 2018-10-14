@@ -1,0 +1,21 @@
+﻿-generate starting info box?
+
+-china dynasty name (DONE)
+
+-formable nations (eg form france) (DONE)
+
+-missions?
+
+-heirs (DONE)
+
+-monarch numbers
+
+-centres of trade (DONE)
+
+-trade goods (DONE)
+
+-generate .mod file
+
+-buddhist branches
+
+-terra incognita outside of ck2 world
