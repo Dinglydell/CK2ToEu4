@@ -130,6 +130,8 @@ tolerance_other = {
 	}
 }
 
+
+
 institution_spread = {
 	title = "Institution spread"
 	desc = ""
@@ -698,5 +700,144 @@ merchants = {
 		merchants = 2
 	}
 }
+
+missionary_strength = {
+	title = "Stonger Missionaries"
+	desc = ""
+	
+	level_0 = {
+		global_missionary_strength = 0.01
+	}
+	level_1 = {
+		global_missionary_strength = 0.02
+	}
+	level_2 = {
+		global_missionary_strength = 0.03
+	}
+	level_3 = {
+		global_missionary_strength = 0.03
+		missionaries = 1
+	}
+}
+heretic_missionary_strength = {
+	title = "No Heresy"
+	desc = ""
+	
+	level_0 = {
+		global_heretic_missionary_strength = 0.01
+	}
+	level_1 = {
+		global_heretic_missionary_strength = 0.02
+	}
+	level_2 = {
+		global_heretic_missionary_strength = 0.03
+	}
+	level_3 = {
+		global_heretic_missionary_strength = 0.03
+		missionaries = 1
+	}
+}
+
+raid = {
+	title = "Raiding"
+	desc = ""
+	
+	level_0 = {
+		may_perform_slave_raid = yes
+	}
+	level_1 = {
+		may_perform_slave_raid = yes
+		light_ship_cost = -0.1
+	}
+	level_2 = {
+		may_perform_slave_raid = yes
+		light_ship_cost = -0.2
+	}
+}
+
+leader_land_shock = {
+	title = "Shocking Lead"
+	desc = ""
+	level_0 = {
+		leader_land_shock = 1
+	}
+	level_1 = {
+		leader_land_shock = 1
+	}
+	level_2 = {
+		leader_land_shock = 2
+	}
+}
+
+leader_land_fire = {
+	title = "Firing lead"
+	desc = ""
+	level_0 = {
+		leader_land_fire = 1
+	}
+	level_1 = {
+		leader_land_fire = 1
+	}
+	level_2 = {
+		leader_land_fire = 2
+	}
+	
+}
+
+core_creation  = {
+	title = "Cheaper Cores"
+	desc = ""
+	level_0 = {
+		core_creation = 0.05
+	}
+	level_1 = {
+		core_creation = 0.1
+	}
+	level_2 = {
+		core_creation = 0.15
+	}
+	level_3 = {
+		core_creation = 0.2
+	}
+}
+
+province_warscore_cost = {
+	title = "Mass Conquest"
+	desc = ""
+	
+	level_0 = {
+		province_warscore_cost = 0.1
+	}
+	level_1 = {
+		province_warscore_cost = 0.15
+	}
+	level_2 = {
+		province_warscore_cost = 0.2
+	}
+	level_3 = {
+		province_warscore_cost = 0.25
+	}
+}
+
+warscore_cost_vs_other_religion = {
+	title = "Religious Conquests"
+	desc = ""
+	
+	level_0 = {
+		province_warscore_cost = 0.1
+	}
+	level_1 = {
+		province_warscore_cost = 0.15
+	}
+	level_2 = {
+		province_warscore_cost = 0.2
+	}
+	level_3 = {
+		province_warscore_cost = 0.25
+	}
+	
+}
+
+
 
 # TODO NOTE: maybe do a church power style thing that gives the appropriate religious bonus

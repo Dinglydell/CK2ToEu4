@@ -36,6 +36,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,12 +48,14 @@
     <Compile Include="CK2Character.cs" />
     <Compile Include="CK2Revolt.cs" />
     <Compile Include="CK2Save.cs" />
+    <Compile Include="CulturalSet.cs" />
     <Compile Include="Eu4Country.cs" />
     <Compile Include="Eu4Province.cs" />
     <Compile Include="Eu4World.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvMap.cs" />
+    <Compile Include="SetGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

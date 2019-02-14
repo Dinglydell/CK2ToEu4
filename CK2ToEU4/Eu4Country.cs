@@ -150,7 +150,7 @@ namespace CK2ToEU4
 		/// <returns></returns>
 		internal bool IsDejure(CK2Title t)
 		{
-			return t.IsDejureLiege(title);
+			return t.IsDirectDejureLiege(title);
 		}
 
 		private void CalcEffects()

@@ -1,332 +1,425 @@
 # CK2TITLE;EU4ID;Filename;Comment
 
 # Iceland
+
 c_vestisland;370;370 - Reykjavik;Vestisland - Reykjavik
-c_sunnlendingafjordungur;370;370 - Reykjavik;Sudurland - Reykjavik
+
 c_austisland;371;371 - Akureyri;Austisland - Akureyri
-c_nordlendingafjordungur;371;371 - Akureyri;Nordland - Akureyri
 
 # Ireland
+d_ulster;4121;4121 - Ulaidh;Duchy Ulster - Ulaidh
 c_ulster;4121;4121 - Ulaidh;County Ulster - Ulaidh
 c_tyrone;372;372 - Ulster;Tyrone - Ulster
 c_tyrconnell;4380;4380 - Donegal;Tyrconnell - Donegal
-c_oriel;373;373 - Ulster;Oriel - Pale
-c_meath;373;373 - Ulster;Meath - Pale
-c_dublin;373;373 - Meath;Dublin - Pale
-c_breifne;4119;4119 - Sligo;Breifne - Sligo
-c_ui_fiachrach;4119;4119 - Sligo;Ui Fiachrach - Sligo
-c_hy_many;4119;4119 - Sligo;Hy Many - Sligo
+c_oriel;373;373 - Ulster;Oriel - Ulster
+c_dublin;373;373 - Meath;Dublin - Meath
+d_connacht;376;376 - Connaught;Duchy Connacht - Connaught
 c_connacht;376;376 - Connaught;County Connacht - Connaught
-c_westmeath;4379;4379 - Middlands;Westmeath - Middlands
-c_kildare;4379;4379 - Middlands;Kildare - Middlands
+c_connacht;4119;4119 - Sligo;County Connacht - Sligo
+c_breifne;4379;4379 - Middlands;Breifne - Middlands
 c_kildare;4120;4120 - Cilldara;Kildare - Cilldara
-c_thomond;375;375 - Munster;Thomond - Munster
-c_desmond;4378;4378 - Kinsale;Desmond - Kinsale
-c_iarmond;4378;4378 - Kinsale;Iarmond - Kinsale
-c_ormond;4118;4118 - Desmond;Ormond - Cork
-c_desmond;4118;4118 - Desmond;Desmond - Cork
-c_iarmond;4118;4118 - Desmond;Iarmond - Cork
-c_leix;4377;4377 - Leinster;Leix - Leinster
-c_ossory;4377;4377 - Ormond;Ossory - Leinster
+d_leinster;374;374 - Leinster;Duchy Leinster - Leinster
 c_leinster;374;374 - Leinster;County Leinster - Leinster
+c_ossory;4377;4377 - Leinster;Ossory - Leinster
+c_thomond;375;375 - Munster;Thomond - Munster
+c_ormond;4118;4118 - Ormond;Ormond - Ormond
+c_desmond;4118;4118 - Deasmhumhain;Desmond - Deasmhumhain
+c_desmond;4378;4378 - Kinsale;Desmond - Kinsale
 
 # Scotland
+
 d_galloway;249;249 - Ayrshire;Duchy Galloway - Ayrshire
 c_galloway;249;249 - Ayrshire;County Galloway - Ayrshire
 c_carrick;249;249 - Ayrshire;Carrick - Ayrshire
 c_clydesdale;249;249 - Ayrshire;Clydesdale - Ayrshire
+
 d_lothian;248;248 - Lothian;Duchy Lothian - Lothian
 c_lothian;248;248 - Lothian;County Lothian - Lothian
+
 c_dunbar;4361;4361 - East March;Dunbar - East March
+
 c_teviotdale;4362;4362 - West March;Teviotdale - West March
+
 c_fife;250;250 - Perth;Fife - Perth
 c_strathearn;250;250 - Perth;Strathearn - Perth
+
 c_gowrie;251;251 - Aberdeen;Gowrie - Aberdeen
 c_atholl;251;251 - Aberdeen;Atholl - Aberdeen
 c_buchan;251;251 - Aberdeen;Buchan - Aberdeen
+
 d_moray;252;252 - Highlands;Duchy Moray - Highlands
 c_moray;252;252 - Highlands;County Moray - Highlands
+
 c_argyll;4363;4363 - Argyll;Argyll - Argyll
+
 c_ross;4110;4110 - Sutherland;Ross - Sutherland
 c_caithness;4110;4110 - Sutherland;Caithness - Sutherland
+
 c_innse_gall;253;253 - Western Isles;Innse Gall - Western Isles
-c_iona;4364;4364 - Inner Hebrides;Iona - Inner Hebrides
+c_innse_gall;4364;4364 - Inner Hebrides;Innse Gall - Inner Hebrides
 
 # England & Wales
+
 d_northumberland;246;246 - Northumberland;Duchy Northumberland - Northumberland
 c_northumberland;246;246 - Northumberland;County Northumberland - Northumberland
 c_durham;246;246 - Northumberland;Durham - Northumberland
-c_lindisfarne;246;246 - Northumberland;Lindisfarne - Northumberland
+
 c_cumberland;247;247 - Cumbria;Cumberland - Cumbria
+
 c_isle_of_man;4365;4365 - Mann;Isle of Man - Mann
+
+c_york;245;245 - Yorkshire;York - York
 c_york;4368;4368 - Scarborough;York - Scarborough
-c_hull;4367;4367 - Hull;Hull - Hull
-c_yoredale;245;245 - Yorkshire;Yoredale - York
-c_leeds;245;245 - Yorkshire;Leeds - York
+c_york;4367;4367 - Hull;York - Hull
+
 d_lancaster;244;244 - Lancashire;Duchy Lancaster - Lancashire
 c_lancaster;244;244 - Lancashire;Lancaster - Lancashire
 c_westmorland;244;244 - Lancashire;Westmorland - Lancashire
+
 c_chester;4375;4375 - Chester;Chester - Chester
+
 c_lincoln;243;243 - Lincoln;Lincoln - Lincoln
+
 c_derby;1861;1861 - Derby;Derby - Derby
+
 c_leicester;4376;4376 - Leicester;Leicester - Leicester
+
 d_hereford;240;240 - Shrewsbury;Duchy Hereford - Shrewsbury
 c_hereford;240;240 - Shrewsbury;County Hereford - Shrewsbury
 c_shrewsbury;240;240 - Shrewsbury;Shrewsbury - Shrewsbury
 c_worcester;240;240 - Shrewsbury;Worcester - Shrewsbury
+
 c_warwick;4372;4372 - Coventry;Warwick - Coventry
+
 d_gwynedd;242;242 - Gwynedd;Duchy Gwynedd - Gwynedd
 c_gwynedd;242;242 - Gwynedd;County Gwynedd - Gwynedd
 c_perfeddwlad;242;242 - Gwynedd;Perfeddwlad - Gwynedd
-c_anglesey;242;242 - Gwynedd;Anglesey - Gwynedd
+
 c_powys;4366;4366 - Montgomery;Powys - Montgomery
-c_builth;4366;4366 - Montgomery;Builth - Montgomery
+
 d_deheubarth;241;241 - Glamorgan;Duchy Deheubarth - Glamorgan
 c_glamorgan;241;241 - Glamorgan;Glamorgan - Glamorgan
-c_gower;241;241 - Glamorgan;Gower - Glamorgan
 c_gwent;241;241 - Glamorgan;Gwent - Glamorgan
-c_brycheiniog;241;241 - Glamorgan;Brycheiniog - Glamorgan
+
 c_dyfed;4369;4369 - Carmarthen;Dyfed - Carmarthen
-c_ceredigion;4369;4369 - Carmarthen;Ceredigion - Carmarthen
+
 d_gloucester;239;239 - Gloucestershire;Duchy Gloucester - Gloucestershire
 c_gloucester;239;239 - Gloucestershire;County Gloucester - Gloucestershire
-c_bath;239;239 - Gloucestershire;Bath - Gloucestershire
 c_wiltshire;239;239 - Gloucestershire;Wiltshire - Gloucestershire
+
 d_somerset;234;234 - Wessex;Duchy Somerset - Wessex
 c_winchester;234;234 - Wessex;Winchester - Wessex
-c_wight;234;234 - Wessex;Wight - Wessex
+
 c_dorset;4374;4374 - Dorset;Dorset - Dorset
+
 d_cornwall;233;233 - Cornwall;Duchy Cornwall - Cornwall
 c_cornwall;233;233 - Cornwall;County Cornwall - Cornwall
+
 c_devon;4373;4373 - Devon;Devon - Devon
+
 c_somerset;4130;4130 - Somerset;Somerset - Somerset
+
 c_oxford;237;237 - Oxfordshire;Oxford - Oxfordshire
+
 c_middlesex;236;236 - London;Middlesex - London
+
 c_essex;238;238 - Essex;Essex - Essex
+
 d_norfolk;1860;1860 - Norfolk;Duchy Norfolk - Norfolk
 c_norfolk;1860;1860 - Norfolk;County Norfolk - Norfolk
 c_suffolk;1860;1860 - Norfolk;Suffolk - Norfolk
+
 c_northampton;4370;4370 - Cambridgeshire;Northampton - Cambridgeshire
 c_bedford;4370;4370 - Cambridgeshire;Bedford - Cambridgeshire
+
 d_canterbury;235;235 - Kent;Duchy Canterbury - Kent
 c_kent;235;235 - Kent;Kent - Kent
+
 c_surrey;4371;4371 - Sussex;Surrey - Sussex
 c_sussex;4371;4371 - Sussex;Sussex - Sussex
 
 # Norway
+
 c_faereyar;1979;1979 -Faroes;Faereyar - Färöarna
+
 c_shetland;1978;1978 - Shetlands;Shetland - The Shetlands
+
 c_orkney;369;369 - Orkney;Orkney - Orkney
+
 c_bergenshus;23;23-Bergenshus;Bergenhus - Bergenhus
-c_sogn;23;23-Bergenshus;Sogn - Bergenhus
-c_forde;23;23-Bergenshus;Forde - Bergenhus
 c_rogaland;24;24-Agder;Rogaland - Agder
+
 c_agder;4145;4145 - Agdesiden;Agder - Agdesiden
 c_telemark;4144;4144 - Bratsberg;Telemark - Bratsberg
+
 c_akershus;4143;4143 - Smalenene;Akershus - Smalenene
 c_vestfold;17;17-Akershus;Vestfold - Akershus
+
 c_hedmark;22;22-Eisdiva;Hedmark - Eidsiva
 c_oppland;22;22-Eisdiva;Oppland - Eidsiva
-c_romerike;22;22-Eisdiva;Romerike - Eidsiva
-c_gudbrandsdal;22;22-Eisdiva;Gudbrandsdalen - Eidsiva
-c_sunnmore;2752;2752 - Sogn;Sunnmore - Sogn
-c_romsdal;2752;2752 - Sogn;Romsdal - Sogn
-c_trondelag;20;20-Trondelag;Trondelag - Trondelag
+
+d_trondelag;20;20-Trondelag;Duchy Trondelag - Trondelag
 c_naumadal;20;20-Trondelag;Naumadal - Trondelag
+
+c_trondelag;2752;2752 - Sogn;County Trondelag - Sogn
+
 c_halogaland;21;21-Halogaland;Halogaland - Hålogaland
 c_nordland;21;21-Halogaland;Nordland - Hålogaland
+
 c_finnmark;315;315 - Finnmark;Finnmark - Finnmark
+
 d_jamtland;10;10-Jamtland;Duchy Jämtland - Jämtland
 c_jamtland;10;10-Jamtland;County Jämtland - Jämtland
 c_herjedalen;10;10-Jamtland;Herjedalen - Jämtland
+
 c_viken;16;16-Bohuslan;Viken - Bohuslän
 
 # Sweden & Finland
-c_skara;7;7 - Skaraborg;Skara - Västergötland
+
+c_vastergotland;7;7-Vastergotland;Västergötland - Västergötland
 c_vastergotland;4163;4163 - Elfsborg;Västergötland - Elfsborg
+
 c_smaland;4166;4166 - Tioharad;Småland - Tioharad
-c_njudung;4166;4166 - Tioharad;Njudung - Tioharad
-c_finnveden;4166;4166 - Tioharad;Finnveden - Tioharad
+
+d_smaland;3;3 - Kalmar;Duchy Småland - Kalmar
 c_more;3;3 - Kalmar;Möre - Kalmar
-c_sevede;3;3 - Kalmar;Sevede - Kalmar
 c_oland;3;3 - Kalmar;Öland - Kalmar
-c_tjust;3;3 - Kalmar;Tjust - Kalmar
-c_kinda;3;3 - Kalmar;Kinda - Kalmar
-c_vista;3;3 - Kalmar;Vista - Kalmar
+
 c_ostergotland;2;2-Ostergotland;Östergötland - Östergötland
+c_tjust;2;2-Ostergotland;Tjust - Östergötland
+
 c_narke;1985;1985-Narke;Närke - Närke
+
 c_gotland;25;25-Gotland;Gotland - Gotland
+
 c_sodermanland;1;1-Uppland;Södermanland - Stockholm
 c_uppland;1;1-Uppland;Uppland - Stockholm
+
 c_aland;1930;1930 - Aland;Åland - Åland
+
 c_varmland;5;5-Varmland;Värmland - Värmland
 c_dal;4164;4164 - Dal;Dal - Dal
+
 c_vastmanland;4;4-Bergslagen;Västmanland - Bergslagen
+
 c_dalarna;8;8-Dalaskogen;Dalarna - Dalaskogen
+
 c_halsingland;9;9-Halsingland;Hälsingland - Hälsingland
 c_gastrikland;9;9-Halsingland;Gästrikland - Hälsingland
 c_medelpad;9;9-Halsingland;Medelpad - Hälsingland
+
 c_vasterbotten;11;11-Vasterbotten;Västerbotten - Västerbotten
 c_angermanland;11;11-Vasterbotten;Ångermanland - Västerbotten
+
 c_lappland;18;18-Lappland;Lappland - Lappland
 c_lappland;4114;4114-Jokkmokk;Lappland - Jokkmokk
+
 c_finland;27;27-Finland;Finland - Finland
+
 c_satakunta;4123;4123-Birkaland;Satakunta - Birkaland
-c_laukaa;4123;4123-Birkaland;Laukaa - Birkaland
+
 c_nyland;28;28 - Nyland;Nyland - Nyland
-c_siuntio;28;28 - Nyland;Siuntio - Nyland
+
 c_tavasts;29;29 -Tavastland;Tavasts - Tavastland
+
 c_savolaks;31;31 - Savolaks;Savolaks - Savolax
+
 c_kexholm;30;30 - Viborg;Kexholm - Viborg
-c_joensuu;4124;4124 - Karelia;Joensuu - Karelia
-c_sortavala;32;32 - Keksholm;Sortavala - Kexholm
+c_kexholm;32;32 - Keksholm;Kexholm - Kexholm
+c_kexholm;4124;4124 - Karelia;Kexholm - Karelia
+
 c_osterbotten;19;19-Osterbotten;Österbotten - Österbotten
-c_oulu;19;19-Osterbotten;Oulu - Österbotten
-c_kajaani;4152;4152 - Kajaani;Kajaani - Kajaani
+c_osterbotten;4152;4152 - Kajaani;Österbotten - Kajaani
+
 c_kemi;4113;4113-Rovaniemi;Kemi - Rovaniemi
-c_rovaniemi;4151;4151 - Inari;Rovaniemi - Inari
+c_kemi;4151;4151 - Inari;Kemi - Inari
 c_kola;1777;1777-Kola;Kola - Kola
+
 c_karelen;1776;1776-Karelia;Karelen - Karelia
 c_kandalax;1776;1776-Karelia;Kandalax - Karelia
+
 c_onega;309;309 - Olonets;Onega - Olonets
 c_zaozerye;309;309 - Olonets;Zaozerye - Olonets
-c_chlisselbourg;309;309 - Olonets;Chlisselbourg - Olonets
+
 c_vodi;33;33-Neva;Vodi - Neva
 c_vodi;34;34-Ingermanland;Vodi - Ingermanland
+
 c_narva;1842;1842 - Narva;Narva - Narva
+
 c_reval;36;36 - Estland;Reval - Reval
-c_livs;36;36 - Estland;Reval - Reval
 
 # Denmark
+
 c_skane;6;6-Skane;Skåne - Skåne
 c_skane;4165;4165 - Goinge;Skåne - Goinge
+
 c_halland;26;26-Halland;Halland - Halland
+
 c_blekinge;1982;1982-Blekinge;Blekinge - Blekinge
+
 c_bornholm;1981;1981-Bornholm;Bornholm - Bornholm
+
 c_sjaelland;12;12-Sjaelland;Sjaelland - Sjaelland
-c_lolland;1983;1983-Lolland;Lolland - Lolland
+c_sjaelland;1983;1983-Lolland;Sjaelland - Lolland
+
 c_fyn;14;14-Fyn;Fyn - Fyn
+
 c_jylland;1984;1984-Nordjylland;Jylland - Nordjylland
-c_himmersyssel;1984;1984-Nordjylland;Himmersyssel - Nordjylland
-c_hardsyssel;15;15-Jylland;Hardsyssel - Midtjylland
-c_abosyssel;4142;4142 - Aarhus;Abosyssel - Aarhus
-c_abosyssel;4149;4149 - Kolding;Abosyssel - Kolding
+c_jylland;15;15-Jylland;Jylland - Midtjylland
+c_jylland;4142;4142 - Aarhus;Jylland - Aarhus
+c_jylland;4149;4149 - Kolding;Jylland - Kolding
+
+
 c_slesvig;13;13-Slesvig;Slesvig - Slesvig
+
 c_holstein;1775;1775 - Holstein;Holstein - Holstein
-c_dithmarschen;4141;4141 - Ditmarschen;Ditmarschen - Ditmarschen
+
+c_holstein;4141;4141 - Ditmarschen;Holstein - Ditmarschen
 
 # Francia
+
 c_french_leon;170;170 - Finistere;French Leon - Finistere
 c_cornouaille;170;170 - Finistere;Cornouaille - Finistere
-c_poher;170;170 - Finistere;Poher - Finistere
-c_tregor;170;170 - Finistere;Tregor - Finistere
+
 c_penthievre;169;169 - Armor;Penthievre - Armor
+
 c_rennes;4384;4384 - Rennes;Rennes - Rennes
+
 c_vannes;171;171 - Vannetais;Vannes - Vannetais
+
 c_nantes;172;172 - Vendee;Nantes - Vendee
-c_retz;172;172 - Vendee;Retz - Vendee
+
+c_avranches;168;168 - Normandie;Avranches - Normandie
 c_avranches;4385;4385 - Cotentin;Avranches - Cotentin
-c_evreux;1879;1879 - Alencon;Evreux - Alencon
+c_avranches;1879;1879 - Alencon;Avranches - Alencon
 c_evreux;168;168 - Normandie;Evreux - Normandie
-c_caen;1879;1879 - Alencon;Caen - Alencon
-c_caen;168;168 - Normandie;Caen - Normandie
+
 c_chartres;4388;4388 - Chartres;Chartres - Chartres
-c_dunois;4388;4388 - Chartres;Dunois - Chartres
+
 c_arques;167;167 - Caux;Arques - Caux
 c_eu;167;167 - Caux;Eu - Caux
 c_vexin;167;167 - Caux;Vexin - Caux
+
 c_thouars;4386;4386 - Vendee;Thouars - Vendee
+
 c_saintonge;4111;4111 - Santoigne;Saintonge - Santoigne
+
 c_bordeaux;174;174 - Gascogne;Bordeaux - Gascogne
+
 c_labourd;173;173 - Labourd;Labourd - Labourd
 c_albret;173;173 - Labourd;Albret - Labourd
+
 c_bearn;176;176 - Bearn;Bearn - Bearn
+
 c_agen;175;175 - Armagnac;Agen - Armagnac
 c_armagnac;175;175 - Armagnac;Armagnac - Armagnac
+
 c_rosello;197;197 - Roussillon;Rosello - Roussillon
 c_foix;197;197 - Roussillon;Foix - Roussillon
+
 c_toulouse;196;196 - Toulouse;Toulouse - Toulouse
 c_carcassonne;196;196 - Toulouse;Carcassonne - Toulouse
+
 c_rouergue;198;198 - Rouergue;Rouergue - Rouergue
+
 c_montpellier;200;200 - Languedoc;Montpellier - Languedoc
+
 c_narbonne;2753;2753 - Narbonne;Narbonne - Narbonne
+
 c_provence;201;201 - Provence;Provence - Provence
 c_forcalquier;201;201 - Provence;Forcalquier - Provence
 c_provence;2991;2991 - Draguignan;Provence - Draguignan
 c_forcalquier;2991;2991 - Draguignan;Forcalquier - Draguignan
+
 c_venaissin;202;202 - Avignon;Venaissin - Avignon
+
 c_dauphine_viennois;204;204 - Dauphine;Dauphine Viennois - Dauphine
+
 c_viviers;4391;4391 - Vivarais;Viviers - Vivarais
 c_gevaudan;4391;4391 - Vivarais;Gevaudan - Vivarais
+
 c_lyon;203;203 - Lyonnais;Lyon - Lyonnais
 c_forez;203;203 - Lyonnais;Forez - Lyonnais
+
 d_auvergne;199;199 - Auvergne;Duchy Auvergne - Auvergne
 c_auvergne;199;199 - Auvergne;County Auvergne - Auvergne
-c_aurillac;199;199 - Auvergne;Aurillac - Auvergne
+
 c_perigord;4112;4112 - Cahors;Perigord - Cahors
 c_perigord;194;194 - Cahors;Perigord - Cahors
+
 c_angouleme;4387;4387 - Angouleme;Angouleme - Angouleme
+
 c_lusignan;180;180 - Perigord;Lusignan - Perigord
 c_poitiers;180;180 - Poitou;Poitiers - Poitou
+
 c_tourraine;4389;4389 - Touraine;Tours - Touraine
+
 c_limousin;195;195 - Limousin;Limousin - Limousin
 c_la_marche;195;195 - Limousin;La Marche - Limousin
+
 c_bourbon;190;190 - Bourbon;Bourbon - Bourbon
+
 d_berry;179;179 - Berry;Berry - Berry
 c_tourraine;179;179 - Berry;Tourraine - Berry
 c_bourges;179;179 - Berry;Bourges - Berry
-c_sancerre;179;179 - Berry;Sancerre - Berry
+
 c_maine;177;177 - Maine;Maine - Maine
-c_perche;177;177 - Maine;Perche - Maine
+
 c_anjou;178;178 - Anjou;Anjou - Anjou
-c_saumur;178;178 - Anjou;Saumur - Anjou
+
 c_ile_de_france;183;183 - Ile-de-France;Ile de France - Ile-de-France
-c_senlis;183;183 - Ile-de-France;Senlis - Ile-de-France
+
 d_orleans;184;184 - Orleanais;Duchy Orleans - Orleanais
 c_orleans;184;184 - Orleanais;County Orleans - Orleanais
 c_blois;184;184 - Orleanais;Blois - Orleanais
 c_vendome;184;184 - Orleanais;Vendome - Orleanais
+
 c_reims;186;186 - Vermandois;Reims - Vermandois
-c_brie;186;186 - Vermandois;Brie - Vermandois
+
 c_troyes;4390;4390 - Troyes;Troyes - Troyes
+
 c_sens;185;185 - Othe;Sens - Nemours
+
 c_nevers;191;191 - Nevers;Nevers - Nevers
+
 c_auxerre;4392;4392 - Auxerrois;Auxerre - Auxerrois
+
 c_dijon;192;192 - Bourgogne;Dijon - Bourgogne
+
 c_charolais;1877;1877 - Charolais;Charolais - Charolais
 c_charolais;1877;1877 - Charolais;Duplicate to increase weight
 c_macon;1877;1877 - Charolais;Macon - Charolais
 c_chalons;1877;1877 - Charolais;Chalons - Charolais
+
 c_amiens;182;182 - Cambray;Amiens - Cambray
-c_clermont;182;182 - Cambray;Clermont - Cambray
+
 c_vermandois;181;181 - Valenciennes;Vermandois - Valenciennes
+
 c_boulogne;89;89 - Picardie;Boulogne - Picardie
-c_ponthieu;89;89 - Picardie;Ponthieu - Picardie
+
 c_guines;87;87 - Calais;Guines - Calais
+
 c_artois;88;88 - Artois;Artois - Artois
+
 c_bar;187;187 - Barrois;Bar - Barrois
 c_saintois;187;187 - Barrois;Santois - Barrois
 c_verdun;187;187 - Barrois;Verdun - Barrois
+
 c_metz;188;188 - Metz;Metz - Metz
+
 c_lorraine;189;189 - Lothringen;Lorraine - Lothringen
+
 c_besancon;193;193 - Franche-Comte;Besancon - Franche-Comte
-c_vesoul;193;193 - Franche-Comte;Vesoul - Franche-Comte
-c_amous;193;193 - Franche-Comte;Amous - Franche-Comte
-c_escuens;193;193 - Franche-Comte;Escuens - Franche-Comte
+
 c_sundgau;1880;1880 - Sundgau;Sundgau - Sundgau
 
 # Hispania
 
 d_galicia;206;206 - Galicia;Duchy Galicia - Galicia
 c_coruna;206;206 - Galicia;Coruna - Galicia
-
-c_santiago;4555;4555 - Vigo;Santiago - Vigo
-
-c_lugo;4554;4554 - Lugo;Lugo - Lugo
-c_lugo;4558;4558 - Orense;Lugo - Orense
+c_santiago;206;206 - Galicia;Santiago - Galicia
 
 c_porto;231;231 - Porto;Porto - Porto
-c_porto;4556;4556 - Aviero;Porto - Aviero
 
 c_braganza;232;232 - Braganca;Braganza - Braganca
 
@@ -350,10 +443,7 @@ c_asturias_de_oviedo;207;207 - Asturias;County Asturias de Oviedo - Asturias
 c_astorga;207;207 - Asturias;Astorga - Asturias
 
 c_leon;208;208 - Leon;Leon - Leon
-
-c_zamora;4553;4553 - Zamora;Zamora - Zamora
-
-c_palencia;4552;4552 - Palencia;Palencia - Palencia
+c_zamora;208;208 - Leon;Zamora - Leon
 
 c_salamanca;216;216 - Salamanca;Salamanca - Salamanca
 
@@ -365,8 +455,7 @@ c_badajoz;218;218 - Badajoz;Badajoz - Badajoz
 
 c_sevilla;224;224 - Andalucia;Sevilla - Andalucia
 c_aracena;224;224 - Andalucia;Aracena - Andalucia
-
-c_niebla;4548;4548 - Huelva;Niebla - Huelva
+c_niebla;224;224 - Andalucia;Niebla - Andalucia
 
 c_cadiz;1749;1749 - Cadiz;Cadiz - Cadiz
 
@@ -375,42 +464,33 @@ c_algeciras;226;226 - Gibraltar;Algeciras - Gibraltar
 c_cordoba;225;225 - Cordoba;Cordoba - Cordoba
 
 c_cuenca;2751;2751 - Cuenca;Cuenca - Cuenca
-c_alcala;2751;2751 - Cuenca;Alcala - Cuenca
 
 c_molina;217;217 - Madrid;Molina - Madrid
 
 c_toledo;219;219 - Toledo;Toledo - Toledo
-c_toledo;4551;4551 - Avila;Toledo - Avila
 c_calatrava;219;219 - Toledo;Calatrava - Toledo
 
 c_la_mancha;2754;2754 - La Mancha;La Mancha - La Mancha
 
 c_granada;223;223 - Granada;Granada - Granada
-
-c_malaga;4546;4546 - Malaga;Malaga - Malaga
-
-c_jaen;1748;1748 - Jaen;Jaen - Jaen
+c_granada;1748;1748 - Jaen;Granada - Jaen
+c_malaga;223;223 - Granada;Malaga - Granada
 
 c_almeria;222;222 - Almeria;Almeria - Almeria
 
 c_murcia;221;221 - Murcia;Murcia - Murcia
-
 c_almansa;221;221 - Murcia;Almansa - Murcia
 
 c_denia;1750;1750 - Alicante;Denia - Alicante
 
 c_valencia;220;220 - Valencia;Valencia - Valencia
-c_valencia;4549;4549 - Xativa;Valencia - Xativa
-
-c_castellon;4550;4550 -Castellon;Castellon - Castellon
+c_castellon;220;220 - Valencia;Castellon - Valencia
 
 d_aragon;214;214 - Aragon;Duchy Aragon - Aragon
 c_zaragoza;214;214 - Aragon;Zaragoza - Aragon
+c_calatayud;214;214 - Aragon;Calatayud - Aragon
 
-c_calatayud;4557;4557 - Lleida;Calatayud - Lleida
-c_calatayud;2990;2990 - Teruel;Calatayud - Teruel
-
-c_albarracin;4547;4547 - Albacete;Albarracin - Albacete
+c_albarracin;2990;2990 - Teruel;Albarracin - Teruel
 
 d_barcelona;213;213 - Barcelona;Duchy Barcelona - Barcelona
 c_barcelona;213;213 - Barcelona;County Barcelona - Barcelona
@@ -435,15 +515,12 @@ c_burgos;1746;1746 - Burgos;Burgos - Burgos
 c_najera;2989;2989 - La Rioja;Najera - La Rioja
 
 c_valladolid;215;215 - Castilla La Vieja;Valladolid - Castilla La Vieja
-c_osma;215;215 - Castilla La Vieja;Osma - Castilla La Vieja
 
 c_soria;2755;2755 - Soria;Soria - Soria
 
 d_mallorca;333;333 - The Baleares;Duchy Mallorca - The Baleares
 c_mallorca;333;333 - The Baleares;County Mallorca - The Baleares
-c_mallorca;4560;4560 - Ibiza;County Mallorca - Ibiza
-
-c_menorca;4559;4559 - Minorca;Menorca - Minorca
+c_menorca;333;333 - The Baleares;Menorca - The Baleares
 
 # Italy
 
@@ -468,7 +545,6 @@ c_siracusa;2982;2982 - Syracuse;Siracusa - Syracuse
 c_malta;126;126 - Malta;Malta - Malta
 
 c_reggio;123;123 - Calabria;Reggio - Calabria
-c_catanzaro;123;123 - Calabria;Catanzaro - Calabria
 
 c_consenza;2984;2984 - Costenza;Cosenza - Cosenza
 
@@ -496,9 +572,7 @@ c_napoli;121;121 - Napoli;Napoli - Napoli
 
 d_spoleto;120;120 - Abbruzzi;Duchy Spoleto - Abruzzi
 c_spoleto;120;120 - Abbruzzi;County Spoleto - Abruzzi
-c_perugia;120;120 - Abbruzzi;Perugia - Abruzzi
 c_aprutium;120;120 - Abbruzzi;Aprutium - Abruzzi
-c_chieti;120;120 - Abbruzzi;Chieti - Abruzzi
 
 c_spoleto;2976;2976 - Umbria;County Spoleto - Umbria
 
@@ -512,7 +586,6 @@ c_orbetello;118;118 - Roma;Orbetello - Roma
 c_ancona;119;119 - Ancona;County Ancona - Ancona
 
 c_urbino;2977;2977 - Urbino;Urbino - Urbino
-c_rimini;2977;2977 - Urbino;Rimini - Urbino
 
 c_siena;117;117 - Siena;Siena - Siena
 
@@ -522,7 +595,7 @@ c_piombino;115;115 - Pisa;Piombino - Pisa
 
 c_firenze;116;116 - Firenze;Firenze - Firenze
 
-c_arezzo;2978;2978 - Arezzo;Arezzo - Arezzo
+c_firenze;2978;2978 - Arezzo;Firenze - Arezzo
 
 c_lucca;2980;2980 - Lucca;Lucca - Firenze
 
@@ -531,8 +604,7 @@ c_modena;106;106 - Modena;Modena - Modena
 c_parma;105;105 - Parma;Parma - Parma
 
 c_genoa;101;101 - Liguria;Genoa - Liguria
-
-c_noli;2992;2992 - Albenga;Noli - Liguria
+c_genoa;2992;2992 - Albenga;Genoa - Liguria
 
 c_nice;102;102 - Nice;Nice - Nice
 
@@ -552,22 +624,18 @@ c_cremona;1862;1862 - Cremona;Cremona - Cremona
 
 c_lombardia;104;104 - Lombardia;Lombardia - Lombardia
 c_lombardia;104;104 - Lombardia;Lombardia - Lombardia #Tiebreaker
-c_como;104;104 - Lombardia;Como - Lombardia
-c_leventina;104;104 - Lombardia;Leventina - Lombardia
 c_pavia;104;104 - Lombardia;Pavia - Lombardia
 
 c_lombardia;2979;2979 - Novarra;Lombardia - Novarra
 c_pavia;2979;2979 - Novarra;Pavia - Novarra
 
 c_monferrato;2981;2981 - Montferrat;Monferrato - Montferrat
-c_ivrea;2981;2981 - Montferrat;Ivrea - Montferrat
 
 c_saluzzo;1875;1875 - Turin;Saluzzo - Cuneo
 
 c_piemonte;103;103 - Piedmont;Piemonte - Piedmont
 
 c_trent;110;110 - Trent;Trent - Trent
-c_bolzano;110;110 - Trent;Bolzano - Trent
 
 c_treviso;1774;1774 - Treviso;Treviso - Treviso
 c_treviso;111;111 - Friuli;Treviso - Friuli
@@ -577,7 +645,6 @@ c_venezia;112;112 - Venezia;Venezia - Venezia
 c_istria;130;130 - Istria;Istria - Istria
 
 c_krain;129;129 - Krain;Krain - Krain
-c_pettau;129;129 - Krain;Pettau - Krain
 
 c_aquileia;1769;1769 - Gorz;Aquileia - Görz
 
@@ -586,20 +653,18 @@ c_aquileia;1769;1769 - Gorz;Aquileia - Görz
 c_savoie;205;205 - Savoie;Savoie - Savoie
 
 c_valais;1871;1871 - Wallis;Valais - Wallis
-c_aosta;1871;1871 - Wallis;Aosta - Wallis
 
 c_geneve;1867;1867 - Freiburg;Geneve - Freiburg
-c_vaud;1867;1867 - Freiburg;Vaud - Freiburg
 c_neuchatel;1867;1867 - Freiburg;Neuchatel - Freiburg
-c_montbeliard;1867;1867 - Freiburg;Montbeliard - Freiburg
 
 c_bern;165;165 - Bern;Bern - Bern
 c_aargau;165;165 - Bern;Aargau - Bern
 
 c_schwyz;1869;1869 - Zurich;Schwyz - Zurich
-c_schwyz;166;166 - Schwyz;Schwyz - Waldstatte
 
 c_st_gallen;1870;1870 - St Gallen;St Gallen - St Gallen
+
+c_grisons;166;166 - Schwyz;Grisons - Schwyz
 
 # Low Countries
 
@@ -639,8 +704,7 @@ c_westfriesland;97;97 - Holland;Westfriesland - Holland
 c_sticht;98;98 - Utrecht;Sticht - Utrecht
 
 c_gelre;99;99 - Gelre;Gelre - Gelre
-	
-c_overijssel;4381;4381 - Oversticht;Overijssel - Oversticht
+c_gelre;4381;4381 - Oversticht;Gelre - Oversticht
 
 c_frisia;100;100 - Friesland;Frisia - Friesland
 c_frisia;4382;4382 - Ommeland;Frisia - Ommeland
@@ -658,23 +722,18 @@ c_mainz;78;78 - Mainz;Mainz - Mainz
 c_nordgau;75;75 - Elsass;Nordgau - Elsass
 
 c_trier;80;80 - Trier;Trier - Trier
+c_trier;1761;1761 - Alzey;Trier - Worms
 c_trier;1760;1760 - Koblenz;Trier - Koblenz
 
-c_saargau;1761;1761 - Alzey;Saargau - Worms
-
 c_koln;85;85 - Koln;Köln - Köln
+c_koln;84;84 - Berg;Köln - Berg
 
-c_berg;84;84 - Berg;Berg - Berg
+c_nassau;83;83 - Nassau;Nassau - Nassau
+c_nassau;1876;1876 - Frankfurt;Nassau - Frankfurt
 
-c_frankfurt;83;83 - Nassau;Frankfurt - Nassau
-c_frankfurt;1876;1876 - Frankfurt;Frankfurt - Frankfurt
-
-c_gottingen;2972;2972 - Paderborn;Gottingen - Paderborn
-
-c_nassau;1762;1762 - Kassel;Fritzlar - Kassel
-
-c_hesse;81;81 - Hessen;Hesse - Hessen
-c_hesse;82;82 - Lippe;Hesse - Westfalen
+c_gottingen;82;82 - Lippe;Göttingen - Westfalen
+c_gottingen;81;81 - Hessen;Göttingen - Hessen
+c_gottingen;1762;1762 - Kassel;Göttingen - Kassel
 
 c_munster;86;86 - Munster;Munster - Munster
 
@@ -688,16 +747,15 @@ c_ostfriesland;1931;1931 - East Frisia;Ostfriesland - East Frisia
 c_oldenburg;55;55 - Oldenburg;Oldenburg - Oldenburg
 
 c_bremen;1874;1874 - Bremen;Bremen - 1874
+c_bremen;54;54 - Bremen;Bremen - 54
 
-c_celle;54;54 - Bremen;Celle - 54
-
-c_verden;1758;1758 - Hannover;Verden - Hannover
+c_celle;1758;1758 - Hannover;Celle - Hannover
 
 c_luneburg;53;53 - Luneburg;Luneburg - Luneburg
 
 c_braunschweig;57;57 - Hannover;Braunschweig - Brunswick
-
-c_minden;2971;2971 - Hoya;Minden - Hoya
+c_braunschweig;2971;2971 - Hoya;Braunschweig - Hoya
+c_braunschweig;2972;2972 - Paderborn;Braunschweig - Paderborn
 
 c_hamburg;44;44 - Hamburg;Hamburg - Hamburg
 
@@ -706,8 +764,7 @@ c_lubeck;1857;1857 - Lauenburg;Lubeck - Lauenburg
 
 c_altmark;2964;2964 - Altmark;Altmark - Altmark
 
-c_magdeburg;52;52 - Magdeburg;Magdeburg - Magdeburg
-
+c_anhalt;52;52 - Magdeburg;Anhalt - Magdeburg
 c_anhalt;58;58 - Anhalt;Anhalt - Anhalt
 
 d_mecklemburg;46;46 - Mecklenburg;Mecklemburg - Mecklenburg
@@ -722,10 +779,12 @@ c_wolgast;2994;2994 - Greifswald;Wolgast - Greifswald
 c_rugen;47;47 - Vorpommern;Rugen - Vorpommern
 
 c_plauen;62;62 - Leipzig;Plauen - Leipzig
-c_plauen;2965;2965 - Vogtland;Plauen - Vogtland
 
 c_meissen;59;59 - Meissen;Meissen - Meissen
+
+c_plauen;2965;2965 - Vogtland;Plauen - Vogtland
 c_meissen;2965;2965 - Vogtland;Meissen - Vogtland
+
 c_meissen;61;61 - Dresden;Meissen - Dresden
 
 c_thuringen;63;63 - Erfurt;Thuringen - Thuringen
@@ -734,12 +793,10 @@ c_weimar;63;63 - Erfurt;Weimar - Thuringen
 c_furstenberg;69;69 - Konstanz;Furstenberg - Konstanz
 
 c_wurttemberg;70;70 - Wurttemberg;Wurttemberg - Wurttemberg
-c_rottenburg;70;70 - Wurttemberg;Rottenburg - Wurttemberg
 
 c_ulm;1872;1872 - Ulm;Ulm - Ulm
 
 c_leiningen;71;71 - Ansbach;Leiningen - Ansbach
-c_eichstadt;71;71 - Ansbach;Eichstadt - Ansbach
 
 c_wurzburg;79;79 - Wurzburg;Wurzburg - Wurzburg
 
@@ -748,9 +805,10 @@ c_bamberg;66;66 - Bamberg;Bamberg - Bamberg
 c_nurnberg;67;67 - Franken;Nurnberg - Franken
 c_nurnberg;1757;1757 - Oberpfalz;Nurnberg - Oberpfalz
 
-c_regensburg;2957;2957 - Regensburg;Regensburg - Regensburg
-
 c_niederbayern;64;64 - Niederbayern;Niederbayern - Niederbayern
+
+c_niederbayern;2957;2957 - Regensburg;Niederbayern - Regensburg
+
 c_niederbayern;2956;2956 - Straubing;Niederbayern - Straubing
 
 c_kempten;68;68 - Memmingen;Kempten - Memmingen
@@ -766,66 +824,51 @@ c_schwaben;73;73 - Tirol;Schwaben - Tirol
 c_chur;1873;1873 - Chur;Chur - Chur
 
 c_innsbruck;1768;1768 - Lienz;Innsbruck - Lienz
-c_pongau;1768;1768 - Lienz;Pongau - Lienz
 
 c_salzburg;76;76 - Salzburg;Salzburg - Salzburg
 
 c_passau;133;133 - Linz;Passau - Linz
 
 c_znojmo;1770;1770 - Ostmarch;Znojmo - Ostmarch
-c_freistadt;1770;1770 - Ostmarch;Freistadt - Ostmarch
-c_krems;1770;1770 - Ostmarch;Krems - Ostmarch
 
 c_osterreich;134;134 - Wien;Osterreich - Wien
-c_medelike;134;134 - Wien;Medelike - Wien
-
-c_graz;1863;1863 - Graz;Graz - Graz
-c_pitten;1863;1863 - Graz;Osterreich - Graz
+c_osterreich;1863;1863 - Graz;Osterreich - Wien
 
 c_steiermark;132;132 - Steiermark;Steiermark - Steiermark
-c_traungau;132;132 - Steiermark;Traungau - Steiermark
-c_leoben;132;132 - Steiermark;Leoben - Steiermark
 
 c_karnten;128;128 - Karnten;Karnten - Karnten
-c_udine;128;128 - Karnten;Udine - Karnten
-c_friesach;128;128 - Karnten;Friesach - Karnten
-
-c_udine;128;128 - Karnten;Udine - Karnten
 
 c_plzen;2967;2967 - Eger;Plzen - Eger
+
 c_plzen;267;267 - Plsen;Plzen - Plzen
 
 c_domazlice;2968;2968 - Budejovice;Domazlice - Budejovice
 
 c_litomerice;1771;1771 - Erz;Litomerice - Erz
 
-c_zatec;1771;1771 - Erz;Zatec - Erz
-
 c_praha;266;266 - Bohemia;Praha - Bohemia
 
 c_brno;265;265 - Moravia;Brno - Moravia
 
 c_olomouc;4237;4237 - Olomouc;Olomouc - Olomouc
-c_opava;4237;4237 - Olomouc;Opava - Olomouc
 
 c_hradec;2970;2970 - Hradeco;Hradec - Hradeco
 
 c_lower_silesia;2966;2966 - Glogow;Lower Silesia - Glogow
 
-c_lubusz;2969;2969 - Sternberg;Lubusz - Sternberg
+c_lubusz;1763;1763 - Niederlausitz;Lubusz - Niederlausitz
 
-c_gorlitz;60;60 - Lausitz;Gorlitz - Oberlausitz
+c_upper_silesia;60;60 - Lausitz;Upper Silesia - Oberlausitz
 
 c_upper_silesia;4238;4238 - Leignitz;Upper Silesia - Liegnitz
 
-c_lausitz;1763;1763 - Niederlausitz;Lausitz - Niederlausitz
 c_lausitz;61;61 - Dresden;Lausitz - Dresden
 
 c_brandenburg;50;50 - Brandenburg;Brandenburg - Berlin
+c_brandenburg;51;51 - Ruppin;Brandenburg - Ruppin
 c_brandenburg;1759;1759 - Potsdam;Brandenburg - Potsdam
+c_brandenburg;2969;2969 - Sternberg;Brandenburg - Sternberg
 c_brandenburg;2993;2993 - Uckermark;Brandenburg - Uckermark
-
-c_havelberg;51;51 - Ruppin;Havelberg - Ruppin
 
 # Balkans
 
@@ -836,15 +879,13 @@ d_dalmatia;136;136 - Dalmatia;Duchy Dalmatia - Dalmatia
 c_zadar;136;136 - Dalmatia;Zadar - Dalmatia
 c_split;136;136 - Dalmatia;Split - Dalmatia
 c_zachlumia;136;136 - Dalmatia;Zachlumia - Dalmatia
-c_imotski;136;136 - Dalmatia;Imotski - Dalmatia
 
 c_zagreb;131;131 - Zagorje15;Zagreb - Croatia
 
 c_varadzin;152;152 - Belovar;Varadzin - Belovar
 
 c_ragusa;137;137 - Ragusa;Ragusa - Ragusa
-
-c_travunia;1831;1831 - Travunia;Travunia - Travunia
+c_ragusa;1831;1831 - Travunia;Ragusa - Travunia
 
 c_zeta;138;138 - Zeta;Zeta - Zeta
 
@@ -859,35 +900,26 @@ c_vidin;2746;2746 - East Gangwon;Vidin - Vidin
 c_vidin;4176;4176 - Brancievo;Vidin - Brancievo
 
 c_krizevci;1767;1767 - Veroce;Krizevci - Veroce
-c_vukovar;1767;1767 - Veroce;Vukovar - Veroce
 
 c_usora;1828;1828 - Soli;Usora - Soli
 
 c_hum;139;139 - Hum;Hum - Hum
-c_onogost;139;139 - Hum;Onogost - Hum
 
-c_soli;140;140 - Usora;Soli - Bosnia
-c_bilino_polje;140;140 - Usora;Bilino Polje - Bosnia
-
+c_rama;140;140 - Usora;Rama - Bosnia
 c_rama;3002;3002 - Visoki;Rama - Visoki
 
 # Byzantine Empire
 
-c_aulon;4174;4174 - Durres;Aulon - Durres
-
 c_dyrrachion;143;143 - Vlore;Dyrrachion - Vlore
+c_dyrrachion;4174;4174 - Durres;Dyrrachion - Durres
+
 c_dyrrachion;4175;4175 - Lezhe;Ochrid - Lezhe
 c_ochrid;4175;4175 - Lezhe;Ochrid - Lezhe
-c_lyncestis;4175;4175 - Lezhe;Lyncestis - Lezhe
 
 c_epeiros;144;144 - Janina;Epeiros - Janina
-c_kastoria;144;144 - Janina;Kastoria - Janina
 c_arta;144;144 - Janina;Arta - Janina
-c_naupactus;144;144 - Janina;Naupactus - Janina
 
-c_corfu;142;142 - Corfu;Corfu - Corfu
 c_cephalonia;142;142 - Corfu;Cephalonia - Corfu
-c_zakynthos;142;142 - Corfu;Zakynthos - Corfu
 
 c_achaia;1773;1773 - Achaea;Achaia - Achaea
 c_korinthos;1773;1773 - Achaea;Kornithos - Achaea
@@ -912,10 +944,8 @@ c_thessalia;147;147 - Salonica;Thessalia - Larissa
 c_thessalonike;1853;1853- Kozani;Thessalonike - Kozani
 
 c_chalkidike;148;148 - Thessaloniki;Chalkidike - Thessaloniki
-c_seres;148;148 - Thessaloniki;Seres - Thessaloniki
 
 c_strymon;3001;3001 - Skopje;Strymon - Skopje
-c_astibus;3001;3001 - Skopje;Astibus - Skopje
 
 c_naissus;3000;3000 - Nis;Naissus - Nis
 
@@ -932,9 +962,7 @@ c_karvuna;159;159 - Silistria;Karvuna - Silistria
 
 d_adrianopolis;149;149 - Edirne;Duchy Adrianopolis - Edirne
 c_adrianopolis;149;149 - Edirne;County Adrianopolis - Edirne
-c_traianopolis;149;149 - Edirne;Traianopolis - Edirne
 c_philippopolis;149;149 - Edirne;Philippopolis - Edirne
-c_maroneia;149;149 - Edirne;Maroneia - Edirne
 c_kaliopolis;149;149 - Edirne;Kaliopolis - Edirne
 
 c_mesembria;1764;1764 - Burgas;Mesembria - Burgas
@@ -945,7 +973,6 @@ c_byzantion;151;151 - Thrace;Byzantion - Thrace
 c_nikomedeia;316;316 - Bithynia;Nikomedeia - Izmit
 
 c_nikaea;4312;4312 - Sultanonu;Nikea - Sultanönu
-c_claudiopolis;4312;4312 - Sultanonu;Claudiopolis - Sultanönu
 
 c_kyzikos;317;317 - Bursa;Kyzikos - Hudavendigar
 c_prusa;317;317 - Bursa;Prusa - Hudavendigar
@@ -958,8 +985,6 @@ c_ephesos;318;318 - Sugla;Ephesos - Sugla
 
 c_laodikeia;4309;4309 - Aydin;Laodikeia - Aydin
 c_laodikeia;4308;4308 - Denizli;Laodikeia - Denizli
-c_sardis;4309;4309 - Aydin;Sardis - Aydin
-c_sardis;4308;4308 - Denizli;Sardis - Denizli
 
 c_lykia;319;319 - Mentese;Lykia - Mentese
 
@@ -976,14 +1001,11 @@ c_teluch;327;327 - Adana;Teluch - Adana
 c_lykandos;327;327 - Adana;Lykandos - Adana
 
 c_tyana;4307;4307 - Aksaray;Tyana - Aksaray
-c_nyssa;4307;4307 - Aksaray;Nyssa - Aksaray
 
 c_sozopolis;1848;1848 - Hamid;Sozopolis - Hamid
 
 c_dorylaion;322;322 - Anatolia;Dorylaion - Kutahya
-c_akroinon;322;322 - Anatolia;Akroinon - Kutahya
-
-c_amorion;4311;4311 - Karahisar;Amorion - Karahisar
+c_dorylaion;4311;4311 - Karahisar;Dorylaion - Karahisar
 
 c_ikonion;323;323 - Konya;Ikonion - Konya
 c_ikonion;324;324 - Karaman;Ikonion - Karaman
@@ -993,10 +1015,8 @@ c_paphlagonia;4313;4313 - Kangiri;Paphlagonia - Kangiri
 c_ankyra;326;326 - Ankara;Ankyra - Ankara
 
 c_herakleia;2299;2299 - Bolu;Herakleia - Bolu
-c_amastris;2299;2299 - Bolu;Amastris - Bolu
 
-c_kastamon;325;325 - Kastamon;Kastamon - Kastamon
-
+c_sinope;325;325 - Kastamon;Sinope - Kastamon
 c_sinope;328;328 - Sinope;Sinope - Sinope
 
 c_chaldea;2304;2304 - Canik;Chaldea - Canik
@@ -1007,8 +1027,7 @@ c_trapezous;330;330 - Trebizon;Trapezous - Trebizond
 c_theodosiopolis;330;330 - Trebizon;Theodosiopolis - Trebizond
 
 c_kaisereia;2301;2301 - Kayseri;Kaisereia - Kayseri
-
-c_charsianon;2300;2300 - Bozok;Charsianon - Bozok
+c_kaisereia;2300;2300 - Bozok;Kaisereia - Bozok
 
 c_galatia;4314;4314 - Kirshehir;Galatia - Kirshehir
 
@@ -1034,21 +1053,18 @@ c_lori;419;419 - Armenia;Dwin - Armenia
 
 c_kartli;423;423 - Tbilisi;Kartli - Tbilisi
 
+c_kakheti;4301;4301 - Kartli;Kahketi - Kartli
 
 c_taron;418;418 - Diyarbekir;Taron - Diyarbekir
 
 c_guria;2196;2196 - Guria;Guria - Gruia
 
 c_tao;4303;4303 - Tao;Tao - Tao
-
-c_klarjeti;2204;2204 - Samtskhe;Klarjeti - Samtskhe
+c_tao;2204;2204 - Samtskhe;Tao - Samtskhe
 
 c_mesopotamia;2306;2306 - Mush;Mesopotamia - Mush
 
-c_mtskheta;4301;4301 - Kartli;Mtskheta - Kartli
-
-c_kakheti;2203;2203 - Kahketi;Kahketi - Kahketi
-
+c_albania;2203;2203 - Kahketi;Albania - Kahketi
 c_albania;4305;4305 - Shaki;Albania - Shaki
 
 d_cyprus;321;321 - Cyprus;Duchy Cyprus - Cyprus
@@ -1145,6 +1161,7 @@ c_druz;405;405 - Tadmor;Druz - Tadmor
 c_tadmor;405;405 - Tadmor;Tadmor - Tadmor
 c_palmyra;405;405 - Tadmor;Palmyra - Tadmor
 c_syria;405;405 - Tadmor;County Syria - Tadmor
+c_bostra;405;405 - Tadmor;County Syria - Tadmor
 c_al_mafraq;405;405 - Tadmor;Al Mafraq - Tadmor
 
 c_karbala;406;406 - Haditha;Karbala - Haditha
@@ -1180,11 +1197,9 @@ c_asyut;2319;2319 - Asyut;Asyut - Asyut
 
 c_quena;4320;4320 - Girga;Quena - Girga
 c_quena;360;360 - Nile;Quena - Qena
+c_quena;2320;2320 - Ras Gharib;Quena - RasGharib
 
-c_alqusair;2320;2320 - Ras Gharib;AlQusair - RasGharib
-
-c_kharga;2318;2318 - Buhaira;Kharga - Buhaira
-
+c_buhairya;2318;2318 - Buhaira;Buhairya - Buhaira
 c_buhairya;4323;4323 - Farafreh;Buhairya - Farafreh
 c_buhairya;1233;1233 - Kargah;Buhairya - Kharga
 
@@ -1226,21 +1241,18 @@ c_hayya;2787;2787 - Hamasien;Haya - Hamasien
 c_akordat;2787;2787 - Hamasien;Akordat - Hamasien
 c_massawa;2787;2787 - Hamasien;Massawa - Hamasien
 
-c_bayuda;1220;1220 - Dar Jaal;Bayuda - Bayuda
-
+c_atbara;1220;1220 - Dar Jaal;Atbara - Bayuda
 c_atbara;2797;2797 - Shendy;Atbara - Shendy
 
+c_kassala;4033;4033 - Al Qadirif;Kassala - Al Qadirif
 
-
-c_gezira;4033;4033 - Al Qadirif;Gezira - Al Qadirif
-c_gezira;2772;2772 - Dembiya;Gezira - Demibya
-c_gezira;2770;2770 - Agew;Gezira - Agew
+c_kassala;1225;1225 - Butana;Kassala - Butana
+c_kassala;2772;2772 - Dembiya;Kassala - Demibya
+c_kassala;2770;2770 - Agew;Kassala - Agew
 
 d_hayya;1226;1226 - Taka;Duchy Blemmyia - Beja
 c_hayya;1226;1226 - Taka;Hayya - Beja
 c_kassala;1226;1226 - Taka;Kassala - Beja
-
-c_kassala;1225;1225 - Butana;Kassala - Butana
 
 d_axum;1230;1230 - Massawa;Duchy Axum - Massawa
 c_trinkitat;1230;1230 - Massawa;Trinkitat - Massawa
@@ -1250,12 +1262,10 @@ c_massawa;2767;2767 - Enderta;Massawa - Enderta
 
 d_sennar;1222;1222 - Gezira;Duchy Alodia - Gezira
 c_alodia;1222;1222 - Gezira;Alodia - Gezira
+c_sennar;1222;1222 - Gezira;Sennar - Gezira
+c_kosti;1222;1222 - Gezira;Kosti - Gezira
 
-c_sennar;2799;2799 - Sennar;Sennar - Sennar
-c_sennar;1217;1217 - Fazughli;Sennar - Fazughli
-
-c_kosti;2800;2800 - Kosti;Kosti - Kosti
-c_kosti;1216;1216 - Dar Nuba;Kosti - Dar Nuba
+c_kosti;2799;2799 - Sennar;Kosti - Sennar
 
 d_axum;1227;1227 - Tigre;Duchy Axum - Tigray
 d_semien;1227;1227 - Tigre;Duchy Semien - Tigray
@@ -1345,93 +1355,77 @@ c_zeila;1208;1208 - Haud;Zeila - Haud
 # North Africa
 
 c_canarias;366;366 - The Canarias;Canarias - The Canarias
-c_canarias;4565;4565 - Tenerife;Canarias - Tenerife
 
+c_anti-atlas;348;348 - Sus;Anti-Atlas - Sus
 c_anti-atlas;2470;2470 - Haha;Anti-Atlas - Haha
-
-c_warzazat;2464;2464 - Quarzazate;Warzazat - Quarzazate
-c_warzazat;4568;4568 - Demnate;Warzazat - Demnate
-
-c_tharasset;348;348 - Sus;Tharasset - Sus
-c_tharasset;1110;1110 - Agadir;Tharasset - Agadir
-
+c_anti-atlas;1110;1110 - Agadir;Anti-Atlas - Agadir
+c_anti-atlas;2464;2464 - Quarzazate;Anti-Atlas -Quarzazate
+c_ifni;348;348 - Sus;Ifni - Sus
+c_ifni;2470;2470 - Haha;Ifni - Haha
+c_ifni;1110;1110 - Agadir;Ifni - Agadir
 c_ifni;347;347 - Ifni;Ifni - Ifni
+c_tharasset;347;347 - Ifni;Tharasset - Ifni
 
 c_marrakech;344;344 - Marrakech;Marrakech - Marrakech
-c_tinmallal;344;344 - Marrakech;Tinmallal - Marrakech
+c_marrakech;2467;2467 - Meknes;Marrakech - Meknes
+c_marrakech;2468;2468 - Tadla;Marrakech - Tadla
 
-c_tadla;2468;2468 - Tadla;Tadla - Tadla
-
-c_meknes;2467;2467 - Meknes;Meknes - Meknes
-
-c_tudgha;346;346 - Figuig;Tudgha - Figuig
-
+c_sijilmasa;346;346 - Figuig;Sijilmasa - Figuig
+c_sijilmasa;2466;2466 - Draa;Sijilmasa - Draa
 c_sijilmasa;2460;2460 - Saoura;Sijilmasa - Saoura
-
-c_draa;2466;2466 - Draa;Draa - Draa
 
 c_massat;2469;2469 - Toubkhal;Massat - Dukkala
 c_massat;345;345 - Abda;Massat - Abda
-c_massat;4564;4564 - Anfa;Massat - Anfa
 c_infa;342;342 - Toubkhal;Infa - Charb
-c_infa;4563;4563 - Sale;Infa - Sale
 
 c_tangiers;334;334 - Tangiers;Tangiers - Tangiers
 
 c_cebta;1751;1751 - Ceuta;Cebta - Ceuta
-c_cebta;4561;4561 - Tetouan;Cebta - Tetouan
 
 c_fes;343;343 - Fez;Fes - Fez
-c_taza;343;343 - Fez;Taza - Fez
-
-c_el_rif;335;335 - Mellila;El Rif - Mellila
-
-c_figuig;2463;2463 - Kasadir;Figuig - Kasadir
-c_atlas_mnt;2463;2463 - Kasadir;Atlas Mnt - Kasadir
-
-c_figuig;349;349 - Figuig;Figuig - Figuig
-c_muluja;349;349 - Figuig;Muluja - Figuig
+c_figuig;349;349 - Figuig;Figuig - Fez
+c_el_rif;335;335 - Mellila;El Rif - Fez
 
 c_snassen;2465;2465 - Oujda;Snassen  - Oujda
 
 c_tlemcen;336;336 - Tlemcen;Tlemcen - Tlemcen
 
 c_orania;337;337 - Oran;Orania - Oran
-c_orania;4562;4562 - Mers el Kebir;Orania - Mers el Kebir
 
+c_hanyan;2463;2463 - Kasadir;Hanyan - Kasadir
+c_atlas_mnt;2463;2463 - Kasadir;Atlas Mnt - Kasadir
+c_atlas_mnt;2462;2462 - Ouarsenis;Atlas Mnt
 
-c_beni_yanni;2461;2461 - Dahra;Beni Yanni - Dahra
-
+c_al_djazair;2461;2461 - Dahra;Al Djazair - Dahra
 c_al_djazair;338;338 - Al-Djazair;Al Djazair - Al-Djazair
-
+c_lemdiyya;338;338 - Al-Djazair;Lemdiyya - Al-Djazair
 c_lemdiyya;2462;2462 - Ouarsenis;Lemdiyya - Ouarsenis
-c_hanyan;2462;2462 - Ouarsenis;Hanyan - Ouarsenis
 
-c_ashir;2459;2459 - Titteri;Ashir - Titteri
+c_ouled_nail;2458;2458 - Hodna;Ouled Nail - Hodna
+c_ouled_nail;351;351 - Aures;Ouled Nail - Aures
 
-c_mzab;2457;2457 - Mzab;Mzab - Mzab
+c_mzab;350;350 - Laghouat;Mzab - Laghouat
+c_mzab;2459;2459 - Titteri;Mzab - Titteri
 
-c_tuggurt;2456;2456 - Touggourt;Tuggurt - Touggourt
-
-c_arigh;2472;2472 - Ouargla;Arigh - Ouargla
-
-
-c_bejaija;339;339 - Bejaia;Bejaija - Kabylia
+c_beni_yanni;339;339 - Bejaia;Beni Yanni - Kabylia
 c_tell_atlas;339;339 - Bejaia;Tell Atlas - Kabylia
 
+
+
+c_bejaija;1882;1882 - Bone;Bejaija - Bone
+
 c_constantine;340;340 - Constantine;Constantine - Constantine
+c_biskra;340;340 - Constantine;Biskra - Constantine
 c_annaba;1882;1882 - Annaba;Annaba - Annaba
 
-c_biskra;351;351 - Biskra;Biskra - Biskra
-c_biskra;2458;2458 - Hodna;Biskra - Hodna
-
-c_ouled_nail;350;350 - Laghouat;Ouled Nail - Laghouat
 
 c_tunis;341;341 - Tunis;Tunis - Tunis
 c_tunis;341;341 - Tunis;Duplicate to increase weight
+c_medjerda;2454;2454 - Kef;Medjerda - Kef
 
 c_bizerte;2455;2455 - Bizerte;Bizerte - Bizerte
 
+c_kairwan;352;352 - Gafsa;Kairwan - Gafsa
 c_gabes;352;352 - Gafsa;Gabes - Gafsa
 
 c_gabes;2453;2453 - Sfax;Gabes - Sfax
@@ -1440,34 +1434,21 @@ c_mahdia;2453;2453 - Sfax;Mahdia - Sfax
 c_mahdia;2473;2473 - Sousse;Mahdia - Sousse
 
 c_tripolitana;354;354 - Tripolitania;Tripolitana - Tripolitania
+c_tripolitana;2451;2451 - Thubaqt;Tripolitana - Thubaqt
 
 c_djerba;353;353 - Gabes;Djerba - Tataouine
 c_djerba;2954;2954 - Djerba;Djerba - Djerba
 c_djerba;2452;2452 - Zuwarah;Djerba - Zuwarah
 
 c_syrte;355;355 - Sirt;Syrta - Sirt
-c_tadjrift;355;355 - Sirt;Leptis Magna - Sirt
+c_leptis_magna;355;355 - Sirt;Leptis Magna - Sirt
 
-c_cyrenaica;356;356 - Cyrenaica;Cyrenaica - Cyrenaica
+d_cyrenaica;356;356 - Cyrenaica;Duchy Cyrenaica - Cyrenaica
+c_cyrenaica;356;356 - Cyrenaica;County Cyrenaica - Cyrenaica
 c_benghazi;356;356 - Cyrenaica;Benghazi - Cyrenaica
 c_senoussi;356;356 - Cyrenaica;Senoussi - Cyrenaica
-c_ajadabiya;356;356 - Cyrenaica;Senoussi - Cyrenaica
 
 c_tobruk;357;357 - Dahrna;Tobruk - Dahrna
-
-c_leptis_magna;2451;2451 - Thubaqt;Leptis Magna - Thubaqt
-
-c_nafusa;2449;2449 - Jufra;Nafusa - Jufra
-c_nafusa;4567;4567 - Sabha;Nafusa - Sabha
-
-c_suf;2450;2450 - Ghadames;Suf - Ghadames
-
-c_gafsa;352;352 - Gafsa;Gafsa - Gafsa
-
-c_kairwan;4566;4566 - Kairwan;Kairwan - Kairwan
-c_medjerda;4566;4566 - Kairwan;Medjerda - Kairwan
-
-c_tebessa;2454;2454 - Kef;Tebessa - Kef
 
 
 
@@ -1477,143 +1458,54 @@ c_ouadane;1127;1127 - Tuat;Ouadane - Tuat
 c_idjil;1127;1127 - Tuat;Idjil - Tuat
 
 c_araouane;1128;1128 - Taodeni;Araouane - Taodeni
-c_araouane;1129;1129 - Azawadd;Araouane - Azawadd
 c_taghaza;1128;1128 - Taodeni;Taghaza - Taodeni
 
 c_timbuktu;1132;1132 - Timbuktu;Timbuktu - Timbuktu
 
 c_gao;1133;1133 - Gao;Gao - Gao
 c_gao;2262;2262 - Karabara;Gao - Karabara
+c_gao;2264;2264 - Hombori;Gao - Hombori
 c_gao;2271;2271 - Azawagh;Gao - Azawagh
-
-c_songhay;2268;2268 - Aribanda;Songhay - Aribanda
-
-c_tahoua;2269;2269 - Zarmaganda;Tahoua - Zarmaganda
-c_tahoua;2273;2273 - Ader;Tahoua - Ader
+c_gao;2269;2269 - Zarmaganda;Gao - Zarmaganda
 
 c_tadmekka;1130;1130 - Tadmekka;Tadmekka - Tadimekket
 
-c_kurumba;2264;2264 - Hombori;Kurumba - Hombori
-c_kurumba;2265;2265 - Liptako;Kurumba - Liptako
+c_aoudaghost;1129;1129 - Azawadd;Aoudaghost - Azawadd
 
-c_dendi;1142;1142 - Dendi;Dendi - Dendi
-
-c_dyamare;2270;2270 - Dallol;Dyamare - Dallol
-
-c_kebbi;2278;2278 - Kebbi;Kebbi - Kebbi
-
-c_zarma;1143;1143 - Borgu;Zarma - Borgu
-c_zarma;2293;2293 - Yawuri;Zarma - Yawuri
+c_zarma;1142;1142 - Dendi;Zarma - Dendi
+c_zarma;2268;2268 - Aribanda;Zarma - Aribanda
+c_zarma;2270;2270 - Dallol;Zarma - Dallol
+c_zarma;2278;2278 - Kebbi;Zarma - Kebbi
 
 c_gurma;1136;1136 - Gurma;Gurma - Gurma
-
-c_yatenga;1135;1135 - Yatenga;Yatenga - Yatenga
+c_gurma;2266;2266 - Bilanga;Gurma - Bilanga
+c_gurma;2265;2265 - Liptako;Gurma - Liptako
+c_gurma;1137;1137 - Wagadugu;Gurma - Wagadugu
 
 c_djenne;1134;1134 - Jenne;Djenne - Jenne
-c_djenne;2263;2263 - Haayre;Djenne - Haayre
-c_djenne;2259;2259 - Bara;Djenne - Bara
+c_djenne;1135;1135 - Yatenga;Djenne - Jenne
 c_djenne;2261;2261 - Kala;Djenne - Kala
-
-c_wagadougou;1137;1137 - Wagadugu;Wagadougou - Wagadugu
-c_wagadougou;2267;2267 - Tenkodogo;Wagadougou - Tenkodogo
-c_wagadougou;2266;2266 - Bilanga;Wagadougou - Bilanga
+c_djenne;2259;2259 - Bara;Djenne - Bara
+c_djenne;2263;2263 - Haayre;Djenne - Haayre
 
 c_bambuk;1120;1120 - Bambuk;Bambuk - Bambuk
+c_bambuk;1121;1121 - Bure;Bambuk - Bure
 c_bambuk;1117;1117 - Futa Jallon;Bambuk - Futa Jallon
-
-c_kantor;2238;2238 - Kantor;Kantor - Kantor
-c_kantor;2240;2240 - Galam;Kantor - Galam
-c_kantor;1114;1114 - Gabu;Kantor - Gabu
-
-c_bure;1121;1121 - Bure;Bure - Bure
-
-c_kiri;2248;2248 - Do;Kiri - Do
-
-c_tagant;2244;2244 - Tagant;Tagant - Tagant
-c_aoudaghost;2244;2244 - Tagant;Aoudaghost - Tagant
-
-c_diafunu;1115;1115 - Brakna;Diafunu - Brakna
-c_diafunu;2237;2237 - Tekrur;Diafunu - Tekrur
+c_bambuk;2248;2248 - Do;Bambuk - Do
 
 c_oualata;2247;2247 - Hodh;Oualata - Hodh
-c_oualata;2246;2246 - Baghena;Oualata - Baghena
 
-c_ghana;2245;2245 - Wagadu;Ghana - Wagadu
-c_ghana;2243;2243 - Termes;Ghana - Termes
+c_ghana;1131;1131 - Massina;Ghana - Massina
+c_ghana;1123;1123 - Segu;Ghana - Segu
+c_ghana;2246;2246 - Baghena;Ghana - Baghena
+c_ghana;2260;2260 - Mema;Ghana -Mema
 
-c_mema;2260;2260 - Mema;Mema - Mema
-c_mema;1131;1131 - Massina;Mema - Massina
 
-c_soso;1123;1123 - Segu;Soso - Segu
-
-c_bobo_dyulasso;2253;2253 - Gwiriko;Bobo Dyulasso - Gwiriko
-c_bobo_dyulasso;2252;2252 - Lobi;Bobo Dyulasso - Lobi
-c_bobo_dyulasso;1125;1125 - Kong;Bobo Dyulasso - Kong
-
+c_mali;1124;1124 - Wasuju;Mali - Wasuju
+c_mali;2249;2249 - Sibiridugu;Mali - Sibiridugu
 c_mali;1122;1122 - Bagoe;Mali - Bagoe
 c_mali;2250;2250 - Bendugu;Mali - Bendugu
-
-c_dodugu;2249;2249 - Sibiridugu;Dodugu - Sibiridugu
-c_dodugu;1124;1124 - Wasuju;Dodugu - Wasuju
-
-
-c_zamfara;1150;1150 - Zamfara;Zamfara - Zamfara
-
-c_katsina;1149;1149 - Katsina;Katsina - Katsina
-c_katsina;1154;1154 - Zazzau;Katsina - Zazzau
-
-c_gobir;1148;1148 - Gobir;Gobir - Gobir
-
-c_kano;1155;1155 - Kano;Kano - Kano
-c_kano;2280;2280 - Biram;Kano - Biram
-c_kano;2281;2281 - Rano;Kano - Rano
-
-c_daura;2279;2279 - Daurau;Daura - Daurau
-
-c_air;2276;2276 - Itesan;Air - Itesan
-c_air;2274;2274 - Air;Air - Air
-c_air;2272;2272 - Azbin;Air - Azbin
-
-c_fachi;1156;1156 - Damagaram;Fachi - Damagaram
-c_fachi;2275;2275 - Tenere;Fachi - Tenere
-
-c_munio;2282;2282 - Muniyo;Munio - Muniyo
-c_munio;2283;2283 - Bedde;Munio - Bedde
-
-c_bauchi;1161;1161 - Bauchi;Bauchi - Bauchi
-
-c_bornu;1157;1157 - Borno;Bornu - Borno
-
-c_kagha;1160;1160 - Mandara;Kagha - Mandara
-c_kagha;2285;2285 - Marghi;Kagha - Marghi
-
-c_makari;2287;2287 - Kotoko;Makari - Kotoko
-c_makari;2286;2286 - Logone;Makari - Logone
-
-c_masseniya;1159;1159 - Bagirmi;Masseniya - Bagirmi
-
-c_manan;2284;2284 - Manga;Manan - Manga
-
-c_bilma;2277;2277 - Kawar;Bilma - Kawar
-
-c_djado;2475;2475 - Djado;Djado - Djado
-c_djado;2474;2474 - Tajhari;Djado - Tajhari
-
-c_murzuk;2448;2448 - Fezzan;Murzuk - Fezzan
-c_zawila;2448;2448 - Fezzan;Zawila - Fezzan
-
-c_djimi;1158;1158 - Kanem;Djimi - Kanem
-
-c_fitri;2288;2288 - Yao;Fitri - Yao
-
-c_wadai;2932;2932 - Obidos;Wadai - Obidos
-
-c_ennedi;774;774 - Al Junaynahr;Ennedi - Al Junaynahr
-
-c_darfur;1219;1219 - Kordofan;Darfur - Kordofan
-c_darfur;2801;2801 - Medwa;Darfur - Medwa
-c_darfur;2802;2802 - Kobbe.txt;Darfur - Kobbe
-c_darfur;1221;1221 - Taqali;Darfur - Taqali
+c_mali;2253;2253 - Gwiriko;Mali - Gwiriko
 
 # Arabia
 
@@ -1752,8 +1644,8 @@ c_guzgan;2228;2228 - Maymana;Guzgan - Maymana
 c_bost;2229;2229 - Bust;Bost - Bust
 c_bost;447;447 - Kandahar;Bost - Kandahar
 
-c_zahedan;435;435 - Zaranj;Zahedan - Zaranj
-c_zaranj;2230;2230 - Chakhansur;Zaranj - Chakhansur
+c_zaranj;435;435 - Zaranj;Bost - Zaranj
+c_zaranj;2230;2230 - Chakhansur;Bost - Chakhansur
 
 c_farrah;2224;2224 - Ferah;Farrah - Ferah
 
@@ -1887,22 +1779,18 @@ c_gilan;4340;4340 - Astara;Gilan - Astara
 c_zanjan_abhar;2212;2212 - Zanjan;Zanjan - Zanjan
 c_zanjan_abhar;4338;4338 - Soltanieh;Zanjan - Soltanieh
 
-c_kyzyl-su;2349;2349 - Kizil-Su;Kyzyl-su - Kizil-Su
 c_dihistan;2349;2349 - Kizil-Su;Dihistan - Kizil-Su
 
 c_kara-kum;438;438 - Kara Kum;Kara Kum - Karakum
 
 c_usturt;443;443 - Ust Yurt;Usturt - Ust Yurt
-c_kara_bogaz;443;443 - Ust Yurt;Kara Bogaz - Ust Yurt
 
 c_khiva;441;441 - Khiva;Khiva - Khiva
 
 c_urgench;440;440 - Qaraqalpak;Urgench - Qaraqalpak
-
-c_kusbulak;2370;2370 - Kungirot;Kusbulak - Kungirot
-
-c_gurganj;2362;2362 - Gurganj;Gurganj - Gurganj
-c_gurganj;1973;1973 - Urgench;Gurganj - Urgench
+c_urgench;2370;2370 - Kungirot;Urgench - Kungirot
+c_urgench;1973;1973 - Urgench;Urgench - Urgench
+c_urgench;2362;2362 - Gurganj;Urgench - Gurganj
 
 c_bukhara;442;442 - Bukhara;Bukhara - Bukhara
 
@@ -1924,185 +1812,128 @@ c_khojand;1967;1967 - Khujand;Khojand - Khujand
 #Turkestan
 
 c_dashhowuz;455;455 - Kyrzyl-Kum;Dashhowuz - Kyzylkum
-c_dashhowuz;1970;1970 - Syghnak;Dashhowuz - Syghnak
+
+c_kyzylkum;1970;1970 - Syghnak;Kyzylkum - Syghnak
 
 c_chach;457;457 - Tashkent;Chach - Tashkent
 c_chach;2356;2356 - Shymkent;Chach - Shymkent
-
-c_talas;2364;2364 - Talas;Talas - Talas
+c_chach;2364;2364 - Talas;Chach - Talas
 
 c_otrar;1969;1969 - Sozak;Otrar - Sozak
 c_otrar;456;456 - Turkestan;Otrar - Turkestan
 
-c_yangikent;2352;2352 - Alty-Kuduk;Yangikent - Alty-Kuduk
-
+c_syr_darya;2352;2352 - Alty-Kuduk;Syr Darya - Alty-Kuduk
 c_syr_darya;2358;2358 - Altyn;Syr Darya - Altyn
 
 c_karluk;459;459 - Taraz;Karluk - Taraz
 
 c_chuy;2126;2126 - Chuy;Chuy - Chuy
-
-c_barskhan;2125;2125 - Kochkor;Barskhan - Kochkor
+c_chuy;2125;2125 - Kochkor;Chuy - Kochkor
 
 c_ili;2120;2120 - Ili;Ili - Ili
-c_qayaliq;2120;2120 - Ili;Qayaliq - Ili
 
-c_almaliq;4208;4208 - Qurqara-usu;Almaliq - Qurqara-usu
-
-
-c_zhetysu;2368;2368 - Karamegdan;Zhetysu - Karamegdan
-c_almaty;461;461 - Almaty;Almaty - Almaty
 c_zhetysu;461;461 - Almaty;Zhetysu - Almaty
-
+c_zhetysu;2368;2368 - Karamegdan;Zhetysu - Karamegdan
 
 c_mangyshlak;439;439 - Mangyshlak;Mangyshlak - Mangyshlak
-c_buzachi;439;439 - Mangyshlak;Buzachi - Mangyshlak
 
 # Cumania & Perm
 
 c_aral;471;471 - Alimuly;Aral - Alimuly
-c_emba;471;471 - Alimuly;Emba - Alimuly
 
 c_turkestan;2351;2351 - Shekty;Turkestan - Shekty
 
-c_erchis;1068;1068 - Pegaya Orda;Ket - Ket
+c_kirghiz;480;480 - Pegaya Orda;Kirghiz - Pegaya Orda
 
 c_ket;2433;2433 - Vah;Ket - Vah
-c_ob;2433;2433 - Vah;Ob - Vah
 
-c_saur;2118;2118 - Urzhar;Saur - Urzhar
 c_urzhar;2118;2118 - Urzhar;Urzhar - Urzhar
-
-c_tarbagatai;2119;2119 - Chuguchak;Tarbagatai - Chuguchak
+c_urzhar;2119;2119 - Chuguchak;Urzhar - Chuguchak
+c_urzhar;4208;4208 - Qurqara-usu;Urzhar - Qurqara-usu
 
 c_kangly;465;465 - Nogay;Kangly - Nogay
 
 c_tobol;1076;1076 - Kurgan;Tyumen - Kurgan
-
-c_magnitaya;2441;2441 - Iglino;Magnitaya - Iglino
+c_tobol;2441;2441 - Iglino;Tobol - Iglino
 
 c_tyumen;1075;1075 - Tyumen;Tyumen - Tyumen
-c_vagay;1075;1075 - Tyumen;Vagay - Tyumen
-c_tyumen;2427;2427 - Ostyaki;Tyumen - Ostyaki
 
-c_tura;1071;1071 - Tara;Tura - Irtesh
-c_osha;1071;1071 - Tara;Osha - Irtesh
+c_sibir;1071;1071 - Irtesh;Tura - Irtesh
 
-c_sibir;1074;1074 - Sibir;Sibir - Sibir
+c_khantia;1074;1074 - Sibir;Sibir - Sibir
 
 c_ishim;2357;2357 - Aksary;Ishim - Aksary
+c_ishim;2369;2369 - Lower Ishim;Ishim - Lower Ishim
 
-c_ubagan;2369;2369 - Lower Ishim;Ubagan - Lower Ishim
-c_kartaly;2369;2369 - Lower Ishim;Kartaly - Lower Ishim
+c_narim;2429;2429 - Agan;Narim - Agan
+c_narim;2428;2428 - Yugan;Khantia - Yugan
 
-c_tara;2429;2429 - Agan;Tara - Agan
-c_tara;2428;2428 - Yugan;Tara - Yugan
+c_mansia;1078;1078 - Middle Urals;Mansia - Tura
+c_mansia;2427;2427 - Ostyaki;Sibir - Ostyaki
 
-c_narim;1070;1070 - Koda;Narim - Koda
-
-c_tui;1069;1069 - Surgut;Tui - Surgut
-c_shish;1069;1069 - Surgut;Shish - Surgut
-
-c_bolshoy;2445;2445 - Mangazea;Bolshoy - Mangazea
-c_vasyugan;2445;2445 - Mangazea;Vasyugan - Mangazea
-
-c_tavda;1078;1078 - Middle Urals;Tavda - Tura
-c_miass;1078;1078 - Middle Urals;Miass - Tura
-
-c_yamalia;1073;1073 - Berezov;Yamalia - Berezov
-c_yamalia;1072;1072 - Obdorsk;Yamalia - Obdorsk
-
-c_mansia;1080;1080 - North Urals;Mansia - Pelym
-
-c_khantia;1780;1780 - Komi;Khantia - Komi
+c_yamalia;1080;1080 - North Urals;Yamalia - Pelym
 
 c_kipchak;476;476 - Kypshak;Kipchak - Kypshak
 c_kipchak;2359;2359 - Baganaly;Kipchak - Baganaly
-c_turgay;2359;2359 - Baganaly;Turgay - Baganaly
-c_irgiz;2359;2359 - Baganaly;Irgiz - Baganaly
 
-c_betpaqdala;477;477 - Nadym;Betpaqdala - Nadym
-c_sarysu;477;477 - Nadym;Sarysu - Nadym
-
-c_sarysu;2361;2361 - Dzhaman-Kuduk;Sarysu - Dzhaman-Kuduk
+c_kazakh;477;477 - Nadym;Kazakh - Nadym
 c_kazakh;2361;2361 - Dzhaman-Kuduk;Kazakh - Dzhaman-Kuduk
 
-c_or;2353;2353 - Tortkara;Or - Tortkara
-c_boqtybay;2353;2353 - Tortkara;Boqtybay - Tortkara
+c_turgay;2353;2353 - Tortkara;Turgay - Tortkara
 
-c_kimak;478;478 - Argyn;Kimak - Argyn
+c_kimak;2354;2354 - Shegendyk;Kimak - Shegendyk
+c_kimak;479;479 - Kerey;Kimak - Kerey
 
-c_om;2434;2434 - Barnaul;Om - Barnaul
-c_buqtirma;2434;2434 - Barnaul;Buqtirma - Barnaul
-
-c_seletyteniz;479;479 - Kerey;Seletyteniz - Kerey
-c_seletyteniz;2354;2354 - Shegendyk;Seletyteniz - Shegendyk
+c_tura;478;478 - Argyn;Tura - Argyn
+c_tura;2434;2434 - Barnaul;Tura - Barnaul
 
 c_balkhash;2360;2360 - Tobykty;Balkhash - Tobykty
-c_qarazhyrya;2360;2360 - Tobykty;Qarazhyrya - Tobykty
-
-c_kirghiz;2355;2355 - Narym;Kirghiz - Narym
-c_zaysan;2355;2355 - Narym;Zaysan - Narym
-
-c_katun;480;480 - Pegaya Orda;Katun - Pegaya Orda
+c_balkhash;2355;2355 - Narym;Balkhash - Narym
 
 c_aqtobe;472;472 - Zhetyru;Aqtobe - Zhetyru
+c_aqtobe;2366;2366 - Utva;Aqtobe - Utva
 
-c_utva;470;470 - Bayuly;Utva - Bayuly, these two should ideally be flipped, but province setup works bet like this...
-c_inder;2366;2366 - Utva;Inder - Utva, these two should ideally be flipped, but province setup works bet like this...
+c_inder;470;470 - Bayuly;Inder - Bayuly
 
-c_irtek;2420;2420 - Agyidel;Irtek - Agyidel
-c_sakmara;2420;2420 - Agyidel;Sakmara - Agyidel
-
+c_yaik;2420;2420 - Agyidel;Yaik - Agyidel
 c_yaik;1966;1966 - Chelyaba;Yaik - Chelyaba
 
 c_bashkirs;475;475 - Bashkortostan;Bashkiria - Bashkortostan
-c_belaya;475;475 - Bashkortostan;Belaya - Bashkortostan
 c_bashkirs;2444;2444 - Bashgird;Bashkiria - Bashgird
 
 c_perm;305;305 - Perm;Perm - Perm
-c_thisageta;305;305 - Perm;Thisageta - Perm
-c_tynea;305;305 - Perm;Tynea - Perm
-
-c_kudymkar;1962;1962 - Kudymkar;Kudymkar - Kudymkar
-c_kudymkar;4266;4266 - Izhkar;Kudymkar - Izhkar
-
-c_udmurts;1972;1972 - Udmurtia;Udmurts - Udmurtia
-c_alabuga;1972;1972 - Udmurtia;Alabuga - Udmurtia
+c_perm;1962;1962 - Kudymkar;Perm - Kudymkar
+c_perm;1972;1972 - Udmurtia;Perm - Udmurtia
+c_perm;4266;4266 - Izhkar;Perm - Izhkar
 
 c_ural;1077;1077 - Solikamsk;Ural - Solikamsk
+c_ural;1963;1963 - Cherdyn;Ural - Cherdyn
 
-c_vishera;1963;1963 - Cherdyn;Vishera - Cherdyn
-
-c_kolva;1964;1964 - Ust-Sysolsk;Kolva - Ust-Sysolsk
 c_komi;1964;1964 - Ust-Sysolsk;Komi - Ust-Sysolsk
-
 
 d_bulgar;4267;4267 - Bolgar;Duchy Bulgar - Bolgar
 c_qazan;1082;1082 - Kazan;Kazan - Kazan
-c_kremenchuk;1082;1082 - Kazan;Kremenchuk - Kazan
 c_bulgar;4267;4267 - Bolgar;Bulgar - Bolgar
 
 c_grassland_cheremisa;2422;2422 - Veda-Suvar;Ashli - Veda-Suvar
 
+d_bulgar;2421;2421 - Juketau;Duchy Bulgar - Juketau
 c_bilyar;2421;2421 - Juketau;Bilyar - Juketau
+c_bulgar;2421;2421 - Juketau;Bulgar - Juketau
 
-c_naberezhnye;4265;4265 - Ar Chally;Naberezhnye - Ar-Chally
+c_bilyar;4265;4265 - Ar Chally;Bilyar - Ar-Chally
 
 c_syrt;1081;1081 - Simbirsk;Syrt - Simbirsk
-c_syrt;2419;2419 - Kanadey;Syrt - Kanadey
 
 c_ashli;4264;4264 - Tetyushi;Ashli - Tetyushi
 
 c_pecheneg;473;473 - Samara;Pecheneg - Samara
 c_pecheneg;1965;1965 - Buzuluk;Pecheneg - Buzuluk
-c_pecheneg;474;474 - Yaik;Pecheneg - Yaik
 
 c_saray;466;466 - Sarai;Saray - Sarai
-c_saqsin;466;466 - Sarai;Saqsin - Sarai
 
-c_uvek;2418;2418 - Ukek;Uvek - Ukek
 c_lower_volga;2418;2418 - Ukek;Lower Volga - Ukek
+c_lower_volga;2419;2419 - Kanadey;Lower Volga - Kanadey
 
 # Southeastern Europe
 
@@ -2119,7 +1950,7 @@ c_pecs;4126;4126 - Bacs;Pecs - Bacs
 c_bacs;1954;1954 - Torontal;Bacs - Torontal
 c_csanad;1954;1954 - Torontal;Csanad - Torontal
 
-c_syrmia;4173;4173 - Syrmia;Syrmia - Syrmia
+c_bacs;4173;4173 - Syrmia;Bacs - Syrmia
 
 c_temes;156;156 - Temes;Temes - Temes
 
@@ -2158,28 +1989,17 @@ c_heves;157;157 - Bihar;Heves - Bihar
 c_feher;1951;1951 - Hunyad;Feher - Hunyad
 c_feher;4128;4128 - Kiralyfold;Feher - Kiralyfold
 
-c_severin;4532;4532 - Severin;Severin - Severin
+c_severin;160;160 - Oltenia;Severin - Oltenia
 
-c_targu_jiu;160;160 - Oltenia;Targu Jiu - Oltenia
-c_craiova;160;160 - Oltenia;Craiova - Oltenia
-
-c_turnu;4531;4531 - Giurgiu;Turnu - Giurgiu
-
-c_calarasi;2998;2998 - Buzau;Calarasi - Buzau
+c_turnu;2998;2998 - Buzau;Turnu - Buzau
 
 c_turnu;161;161 - Wallachia;Turnu - Wallachia
 c_tirgoviste;161;161 - Wallachia;Tirgoviste - Wallachia
-c_campulung;161;161 - Wallachia;Campulung - Wallachia
 
 c_galaz;1756;1756 - Budjak;Galaz - Bessarabia
-c_chilia;1756;1756 - Budjak;Chilia - Bessarabia
 
-c_birlad;4530;4530 - Birlad;Birlad - Birlad
-c_bacau;4530;4530 - Birlad;Bacau - Birlad
-
+c_birlad;268;268 - Bessarabia;Birlad - Moldavia
 c_torki;268;268 - Bessarabia;Torki - Moldavia
-
-c_iasi;4529;4529 - Iasi;Iasi - Iasi
 
 # Eastern Europe
 
@@ -2189,11 +2009,9 @@ c_slupsk;48;48 - Kolberg;Slupsk - Kolberg
 c_slupsk;2995;2995 - Stolp;Slupsk - Stolp
 
 c_danzig;2997;2997 - Tuchel;Danzig - Tuchel
-c_bytow;2997;2997 - Tuchel;Bytow - Tuchel
 
 c_danzig;43;43 - Danzig;Danzig - Danzig
-
-c_gnieznienskie;4523;4523 - Inowroclaw;Gnieznienskie - Inowroclaw
+c_gnieznienskie;43;43 - Danzig;Gnieznienskie - Danzig
 
 c_marienburg;1841;1841 - Marienburg;Marienburg - Marienburg
 c_marienburg;42;42 - Warmia;Marienburg - Warmia
@@ -2202,58 +2020,43 @@ c_marienburg;2958;2958 - Osterode;Marienburg - Osterode
 c_sambia;41;41 - Ostpreussen;Sambia - Ostpreussen
 c_scalovia;41;41 - Ostpreussen;Scalovia - Ostpreussen
 
+c_yatvyagi;767;767 - Wystuc;Yatvyagi - Wystuc
+
 c_memel;40;40 - Memel;Memel - Memel
 
 c_kurs;39;39 - Kurland;Kurs - Kurland
-c_vanema;39;39 - Kurland;Vanema - Kurland
-c_tukums;39;39 - Kurland;Tukums - Kurland
 
-c_riga;38;38 - Riga;Riga - Riga
-
-c_lettigalians;37;37 - Livland;Lettigalians - Livland
-c_jarva;37;37 - Livland;Jarva - Livland
+c_zemigalians;38;38 - Riga;Zemigalians - Riga
 
 c_zemigalians;1935;1935 - Semigallia;Zemigalians - Semigallia
-c_selija;1935;1935 - Semigallia;Selija - Semigallia
 
 c_osel;35;35 - Osel;Osel - Ösel
+
+c_livs;37;37 - Livland;Livs - Livland
 
 c_dorpat;1834;1834 - Dorpat;Dorpat - Dorpat
 
 c_west_dvina;273;273 - Latgalia;West Dvina - Latgalia
+c_west_dvina;4241;4241 - Wenden;West Dvina - Wenden
 
-c_jersika;4241;4241 - Wenden;Jersika - Wenden
-c_talava;4241;4241 - Wenden;Talava - Wenden
-
-
+c_zhmud;1936;1936 - Kovno;Zhmud - Kovno
 c_zhmud;271;271 - Samogitia;Zhmud - Samogitia
 
 c_poznanskie;2963;2963 - Notec;Poznanskie - Notec
 c_poznanskie;254;254 - Poznan;Poznanskie - Poznan
-
-c_neumark;49;49 - Neumark;Neumark - Neumark
+c_poznanskie;49;49 - Neumark;Poznanskie - Neumark
 
 c_kaliskie;255;255 - Kalisz;Kaliskie - Kalisz
-c_kaliskie;4526;4526 - Gniezno;Kaliskie - Gniezno
 
 c_chelminskie;1859;1859 - Torun;Chelminskie - Chelmno
-
-c_dobrzynska;4524;4524 - Dobryzn;Bobrzynska - Dobryzn
+c_kujawy;1859;1859 - Torun;Kujawy - Chelmno
 
 c_plock;256;256 - Plock;Plock - Plock
-
-c_lomzynska;1938;1938 - Wizna;Lomzynska - Wizna
-
-c_kujawy;1939;1939 - Leczyca;Kujawy - Leczyca
-c_kujawy;4528;4528 - Kuyavia;Kujawy - Kuyavia
-
-c_sieradzko-leczyckie;4525;4525 - Rawa;Sieradzko-Leczyckie - Rawa
-c_sieradzko-leczyckie;257;257 - Warszawa;Sieradzko-Leczyckie - Warsawa
+c_plock;1938;1938 - Wizna;Plock - Wizna
 c_czersk;257;257 - Warszawa;Czersk - Warsawa
 
-c_sieradzka;258;258 - Lodz;Sieradzka - Sieradz
-
-c_wielunska;4533;4533 - Wielun;Wielunska - Wielun
+c_sieradzko-leczyckie;1939;1939 - Leczyca;Sieradzko-Leczyckie - Leczyca
+c_sieradzko-leczyckie;258;258 - Lodz;Sieradzko-Leczyckie - Sieradz
 
 c_opole;264;264 - Breslau;Opole - Breslau
 
@@ -2269,19 +2072,12 @@ c_galich;2961;2961 - Lwow;Galich - Lwow
 
 c_peremyshl;2424;2424 - Peremyshl;Peremyshl - Peremyshl
 
-c_zvenyhorod;4541;4541 - Drohobycz;Zvenyhorod - Drohobycz
-
 c_terebovl;281;281 - Kamienec;Terebovl - Podolia
-c_ushytsia;281;281 - Kamienec;Ushytsia - Kamienec
 
 c_sandomierskie;259;259 - Sandomierz;Sandomierskie - Sandomierz
-c_sandomierskie;4527;4527 - Checiny;Sandomierskie - Checiny
-
-c_lubelska;260;260 - Lublin;Lubelska - Lublin
-c_stezycka;260;260 - Lublin;Stezycka - Lublin
+c_sandomierskie;260;260 - Lublin;Sandomierz - Lublin
 
 c_belgorod;282;282 - Yedisan;Belgorod - Yedisan
-c_odessa;282;282 - Yedisan;Odessa - Yedisan
 c_olvia;282;282 - Yedisan;Olvia - Yedisan
 
 c_peresechen;2405;2405 - Bendery;Peresechen - Bender
@@ -2289,28 +2085,17 @@ c_peresechen;2405;2405 - Bendery;Peresechen - Bender
 c_beresty;277;277 - Brest;Beresty - Brest
 
 c_pinsk;278;278 - Pinsk;Pinsk - Pinsk
-
-c_slutsk;4545;4545 - Sluck;Slutsk - Sluck
-
-c_novogrodek;4537;4537 - Nowogrodek;Novogrodek - Nowogrodek
-c_volkovysk;4537;4537 - Nowogrodek;Volkovysk - Nowogrodek
+c_pinsk;279;279 - Volhynia;Pinsk - Volhynia
 
 c_turov;1941;1941 - Turov;Turov - Turov
-c_korosten;1941;1941 - Turov;Korosten - Turov
-
-c_medjybij;1942;1942 - Zhytomyr;Medjybij - Zhytomyr
-
-c_vozviahel;4247;4247 - Owrucz;Vozviahel - Owrucz
-
-c_zaslav;2962;2962 - Rowne;Saslav - Rowne
-c_zaslav;4539;4539 - Kremenets;Saslav - Kremenets
+c_turov;1942;1942 - Zhytomyr;Turov - Zhytomyr
+c_turov;4247;4247 - Owrucz;Turov - Owrucz
+c_turov;2962;2962 - Rowne;Turov - Rowne
 
 c_minsk;276;276 - Minsk;Minsk - Minsk
 c_minsk;4242;4242 - Ula;Minsk - Ula
 c_lyubech;276;276 - Minsk;Lyubech - Minsk
 c_lyubech;4115;4115 - Mazyr;Lyubech - Mazyr
-
-c_drutsk;4544;4544 - Bobrujsk;Drutsk - Bobrujsk
 
 c_kiev;280;280 - Kiev;Kiev - Kiev
 c_kiev;280;280 - Kiev;Kiev - Kiev
@@ -2319,47 +2104,22 @@ c_jacwiez;1937;1937 - Grodno;Jacwiez - Grodno
 
 c_sudovia;270;270 - Troki;Sudovia - Trakai
 
-c_yatvyagi;1936;1936 - Kovno;Yatvyagi - Kovno
-
-c_deltuva;4534;4534 - Upita;Deltuva - Upita
-
-
-c_galindia;767;767 - Wystuc;Galindia - Wystuc
-
 c_podlasie;269;269 - Podlasia;Podlasie - Podlasie
 
 c_aukshayts;272;272 - Lithuania;Aukshayts - Vilna
-c_aukshayts;4536;4536 - Lida;Aukshayts - Lida
 
-c_vladimir_volynsky;279;279 - Volhynia;Vladimir Volynsky - Volhynia
-c_lutsk;279;279 - Volhynia;Lutsk - Volhynia
-
-
-c_belz;1940;1940 - Belz;Belz - Belz
-
-c_cherven;4538;4538 - Chelm;Cherven - Chelm
+c_vladimir_volynsky;1940;1940 - Belz;Vladimir Volynsky - Belz
 
 c_korsun;1944;1944 - Cherkasy;Korsun - Cherkasy
+c_korsun;1943;1943 - Bratslav;Korsun - Bratslav
 
-c_bratslav;1943;1943 - Bratslav;Bratslav - Bratslav
-c_vinnytsia;1943;1943 - Bratslav;Vinnytsia - Bratslav
-c_vinnytsia;4540;4540 - Winnica;Vinnytsia - Winnica
-
-c_voin;4542;4542 - Lubnie;Voin - Lubnie
-c_priluk;4542;4542 - Lubnie;Priluk - Lubnie
-
-
-c_hradyzk;290;290 - Poltava;Hradyzk - Poltava
-
+c_pereyaslavl;290;290 - Poltava;Pereyaslavl - Poltava
 c_pereyaslavl;2407;2407 - Pereyaslavl;Pereyaslavl - Pereyaslavl
 
 c_polotsk;275;275 - Polotsk;Polotsk - Polotsk
 c_lepiel;275;275 - Polotsk;Lepiel - Polotsk
 
 c_lepiel;770;770 - Braslaw;Lepiel - Braslaw
-c_selija;770;770 - Braslaw;Selija - Braslaw
-
-c_nalsia;4535;4535 - Wilkimierz;Nalsia - Wilkimierz
 
 
 c_smolensk;293;293 - Smolensk;Smolensk - Smolensk
@@ -2369,98 +2129,52 @@ c_vitebsk;293;293 - Smolensk;Vitebsk - Smolensk
 c_vitebsk;771;771 - Vitebsk;Vitebsk - Vitebsk
 
 c_mstislavl;4246;4246 - Mstislav;Mstislavl - Mstislav
-c_roslavl;4246;4246 - Mstislav;Roslavl - Mstislav
-
 c_orsha;292;292 - Mogilyov;Orsha - Mogilev
 
 c_chernigov;289;289 - Chernigov;Chernigov - Chernigov
 
-c_starodub;4244;4244 - Starodub;Starodub - Starodub
-
-
-c_kromy;1945;1945 - Novgorod-Seversky;Kromy - Novgorod-Seversky
 c_novgorod_seversky;1945;1945 - Novgorod-Seversky;Novgorod Seversky - Novgorod-Seversky
 
 c_pskov;274;274 - Pskov;Pskov - Pskov
-c_izborsk;1960;1960 - Ostrov;Isborzk - Ostrov
 c_pskov;1960;1960 - Ostrov;Pskov - Ostrov
 
 c_bezhetsky_verh;1961;1961 - Ladoga;Bezhetsky Verh - Ladoga
-c_chlisselbourg;1961;1961 - Ladoga;Chlisselbourg - Ladoga
 
 c_novgorod;310;310 - Novgorod;Novgorod - Novgorod
-c_borovichi;310;310 - Novgorod;Borovichi - Novgorod
+c_novgorod;4260;4260 - Vyshny Volochyok;Novgorod - Vyshny Volochyok
 
 c_torzhok;1959;1959 - Torzhok;Torzhok - Torzhok
-c_torzhok;4260;4260 - Vyshny Volochyok;Torzhok - Vyshny Volochyok
 
-c_kholm;311;311 - Kholm;Kholm - Kholm
-c_rusa;311;311 - Kholm;Rusa - Kholm
-
+c_velikiye_luki;311;311 - Kholm;Velikiye Luki - Kholm
 c_velikiye_luki;4148;4148 - Luki;Velikiye Luki - Luki
 
-c_north_dvina;4258;4258 - Onega;North Dvina- Onega
-c_trans-portage;4258;4258 - Onega;Trans-Portage - Onega
-c_onega_peninsula;4258;4258 - Onega;Trans-Portage - Onega
-
-c_kargopol;1958;1958 - Kargopol;Kargopol - Kargopol
-c_chud;1958;1958 - Kargopol;Chud - Kargopol
 c_romny;1958;1958 - Kargopol;Romny - Kargopol
 
-c_east_karelia;313;313 - Archangelsk;East Karelia - Arkhangelsk
+c_north_dvina;1955;1955 - Kholmogory;North Dvina - Kholmogory
+c_trans-portage;1955;1955 - Kholmogory;Trans-Portage - Kholmogory
+c_trans-portage;4258;4258 - Onega;Trans-Portage - Onega
 
-c_bjarmia;1955;1955 - Kholmogory;Bjarmia - Kholmogory
-c_pinega;1955;1955 - Kholmogory;Pinega - Kholmogory
+c_samoyeds;313;313 - Archangelsk;Samoyeds - Arkhangelsk
+c_bjarmia;313;313 - Archangelsk;Bjarmie - Arkhangelsk
+c_bjarmia;4257;4257 - Mezen;Bjarmie - Mezen
 
-c_mezen;4257;4257 - Mezen;Mezen - Mezen
-c_mezen;4257;4257 - Mezen;Mezen - Mezen
-c_mezen;4257;4257 - Mezen;Mezen - Mezen
-c_mezen;4257;4257 - Mezen;Mezen - Mezen
-c_mezen;4257;4257 - Mezen;Mezen - Mezen
+c_beloozero;2749;2749 - Tikhvin;Beloozero - Tikhvin
+c_beloozero;4117;4117 - Bezhetsk;Beloozero - Bezhetsk
+c_beloozero;4261;4261 - Ustyuzhna;Beloozero - Ustyuzhna
 
-c_samoyeds;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
-c_kanin;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
-c_kolguyev;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
-c_soyma;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
-c_zavarot;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
-c_koshma;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
-c_tobysh;4257;4257 - Mezen;Polar Circle Placeholder mapping, there's nothing better...
+c_vologda;312;312 - Vologda;Vologda - Beloozero
 
-c_bezichy;4117;4117 - Bezhetsk;Bezichy - Bezhetsk
-
-c_uglich;4261;4261 - Ustyuzhna;Uglich - Ustyuzhna
-c_uglich;4252;4252 - Kolomna;Uglich - Kolomna
-
-
-c_beloozero;312;312 - Beloozero;Beloozero - Beloozero
-c_chud;312;312 - Beloozero;Chud - Beloozero
-
-c_tikhvine;2749;2749 - Tikhvin;Tikhvine - Tikhvin
-
-c_vologda;314;314 - Ustyug;Vologda - Ustyug
-
-
-c_velsk;4259;4259 - Velsk;Velsk - Velsk
+c_chud;314;314 - Ustyug;Chud - Vologda
+c_chud;4259;4259 - Velsk;Chud - Velsk
+c_chud;4262;4262 - Totma;Chud - Totma
 
 c_veliky_ustug;1755;1755 - Ustyug;Veliky Ustug - Ustyug
+c_syrj;1755;1755 - Ustyug;Syrj - Ustyug
 
-c_yolva;4129;4129 - Ust-Vym;Rough approximation
-c_sedyu;4129;4129 - Ust-Vym;Rough approximation
-c_izhma;4129;4129 - Ust-Vym;Rough approximation
-c_vel;4129;4129 - Ust-Vym;Rough approximation
-c_kozhva;4129;4129 - Ust-Vym;Rough approximation
-c_lyzha;4129;4129 - Ust-Vym;Rough approximation
+c_zyriane;4129;4129 - Ust-Vym;Zyriane - Ust-Vym
 
-#c_zyriane;4129;4129 - Ust-Vym;Zyriane - Ust-Vym
-
+c_ugra;4122;4122 - Shenkursk;Ugra - Shenkursk
 c_ugra;4256;4256 - Solvychegodsk;Ugra - Solvychegodsk
-c_tsilma;4257;4256;4256 - Solvychegodsk;c_tsilma - Solvychegodsk
-
-c_syrj;4122;4122 - Shenkursk;Syrj - Shenkursk
-c_bolshaya;4122;4122 - Shenkursk;Rough approximation
-c_yezhuga;4122;4122 - Shenkursk;Rough approximation
-c_vashka;4122;4122 - Shenkursk;Rough approximation
-c_syktyvlar;4122;4122 - Shenkursk;Rough approximation
 
 c_kostroma;1753;1753 - Kostroma;Kostroma - Kostroma
 
@@ -2473,35 +2187,31 @@ c_yaroslavl;4250;4250 - Mologa;Yaroslavl - Mologa
 c_rostov;4147;4147 - Rostov;Rostov - Rostov
 
 c_tver;294;294 - Tver;Tver - Tver
-c_naro-fominsk;294;294 - Tver;Naro Fominsk - Tver
-
-c_zoubtsov;4249;4249 - Zubtsov;Zoubtsov - Zubtsov
-
-c_kashin;4248;4248 - Kashin;Kashin - Kashin
+c_tver;4249;4249 - Zubtsov;Tver - Zubtsov
+c_tver;4248;4248 - Kashin;Tver - Kashin
+c_uglich;294;294 - Tver;Uglich - Tver
 
 c_suzdal;1956;1956 - Suzdal;Suzdal - Suzdal
-
-c_murom;1754;1754 - Orel;Murom - Murom
-
+c_suzdal;1754;1754 - Orel;Suzdal - Murom
 
 c_vladimir;307;307 - Vladimir;Vladimir - Vladimir
-c_orekhovo-zouievo;307;307 - Vladimir;Orekhovo-Zouievo - Vladimir
 
-c_yuryev;4253;4253 - Yuriev;Yuryev - Yuriev
 c_pereyaslavl_zalessky;4253;4253 - Yuriev;Pereyaslavl - Yuriev
 
 d_moskva;295;295 - Moskva;Duchy Moskva - Moskva
 c_moskva;295;295 - Moskva;County Moskva - Moskva
+c_moskva;4252;4252 - Kolomna;County Moskva - Kolomna
 
 c_mozhaysk;4251;4251 - Mozhaisk;Mozhaysk - Mozhaisk
-c_mozhaysk;296;296 - Mozhaisk;Mozhaysk - Kaluga
 
+c_vyazma;296;296 - Mozhaisk;Vyazma - Kaluga
 c_vyazma;4245;4245 - Vyazma;Vyazma - Vyazma
 
 c_ryazan;301;301 - Ryazan;Ryazan - Ryazan
 
+c_murom;1778;1778 - Kasimov;Murom - Kasimov
+
 c_kolomna;300;300 - Tula;Kolomna - Tula
-c_serpukhov;300;300 - Tula;Serpukhov - Tula
 
 c_pronsk;4255;4255 - Pronsk;Pronsk - Pronsk
 
@@ -2510,18 +2220,13 @@ c_nizhny_novgorod;306;306 - Nijni-Novgorod;Nizhny Novgorod - Nizhny Novgorod
 c_gorodez;4254;4254 - Starodub;Gorodez - Starodub
 
 c_merya;1083;1083 - Zavolochye;Merya - Vetluga
-
-c_hlynov;4262;4262 - Totma;Hlynov - Totma
+c_hlynov;1083;1083 - Zavolochye;Hlynov - Vetluga
 
 c_votyaki;1079;1079 - Viatka;Votyaki - Viatka
-c_keltma;1079;1079 - Viatka;Keltma - Viatka
-c_vetluga;1079;1079 - Viatka;Vetluga - Viatka
-c_khlynov;1079;1079 - Viatka;Vetluga - Viatka
 
 c_itil;464;464 - Astrakhan;Itil - Astrakhan
 
 c_kuma;2208;2208 - Terek;Kuma - Terek
-c_terek;2208;2208 - Terek;Terek - Terek
 
 c_kuma;2417;2417 - Kuma;Kuma - Kuma
 c_yegorlyk;2417;2417 - Kuma;Yegorlyk - Kuma
@@ -2531,14 +2236,12 @@ c_derbent;425;425 - Dagestan;County Derbent - Dagestan
 
 c_shemakha;4299;4299 - Shamakhi;Shemakha - Shamakhi
 
-c_durdzukia;2198;2198 - Khundzia;Durdzukia - Khundzia
+c_semender;2198;2198 - Khundzia;Semender - Khundzia
 
 c_semender;2199;2199 - Tarki;Semender - Tarki
+c_semender;4306;4306 - Lakia;Semender - Lakia
 
-c_balanjar;4306;4306 - Lakia;Balanjar - Lakia
-
-c_egrisi;462;462 - Mingrelia;Egrisi - Mingrelia
-
+c_imeretia;462;462 - Mingrelia;Imeretia - Mingrelia
 c_imeretia;422;422 - Imereti;Imeretia - Imereti
 
 c_abkhazia;1856;1856 - Abkhazia;Abkhazia - Abkhazia
@@ -2570,8 +2273,7 @@ c_oleshye;283;283 - Zaporozhia;Oleshye - Zaporozhia
 
 c_alania;2197;2197 - Kabardia;Alania - Kabardia
 c_alania;2201;2201 - Alania;Alania - Alania
-
-c_kasogs;463;463 - Circassia;Kasogs - Circassia
+c_alania;463;463 - Circassia;Alania - Circassia
 # c_kasogia;463;463 - Circassia;Kasogia - Circassia
 
 c_manych;468;468 - Khazaria;Manych - Manych
@@ -2584,28 +2286,20 @@ c_sarkel;288;288 - Cherkassk;Sarkel - Lower Don
 
 c_tana;2413;2413 - Tyn;Tana - Tyn
 
+c_uzens;474;474 - Yaik;Uzens - Yaik
 c_uzens;2365;2365 - Orda;Uzens - Orda
-c_yeruslan;2365;2365 - Orda;Yeruslan - Orda
 
 c_guryev;469;469 - Ryn;Guryev - Ryn
+c_guryev;2367;2367 - Lower Yik;Guryev - Lower Yik
 
-c_ryn;2367;2367 - Lower Yik;Ryn - Lower Yik
-
+c_roslavl;4244;4244 - Starodub;Roslavl - Starodub
+c_bryansk;4116;4116 - Odayev;Bryansk - Odayev
 c_bryansk;297;297 - Bryansk;Bryansk - Bryansk
 
-c_karachev;4116;4116 - Odayev;Karachev - Odayev
-c_kozelsk;4116;4116 - Odayev;Kozelsk - Odayev
-c_vorotynsk;4116;4116 - Odayev;Vorotynsk - Odayev
-c_novosil;4116;4116 - Odayev;Novosil - Odayev
-
-c_yelets;2408;2408 - Lipesk;Yelets - Yelets
-
+c_sugrov;2408;2408 - Lipesk;Sugrov - Lipesk
 c_sugrov;299;299 - Voronezh;Sugrov - Voronezh
 
-c_kursk;298;298 - Kursk;Kursk - Kursk
-
-c_rylsk;4543;4543 - Rylsk;Rylsk - Rylsk
-
+c_sharukan;298;298 - Kursk;Sharukan - Kursk
 c_sharukan;291;291 - Kharkov;Sharukan - Kharkov
 
 c_desht-i-kipchak;2409;2409 - Bahmut;Desht-i-Kipchak - Bahmut
@@ -2618,13 +2312,10 @@ c_burtasy;303;303 - Saratow;Lower Volga - Saratov
 c_burtasy;2415;2415 - Etkara;Lower Volga - Etkara
 
 c_mountain_cheremisa;304;304 - Pensa;Mountain Cheremisa - Penza
-c_mountain_cheremisa;1778;1778 - Kasimov;Mountain Cheremisa - Kasimov
-
 
 c_chuvash;2423;2423 - Alatyr;Chuvash - Alatyr
 
-c_rzheva;1752;1752 - Rzhev;Rzheva - Rzhev
-
+c_toropets;1752;1752 - Rzhev;Toropets - Rzhev
 c_toropets;4243;4243 - Toropets;Toropets - Toropets
 
 c_chortitza;2411;2411 - Mansur;Chortitza - Mansur
@@ -2637,11 +2328,7 @@ c_ranikot;504;504 - Lower Sind;Ranikot - Lower Sind
 
 d_sauvira;2088;2088 - Umarkot;Duchy Sauvira - Umarkot
 c_sonda;2088;2088 - Umarkot;Sonda - Umarkot
-
-c_mansura;4503;4503 - Mansura;Mansura - Mansura
-
-c_mansura;4504;4504 - Nasirpur;Mansura - Nasirpur
-c_sonda;4504;4504 - Nasirpur;Sonda - Nasirpur
+c_mansura;2088;2088 - Umarkot;Mansura - Umarkot
 
 c_bhakkar;2072;2072 - Bhakkar;Bhakkar - Bhakkar
 c_rajanpur;2072;2072 - Bhakkar;Rajanpur - Bhakkar
@@ -2649,8 +2336,7 @@ c_vijnot;505;505 - Upper Sind;Vijnot - Upper Sind
 
 d_bhakkar;505;505 - Upper Sind;Duchy Bhakkar - Upper Sind
 c_aror;505;505 - Upper Sind;Aror - Upper Sind
-
-c_siwistan;4505;4505 - Khairpur;Siwistan - Khairpur
+c_siwistan;505;505 - Upper Sind;Siwistan - Upper Sind
 
 c_makran;575;575 - Gwadar;Makran - Gwadar
 
@@ -2666,38 +2352,30 @@ c_quzdar;576;576 - Kalat;Quzdar - Kalat
 c_armail;2231;2231 - Bela;Armail - Bela
 
 c_kafirkot;2079;2079 - Derajat;Kafirkot - Derajat
-c_wana;2079;2079 - Derajat;Wana - Derajat
 
 c_multan;506;506 - Multan;Multan - Multan
 
 d_multan;2086;2086 - Cholistan;Duchy Multan - Cholistan
-c_uch;2086;2086 - Cholistan;Uch - Cholistan
+c_uch;2086;2086 - Multan;Uch - Cholistan
+c_karur;2086;2086 - Multan;Karur - Cholistan
 
-c_karur;4508;4508 - Bahawalpur;Karur - Bahawalpur
-
-c_karor;4509;4509 - Karor;Karor - Karor
-# Adding these to avoid the wasteland problem
-c_kafirkot;4509;4509 - Karor;Kafirkot - Kafirkot
-c_bannu;4509;4509 - Karor;Bannu - Karor
-
+c_karor;507;507 - Punjab;Karor - Punjab
 d_lahore;507;507 - Punjab;Duchy Lahore - Punjab
 c_lahur;507;507 - Punjab;Lahur - Punjab
-
-c_dipalpur;4513;4513 - Dipalpur;Dipalpur - Dipalpur
+c_dipalpur;507;507 - Punjab;Dipalpur - Punjab
+c_bhera;507;507 - Punjab;Bhera - Punjab
+c_shorkot;507;507 - Punjab;Shorkot - Punjab
+c_gurjaratra;507;507 - Punjab;Gurjaratra - Punjab
+c_sakala;507;507;507 - Punjab;Sakala - Punjab
 
 d_haritanaka;510;510 - Sirhind;Duchy Haritanaka - Sirhind
 c_trigarta;510;510 - Sirhind;Trigarta - Sirhind
+c_tribandapura;510;510 - Sirhind;Tribandapura - Sirhind
 c_hisar;510;510 - Sirhind;Hisar - Sirhind
 c_sarasvati;510;510 - Sirhind;Sarasvati - Sirhind
 c_sthanisvara;510;510 - Sirhind;Sthanisvara - Sirhind
 
-c_hisar;4500;4500 - Bharatpur;Hisar - Bharatpur
-
-
-c_tribandapura;4411;4411 - Samana;Tribandapura - Samana
-
 c_trigarta;2075;2075 - Doaba;Trigarta - Doaba
-c_sakala;2075;2075 - Doaba;Sakala - Doaba
 
 c_sthanisvara;2062;2062 - Panipat;Sthanisvara - Panipat
 
@@ -2706,23 +2384,14 @@ d_haritanaka;520;520 - Mewat;Duchy Haritanaka - Mewat
 c_hisar;520;520 - Mewat;Hisar - Mewat
 c_vairata;520;520 - Mewat;Vairata - Mewat
 
-c_ranthambore;4465;4465 - Ranthambore;Ranthambore - Ranthambore
-c_vairata;4465;4465 - Ranthambore;Vairata - Ranthambore
-c_sripatha;4465;4465 - Ranthambore;Sripatha - Ranthambore
+c_wana;2078;2078 - Sind Sagar;Wana - Sind Sagar
 
-c_nandana;4511;4511 - Bhera;Nandana - Bhera
-c_bhera;4511;4511 - Bhera;Bhera - Bhera
-c_gurjaratra;4511;4511 - Bhera;Gurjaratra - Bhera
-
-c_gurjaratra;2076;2076 - Sialkot;Gurjaratra - Sialkot
-
-c_shorkot;4510;4510 - Shorkot;Shorkot - Shorkot
+c_nandana;2076;2076 - Sialkot;Nandana - Sialkot
 
 c_udabhanda;2077;2077 - Margalla;Udabhanda - Margalla
 
 c_purushapura;578;578 - Roh;Purushapura - Roh
-
-c_bannu;2078;2078 - Bannu;Bannu - Bannu
+c_bannu;578;578 - Roh;Bannu - Roh
 
 d_kuru;522;522 - Delhi;Duchy Kuru - Delhi
 c_delhi;522;522 - Delhi;Delhi - Delhi
@@ -2736,6 +2405,10 @@ c_kol;524;524 - Central Doab;Kol - Central Doab
 c_sripatha;524;524 - Central Doab;Sripatha - Central Doab
 
 c_lakhnau;523;523 - Oudh;Lakhnau - Oudh
+c_bharauli;523;523 - Oudh;Bharauli - Oudh
+d_saryupara;523;523 - Oudh;Duchy Saryapura - Oudh
+c_ayodhya;523;523 - Oudh;Ayodhya - Oudh
+c_naimisa;523;523 - Oudh;Naimisa - Oudh
 
 c_lakhnau;2094;2094 - Bahreich;Lakhnau - Bahreich
 c_bharauli;2094;2094 - Bahreich;Bharauli - Bahreich
@@ -2745,20 +2418,11 @@ c_naimisa;2094;2094 - Bahreich;Naimisa - Bahreich
 
 d_vodamayutja;2061;2061 - Katehar;Duchy Vodamayutja - Katehar
 c_katehar;2061;2061 - Katehar;Katehar - Katehar
+c_sambhal;2061;2061 - Katehar;Sambhal - Katehar
 c_vodamayutja;2061;2061 - Katehar;Vodamayutja - Katehar
 
-c_sambhal;4498;4498 - Sambhal;Sambhal - Sambhal
-
-c_vodamayutja;4499;4499 - Bareily;Vodamayutja - Bareily
-
-c_naimisa;4494;4494 - Khairabad;Naimisa - Khairabad
-c_katehar;4494;4494 - Khairabad;Katehar - Khairabad
-
-c_ayodhya;4495;4495 - Feyzabad;Ayodhya - Feyzabad
-c_sravasti;4495;4495 - Feyzabad;Sravasti - Feyzabad
-c_naimisa;4495;4495 - Feyzabad;Naimisa - Feyzabad
-
 d_gurjara_mandala;521;521 - Rajkot;Duchy Gurjara Mandala - Rajkot
+c_sarasvata_mandala;521;521 - Rajkot;Sarasvata Mandala - Rajkot
 c_mohadavasaka;521;521 - Rajkot;Mohadavasaka - Rajkot
 d_anartta;521;521 - Rajkot;Duchy Anartta - Rajkot
 c_dhamalpur;521;521 - Rajkot;Dhamalpur - Rajkot
@@ -2767,22 +2431,15 @@ c_vardhamana;521;521 - Rajkot;Vardhamana - Rajkot
 c_sarasvata_mandala;2053;2053 - Patan;Sarasvata Mandala - Patan
 d_gurjara_mandala;521;521 - Patan;Duchy Gurjara Mandala - Patan
 
-c_sarasvata_mandala;4456;4456 - Jhalavad;Sarasvata Mandala - Jhalavad
-
 c_dvaraka;515;515 - Kathiawar;Dvaraka - Kathiawar
 d_saurashtra;515;515 - Kathiawar;Duchy Saurashtra - Kathiawar
 c_somnath;515;515 - Kathiawar;Somnath - Kathiawar
-
-c_somnath;4455;4455 - Diu;Somnath - Diu
 
 d_anartta;2052;2052 - Navanagar;Anartta - Navanagar
 c_dvaraka;2052;2052 - Navanagar;Dvaraka - Navanagar
 c_dhamalpur;2052;2052 - Navanagar;Dhamalpur - Navanagar
 
-c_bhumilka;4454;4454 - Porbandar;Bhumilka - Porbandar
-
 c_kutch;503;503 - Kutch;Kutch - Kutch
-c_satyapura;503;503 - Kutch;Satyapura - Kutch
 
 d_lata;516;516 - Gujarat;Duchy Lata - Gujarat
 c_navasarika;516;516 - Gujarat;Navasarika - Gujarat
@@ -2794,33 +2451,20 @@ c_dadhipadra;2056;2056 - Rewakanthra;Dadhipadra - Rewakantha
 
 c_khetaka;2054;2054 - Ahmadabad;Khetaka - Ahmadabad
 
-c_khetaka;4457;4457 - Khambhat;Khetaka - Khambhat
-
 c_valabhi;2051;2051 - Bhavanagar;Valabhi - Bhavanagar
-c_somnath;2051;2051 - Bhavanagar;Somnath - Bhavanagar
 
 d_lata;517;517 - Surat;Duchy Lata - Surat
 c_navasarika;517;517 - Surat;Navasarika - Surat
+c_daman;517;517 - Surat;Daman - Surat
 c_thana;517;517 - Surat;Thana - Surat
 
-c_daman;4430;4430 - Daman;Daman - Daman
 
-c_navasarika;4512;4512 - Bharuch;Navasarika - Bharuch
-
-d_nasikya;4433;4433 - Pune;Duchy Nasikya - Nasik
-c_nasikya;4433;4433 - Pune;Nasikya - Nasik
-c_kondana;4433;4433 - Pune;Kondana - Nasik
-
-c_naldurg;4432;4432 - Junir;Naldurg - Junir
-c_kondana;4432;4432 - Junir;Kondana - Junir
-
+d_nasikya;2034;2034 - Pune;Duchy Nasikya - Pune
+c_nasikya;2034;2034 - Pune;Nasikya - Pune
 c_kondana;2034;2034 - Pune;Kondana - Pune
-c_kolhapur;2034;2034 - Pune;Kolhapur - Pune
 
 c_nandurbar;2036;2036 - Baglana;Nandurbar - Baglana
 c_nasikya;2036;2036 - Baglana;Nasikya - Baglana
-
-c_nagauda;2066;2066 - Nagaur;Nagauda - Nagaur
 
 c_mandavyapura;514;514 - Marwar;Mandavyapura - Marwar
 c_mandavyapura;2066;2066 - Nagaur;Mandavyapura - Nagaur
@@ -2830,14 +2474,11 @@ c_godwad;2067;2067 - Gorwar;Godwad - Gorwar
 
 d_jangladesh;512;512 - Jangladesh;Duchy Jangladesh - Jangladesh
 c_vikramapura;512;512 - Jangladesh;Vikramapura - Jangladesh
-
-c_reni;4507;4507 - Churu;Reni - Churu
+c_reni;512;512 - Jangladesh;Reni - Jangladesh
 
 #d_stravani;513;513 - Jaisalmer;Duchy Stravani - Jaisalmer
 c_ludrava;513;513 - Jaisalmer;Ludrava - Jaisalmer
 #c_vijnot;513;513 - Jaisalmer;Vijnot - Jaisalmer
-
-c_ludrava;4506;4506 - Barmer;Ludrava - Barmer
 
 d_medapata;518;518 - Mewar;Duchy Medapata - Chitrakut
 c_chitrakut;518;518 - Mewar;Chitrakut - Chitrakut
@@ -2845,28 +2486,20 @@ c_chitrakut;518;518 - Mewar;Chitrakut - Chitrakut
 d_medapata;2058;2058 - Mewar;Duchy Medapata - Mewar
 c_medapata;2058;2058 - Mewar;Mewar - Mewar
 
+c_medantaka;2064;2064 - Shekhawati;Medantaka - Shekhawati
 c_nagauda;2064;2064 - Shekhawati;Nagauda - Shekhawati
 
-c_medantaka;4502;4502 - Merta;Medantaka - Merta
-
+c_sarasvati;2065;2065 - Bhattiana;Sarasvati - Bhattiana
 c_hisar;2065;2065 - Bhattiana;Hisar - Bhattiana
 d_jangladesh;2065;2065 - Bhattiana;Duchy Jangladesh - Bhattiana
 
-c_sarasvati;4463;4463 - Bhatnair;Sarasvati - Bhatnair
-
-c_kota;4464;4464 - Bundi;Hadoti - Bundi
-
-c_kota;528;528 - Hadoti;Kota - Hadoti
+c_kota;528;528 - Hadoti;Hadoti - Kota
 
 d_ajmer;519;519 - Dhundar;Duchy Ajmer - Dhundar
 c_ajayameru;519;519 - Dhundar;Ajayameru - Dhundar
 c_ranthambore;519;519 - Dhundar;Ranthambore - Dhundar
 c_vairata;519;519 - Dhundar;Vairata - Dhundar
 c_vairata;519;519 - Dhundar;Vairata - Dhundar #Added weight
-
-c_ajayameru;4501;4501 - Bhilwara;Ajayameru - Bhilwara
-c_chitrakut;4501;4501 - Bhilwara;Chitrakut - Bhilwara
-
 
 c_gwalior;525;525 - Gird;Gwalior - Gird
 
@@ -2880,16 +2513,8 @@ c_sarangpur;526;526 - Mandu;Sarangpur - Mandu
 c_chanderi;526;526 - Mandu;Chanderi - Mandu
 c_candhoba;526;526 - Mandu;Candhoba - Mandu
 
-c_ujjayini;4461;4461 - Ujjain;Ujjayini - Ujjain
-
-c_dhara;2093;2093 - Mandsaur;Dhara - Mandsaur
-c_mandapika;2093;2093 - Mandsaur;Mandapika - Mandsaur
-
-c_mohadavasaka;4480;4480 - Mahikantha;Mohadavasaka - Mahikantha
-c_vadodara;4480;4480 - Mahikantha;Vadodara - Mahikantha
-
-c_dasapura;4462;4462 - Vagad;Dasapura - Vagad
-c_mohadavasaka;4462;4462 - Vagad;Mohadavasaka - Vagad
+c_dasapura;2093;2093 - Mandsaur;Dasapura - Mandsaur
+c_mohadavasaka;2093;2093 - Mandsaur;Mohadavasaka - Mandsaur
 
 c_ujjayini;2057;2057 - Bhilsa;Ujjayini - Bhilsa
 
@@ -2907,23 +2532,12 @@ c_asirgarh;527;527 - Khandesh;Asirgarh - Khandesh
 c_burhanpur;527;527 - Khandesh;Burhanpur - Khandesh
 c_thalner;527;527 - Khandesh;Thalner - Khandesh
 
-c_asirgarh;4460;4460 - Handia;Asirgarh - Handia
-
-c_thalner;4453;4453 - Thalner;Thalner - Thalner
-
-d_kanyakubja;2063;2063 - Etawah;Duchy Kanyakubja - Etawah
-c_kanyakubja;2063;2063 - Etawah;Kanyakubja - Etawah
-
-d_kanyakubja;4497;4497 - Kannaut;Duchy Kanyakubja - Kannaut
-c_kanyakubja;4497;4497 - Kannaut;Kanyakubja - Kannaut
-
-c_lakhnau;523;523 - Oudh;Lakhnau - Oudh
-d_kanyakubja;523;523 - Lucknow;Duchy Kanyakubja - Lucknow
-c_kanyakubja;523;523 - Lucknow;Kanyakubja - Lucknow
-c_bharauli;523;523 - Lucknow;Bharauli - Lucknow
-
+d_kanyakubja;556;556 - Lower Doab;Duchy Kanyakubja - Lower Doab
+c_kanyakubja;556;556 - Lower Doab;Kanyakubja - Lower Doab
+c_kalpi;556;556 - Lower Doab;Kalpi - Lower Doab
 c_prayaga;556;556 - Lower Doab;Prayag - Lower Doab
-c_asni;4496;4496 - Kora;Asni - Kora
+c_bharauli;556;556 - Lower Doab;Bharauli - Lower Doab
+c_asni;556;556 - Lower Doab;Asni - Lower Doab
 
 d_kanyakubja;2063;2063 - Etawah;Duchy Kanyakubja - Etawah
 c_kanyakubja;2063;2063 - Etawah;Kanyakubja - Etawah
@@ -2933,78 +2547,57 @@ c_mahoba;559;559 - Bundelkhand;Mahoba - Bundelkhand
 c_kalanjara;559;559 - Bundelkhand;Kalanjara - Bundelkhand
 c_chanderi;559;559 - Bundelkhand;Chanderi - Bundelkhan
 
-c_kalanjara;4467;4467 - Kalinjar;Kalanjara - Kalinjar
-
 c_gurgi;2097;2097 - Baghelkhand;Gurgi - Baghelkhand
 c_jharkand;2097;2097 - Baghelkhand;Jharkand - Baghelkhand
 
 c_kalpi;2059;2059 - Kalpi;Kalpi - Kalpi
 
+c_damoh;550;550 - Mahakoshal;Damoh - Mahakoshal
 d_dahala;550;550 - Mahakoshal;Duchy Dahala - Mahakoshal
 c_tripuri;550;550 - Mahakoshal;Tripuri - Mahakoshal
 c_chauragarh;550;550 - Mahakoshal;Chauragarh - Mahakoshal
+c_kherla;550;550 - Mahakoshal;Kherla - Mahakoshal
+c_ramagiri;550;550 - Mahakoshal;Ramagiri - Mahakoshal
 c_kiranapura;550;550 - Mahakoshal;Kiranapura - Mahakoshal
-
-c_kherla;4458;4458 - Narbada;Kherla - Narbada
-c_ramagiri;4458;4458 - Narbada;Ramagiri - Narbada
-
-c_damoh;4459;4459 - Saugor;Damoh - Saugor
-c_tripuri;4459;4459 - Saugor;Tripuri - Saugor
-c_vidisa;4459;4459 - Saugor;Vidisa - Saugor
-
-c_damoh;4466;4466 - Mahoba;Damoh - Mahoba
-c_kalanjara;4466;4466 - Mahoba;Kalanjara - Mahoba
-c_chanderi;4466;4466 - Mahoba;Chanderi - Mahoba
 
 d_ratanpur;551;551 - Mandla;Duchy Ratanpur - Mandla
 c_tripuri;551;551 - Mandla;Tripuri - Mandla
 c_bandhugadha;551;551 - Mandla;Bandhugadha - Mandla
 
-c_bandhugadha;4468;4468 - Bandogarh;Bandhugadha - Bandogarh
-
 d_ratanpur;2098;2098 - Surguja;Duchy Ratanpur - Surguja
+c_ratanpur;2098;2098 - Surguja;Ratanpur - Surguja
 c_tummana;2098;2098 - Surguja;Tummana - Surguja
 
-c_ratanpur;4452;4452 - Ratanpur;Ratanpur - Ratanpur
-c_rayapura;4452;4452 - Ratanpur;Rayapura - Ratanpur
-
 d_vanga;564;564 - Dacca;Duchy Vanga - Dacca
+c_bikrampur;564;564 - Dacca;Bikrampur - Dacca
+c_kumara_mandala;564;564 - Dacca;Kumara Mandala - Dacca
 c_candradvipa;564;564 - Dacca;Candradvipa - Dacca
 d_varendra;564;564 - Dacca;Duchy Varendra - Dacca
-
-c_kumara_mandala;4475;4475 - Fathabad;Kumara Mandala - Fathabad
-
-c_madhupur;4479;4479 - Goraghat;Madhupur - Ghoraghat
-c_laksmanavati;4479;4479 - Goraghat;Laksmanavati - Goraghat
+c_madhupur;564;564 - Dacca;Madhupur - Dacca
 
 c_suvarnagram;564;564 - Dacca;Suvarnagram - Dacca
 
 d_gauda;563;563 - Gauda;Duchy Gauda - Gauda
 c_gauda;563;563 - Gauda;Gauda - Gauda
+c_laksmanavati;563;563 - Gauda;Laksmanavati - Gauda
 c_radha;563;563 - Gauda;Radha - Gauda
 c_damin_i_koh;563;563 - Gauda;Damin I Koh - Gauda
-
-c_mudgagiri;4472;4472 - Monghyr;Mudgagiri - Monghyr
+c_mudgagiri;563;563 - Gauda;Mudgagiri - Gauda
 
 c_kotivarsa;2044;2044 - Bhagalpur;Kotivarsa - Bhagalpur
-c_mudgagiri;2044;2044 - Bhagalpur;Mudgagiri - Bhagalpur
 
 c_pundravardhana;2045;2045 - Barind;Pundravardhana - Barind
 
-c_nabadwipa;4476;4476 - Nadia;Nabadwipa - Nadia
-
-c_saptagrama;4477;4477 - Satagaon;Saptagrama - Satagaon
-
 d_nadia;561;561 - Bengal Delta;Duchy Nadia - Bengal Delta
 d_nadia;561;561 - Bengal Delta;Duchy Nadia - Bengal Delta #Again for extra weight
+c_nabadwipa;561;561 - Bengal Delta;Nabadwipa - Bengal Delta
+c_saptagrama;561;561 - Bengal Delta;Saptagrama - Bengal Delta
 c_vijayapura;561;561 - Bengal Delta;Vijayapura - Bengal Delta
 d_suhma;561;561 - Bengal Delta;Duchy Suhma - Bengal Delta
 
 c_tamralipti;2039;2039 - Sunderbans;Tamralipti - Sunderbans
 
 c_mallabhum;2081;2081 - Lakhnor;Mallabhum - Lakhnor
-
-c_mallabhum;4471;4471 - Bishnupur;Mallabhum - Bishnupur
 
 c_midnapore;2038;2038 - Midnapore;Midnapore - Midnapore
 
@@ -3016,29 +2609,21 @@ c_goalpara;571;571 - Darrang;Goalpara - Darrang
 c_dimapur;570;570 - Naga;Dimapur - Naga
 
 c_kamatapur;562;562 - Koch;Kamatapur - Koch
-
-c_sikkim;4482;4482 - Sikkim;Sikkim - Sikkim
+c_sikkim;562;562 - Koch;Kamatapur - Koch
 
 c_samatata;568;568 - Chittagong;Samatata - Chittagong
-
-c_samatata;4474;4474 - Sonargaon;Samatata - Sonargaon
-c_bikrampur;4474;4474 - Sonargaon;Bikrampur - Sonargaon
-c_karmanta;4474;4474 - Sonargaon;Karmanta - Sonargaon
 
 c_dimapur;567;567 - Silhet;Dimapur - Silhet
 c_srihatta;567;567 - Silhet;Srihatta - Silhet
 c_karmanta;567;567 - Silhet;Karmanta - Silhet
-
 c_karmanta;2091;2091 - Tripura;Karmanta - Tripura
-c_karmanta;4473;4473 - Chakla;Karmanta - Chakla
 
 c_suvarnagram;2046;2046 - Nasirabad;Suvarnagram - Nasirabad
-c_suvarnagram;4478;4478 - Haibatnagar;Suvarnagram - Haibatnagar
 
 c_kamarupanagara;2042;2042 - Koch Hajo;Kamarupanagara - Koch Hajo
 
 c_haruppeswara;566;566 - Assam;Haruppeswara - Assam
-c_monyul;4440;4440 - Narayanpur;Haruppeswara - Narayanpur
+c_monyul;566;566 - Assam;Haruppeswara - Assam
 
 c_dimapur;573;573 - Cachar;Dimapur - Cachar
 
@@ -3051,28 +2636,19 @@ d_dandakaranya;547;547 - Bastar;Duchy Dandakaranya - Bastar
 c_cakrakuta;547;547 - Bastar;Cakrakuta - Bastar
 c_barasuru;547;547 - Bastar;Barasuru - Bastar
 
-c_cakrakuta;4446;4446 - Kalahandi;Cakrakuta - Kalahandi
-c_suvarnapura;4446;4446 - Kalahandi;Suvarnapura - Kalahandi
-
-c_cakrakuta;4445;4445 - Kanker;Cakrakuta - Kanker
-
 c_rayapura;2082;2082 - Raipur;Rayapura - Raipur
 
 d_daksina_kosala;553;553 - Garjat;Duchy Daksina Kosala - Garjat
+c_suvarnapura;553;553 - Garjat;Suvarnapura - Garjat
+c_sripuri;553;553 - Garjat;Sripuri - Garjat
 c_sambalpur;553;553 - Garjat;Sambalpur - Garjat
 c_nandapur;553;553 - Garjat;Nandapur - Garjat
 
-c_sripuri;4447;4447 - Patna;Sripuri - Patna
-
-c_suvarnapura;4451;4451 - Sonpur;Suvarnapura - Sonpur
-
+c_khijjingakota;2049;2049 - Khudra;Khijjingakota - Khudra
 c_khinjali_mandala;2049;2049 - Khudra;Khinjali Mandala - Khudra
 c_kodalaka_mandala;2049;2049 - Khudra;Kodalaka Mandala - Khudra
 
-c_khijjingakota;4450;4450 - Mayurbhanj;Khijjingakota - Mayurbhanj
-
 c_swetaka_mandala;2048;2048 - Garjat;Swetaka Mandala - Garjat
-c_swetaka_mandala;4448;4448 - Parlakhimedi;Swetaka Mandala - Parlakhimedi
 
 d_tosali;552;552 - Rajabara;Duchy Tosala - Rajabara
 c_kataka;552;552 - Rajabara;Kataka - Rajabara
@@ -3080,43 +2656,24 @@ c_viraja;552;552 - Rajabara;Viraja - Rajabara
 
 c_viraja;2043;2043 - Balasore;Viraja - Balasore
 
-c_puri;4441;4441 - Ganjam;Puri - Ganjam
+c_puri;2080;2080 - Srikakulam;Puri - Srikakulam
 
 d_kalinga;549;549 - Kalingandhra;Duchy Kalinga - Kalingandhra
 c_kalinganagar;549;549 - Kalingandhra;Kalinganagar - Kalingandhra
 c_vizagipatam;549;549 - Kalingandhra;Vizagipatam - Kalingandhra
 
-c_kalinganagar;2080;2080 - Srikakulum;Kalinganagar - Srikakulum
-
 d_tirabhukti;558;558 - Bihar;Duchy Tirabhukti - Bihar
 
+c_rothas;558;558 - Bihar;Rothas - Bihar
 d_magadha;558;558 - Bihar;Duchy Magadha - Bihar
 d_magadha;558;558 - Bihar;Duchy Magadha - Bihar #Added weight
 c_magadha;558;558 - Bihar;Magadha - Bihar
 c_gaya;558;558 - Bihar;Gaya - Bihar
 
-c_rothas;4469;4469 - Rohtasgarh;Rothas - Rohtasgarh
-c_jharkand;4469;4469 - Rohtasgarh;Jharkand - Rohtasgarh
-c_rajrappa;4469;4469 - Rohtasgarh;Rajrappa - Rohtasgarh
-
-c_simaramapura;4488;4488 - Champaran;Simaramapura - Champaran
-c_mithila;4488;4488 - Champaran;Mithila - Champaran
-
+c_simaramapura;2047;2047 - Tirhut;Simaramapura - Tirhut
 c_mithila;2047;2047 - Tirhut;Mithila - Tirhut
 
-c_mithila;4486;4486 - Purnia;Mithila - Purnia
-c_kotivarsa;4486;4486 - Purnia;Kotivarsa - Purnia
-
-c_varanasi;2095;2095 - Varanasi;Varanasi - Varanasi
 c_sasaram;2095;2095 - Varanasi;Sasaram - Varanasi
-
-c_sasaram;4490;4490 - Ghazipur;Sasaram - Ghazipur
-c_kusinagara;4490;4490 - Ghazipur;Kusinagara - Ghazipur
-
-c_mithila;4487;4487 - Saran;Mithila - Saran
-c_kusinagara;4487;4487 - Saran;Kusinagara - Saran
-
-c_mithila;4489;4489 - Hajipur;Mithila - Hajipur
 
 d_kasi;555;555 - Jaunpur;Duchy Kasi - Jaunpur
 c_varanasi;555;555 - Jaunpur;Varanasi - Jaunpur
@@ -3130,9 +2687,6 @@ d_jharkand;560;560 - Jharkand;Duchy Jharkand - Jharkand
 c_jharkand;560;560 - Jharkand;Jharkand - Jharkand
 c_munda;560;560 - Jharkand;Munda - Jharkand
 c_rothas;560;560 - Jharkand;Rothas - Jharkand
-
-c_munda;4470;4470 - Soumelpur;Munda - Soumelpur
-c_sambalpur;4470;4470 - Soumelpur;Munda - Soumelpur
 
 c_rajrappa;2096;2096 - Damin;Rajrappa - Damin
 c_radha;2096;2096 - Damin;Radha - Damin
@@ -3166,17 +2720,11 @@ c_goa;531;531 - Kanara;Goa - Kanara
 c_honnore;531;531 - Kanara;Honnore - Kanara
 c_kanara;531;531 - Kanara;Kanara - Kanara
 
-c_honnore;4427;4427 - Honnavara;Honnore - Honnavara
-
 c_kanara;2029;2029 - South Kanara;Kanara - South Kanara
 
 d_nasikya;1946;1946 - Desh;Duchy Nasikya - Desh
 c_kondana;1946;1946 - Desh;Kondana - Desh
 c_kolhapur;1946;1946 - Desh;Kolhapur - Desh
-
-c_kolhapur;4431;4431 - Kolhapur;Kolhapur - Kolhapur
-
-c_goa;4429;4429 - Rajapur;Goa - Rajpur
 
 d_devagiri;545;545 - Marathwada;Duchy Devagiri - Marathwada
 c_devagiri;545;545 - Marathwada;Devagiri - Marathwada
@@ -3185,31 +2733,16 @@ c_vatsagulma;545;545 - Marathwada;Vatsagulma - Marathwada
 c_nanded;545;545 - Marathwada;Nanded - Marathwada
 c_parnakheta;545;545 - Marathwada;Parnaketha - Marathwada
 
-c_parnakheta;4443;4443 - Karanja;Parnaketha - Karanja
-
-c_pratishthana;4442;4442 - Washim;Pratisthana - Washim
-
-d_devagiri;4434;4434 - Dharangaon;Duchy Devagiri - Dharangaon
-c_devagiri;4434;4434 - Dharangaon;Devagiri - Dharangaon
-c_thalner;4434;4434 - Dharangaon;Thalner - Dharangaon
-
 d_rattapadi;544;544 - Ahmadnagar;Duchy Rattapadi - Ahmadnagar
 c_lattalura;544;544 - Ahmadnagara;Lattalura - Ahmadnagar
 c_naldurg;544;544 - Ahmadnagar;Naldurg - Ahmadnagar
 
 c_taradavadi;569;569 - Bijapur;Taradavadi - Bijapur
 
-c_taradavadi;4435;4435 - Sholhapur;Taradavadi - Sholhapur
-
 d_kalyani;1948;1948 - Bidar;Duchy Kalyani - Bidar
 c_kalyani;1948;1948 - Bidar;Kalyani - Bidar
 c_bidar;1948;1948 - Bidar;Bidar - Bidar
 c_sagar;1948;1948 - Bidar;Sagar - Bidar
-
-c_nanded;4437;4437 - Paithre;Nanded - Paithre
-
-c_nanded;4438;4438 - Paithre;Nanded - Nander
-c_vemulavada;4438;4438 - Nander;Vemulavada - Nander
 
 c_manyakheta;2035;2035 - Gulbarga;Manyaketha - Gulbarga
 
@@ -3221,72 +2754,40 @@ c_nandagiri;533;533 - Mysore;Nandagiri - Mysore
 
 d_nulambavadi;541;541 - Vijayanagar;Duchy Nulambavadi - Vijayanagara
 c_uchangidurga;541;541 - Vijayanagar;Uchangidurga - Vijayanagara
+c_dwarasamudra;541;541 - Vijayanagar;Dwarasamudra - Vijayanagara
+c_alampur;541;541 - Vijayanagar;Alampur - Vijayanagara
 c_banavasi;541;541 - Vijayanagar;Banavasi - Vijayanagara
 
-c_dwarasamudra;4421;4421 - Seringapatam;Dwarasamudra - Seringapatam
-
-c_dwarasamudra;4426;4426 - Chitradurg;Dwarasamudra - Chitradurg
-c_banavasi;4426;4426 - Banavasi;Dwarasamudra - Banavasi
-c_uchangidurga;4426;4426 - Banavasi;Uchangidurga - Banavasi
-
-c_dwarasamudra;4422;4422 - Sira;Dwarasamudra - Sira
-c_manyapura;4422;4422 - Sira;Manyapura - Sira
-c_uchangidurga;4422;4422 - Sira;Uchangidurga - Sira
-
-c_alampur;4424;4424 - Adavani;Alampur - Adavani
-
-c_udayagiri;4423;4423 - Gutti;Udayagiri - Alampur
-c_alampur;4423;4423 - Gutti;Alampur - Alampur
-c_penugonda;4423;4423 - Gutti;Penugonda - Alampur
-
-c_dwarasamudra;534;534 - Mysore;Dwarasamudra - Mysore
+c_dwarasamudra;2032;2032 - Melenadu;Dwarasamudra - Melenadu
 
 d_gangavadi;2031;2031 - Morasandu;Duchy Gangavadi - Morasandu
 c_manyapura;2031;2031 - Morasandu;Manyapura - Morasandu
 c_nandagiri;2031;2031 - Morasandu;Nandagiri - Morasandu
 c_talakad;2031;2031 - Morasandu;Talakad - Morasandu
 
-c_potapi;2027;2027 - Arcot;Potapi - Arcot
-c_tagadur;2027;2027 - Arcot;Tagadur - Arcot
+c_nandagiri;2027;2027 - Arcot;Nandagiri - Arcot
 
 c_udayagiri;2090;2090 - Kurnool;Udayagiri - Kurnool
 c_alampur;2090;2090 - Kurnool;Alampur - Kurnool
 
 d_raichur_doab;532;532 - Raichur Doab;Duchy Raichur Doab - Raichur Doab
 c_idatarainadu;532;532 - Raichur Doab;Idatarainadu - Raichur Doab
+c_kudalasangama;532;532 - Raichur Doab;Kudalasangama - Raichur Doab
+c_vatapi;532;532 - Raichur Doab;Vatapi - Raichur Doab
+c_banavasi;532;532 - Raichur Doab;Banavasi - Raichur Doab
 
-d_raichur_doab;4428;4428 - Mudgal;Duchy Raichur Doab - Mudgal
-c_kudalasangama;4428;4428 - Mudgal;Kudalasangama - Mudgal
-c_idatarainadu;4428;4428 - Mudgal;Idatarainadu - Mudgal
-
-c_cholamandalam;540;540 - Cuddalore;Cholamandalam - Cuddalore
-c_kanchipuram;540;540 - Cuddalore;Canchipuram - Cuddalore
-
+c_cholamandalam;540;540 - Coromandel;Cholamandalam - Coromandel
 c_cholamandalam;2026;2026 - Tanjore;Cholomandalam - Tanjore
 c_cholamandalam;2085;2085 - Tiruchirappalli;Cholomandalam - Tiruchirappalli
-
-c_cholamandalam;4416;4416 - Tranqebar;Cholamandalam - Tranqebar
-c_cholamandalam;4415;4415 - Nagapatam;Cholamandalam - Nagapatam
 
 d_chola_nadu;1947;1947 - Carnatic;Duchy Chola Nadu - Carnatic
 c_tagadur;1947;1947 - Carnatic;Tagadur - Carnatic
 c_potapi;1947;1947 - Carnatic;Potapi - Carnatic
 
-c_tagadur;4420;4420 - Chandragiri;Tagadur - Chandragiri
-c_cholamandalam;4420;4420 - Chandragiri;Cholamandalam - Chandragiri
-c_talakad;4420;4420 - Chandragiri;Talakad - Chandragiri
-c_nandagiri;4420;4420 - Chandragiri;Nandagiri - Chandragiri
-
-c_manyapura;4414;4414 - Salem;Manyapura - Salem
-c_talakad;4414;4414 - Salem;Talakad - Salem
-c_nandagiri;4414;4414 - Salem;Nandagiri - Salem
-
 d_pandya_nadu;536;536 - Madurai;Duchy Pandya Nadu - Madurai
 c_madurai;536;536 - Madurai;Madurai - Madurai
 
 #c_tenkasi;536;536 - Madurai;Tenkasi - Madurai
-
-c_tenkasi;4412;4412 - Dindigul;Tenkasi - Dindigul
 
 c_tirunelveli;2101;2101 - Tirunelveli;Tirunelveli - Tirunelveli
 
@@ -3296,31 +2797,17 @@ d_chera_nadu;534;534 - Malabar;Duchy Chera Nadu - Malabar
 c_mahoyadapuram;534;534 - Malabar;Mahoyadapuram - Malabar
 c_qalqut;534;534 - Malabar;Qalqut - Malabar
 
-c_kanara;4413;4413 - Cannanore;Kanara - Cannanore
-c_qalqut;4413;4413 - Cannanore;Qalqut - Cannanore
-
 c_mahoyadapuram;535;535 - Kochin;Mahoyadapuram - Kochin
 
 c_venadu;537;537 - Venad;Venadu - Venad
-
-c_venadu;4410;4410 - Kumari;Venadu - Kumari
 
 c_maldives;1248;1248 - Maldives;Maldives - Maldives
 
 d_tondai_nadu;539;539 - Tondainadu;Duchy Tondai Nadu - Tondainadu
 c_kanchipuram;539;539 - Tondainadu;Kanchipuram - Tondainadu
-
-c_nellore;4418;4418 - Nellore;Nellore - Nellore
-c_kanchipuram;4418;4418 - Nellore;Kanchipuram - Nellore
-
-c_nellore;4419;4419 - Adanki;Nellore - Adanki
-
-c_nellore;4425;4425 - Kndavidu;Nellore - Kondavidu
-c_amaravati;4425;4425 - Kndavidu;Amaravati - Kondavidu
+c_nellore;539;539 - Tondainadu;Nellore - Tondainadu
 
 c_nellore;2083;2083 - Kosta;Nellore - Kosta
-
-c_kanchipuram;4417;4417 - Kanchpuram;Kanchipuram - Kanchpuram
 
 d_vengi;543;543 - Kosta;Duchy Vengi - Kosta
 c_vijayawada;543;543 - Kosta;Vijayawada - Kosta
@@ -3340,15 +2827,9 @@ c_kambampet;2037;2037 - Warangal;Kambampet - Warangal
 c_orangallu;2037;2037 - Warangal;Orangallu - Warangal
 c_rajamahendravaram;2037;2037 - Warangal;Rajamahendravaram - Warangal
 
-c_kambampet;4439;4439 - Khamammet;Kambampet - Khamammet
-c_rajamahendravaram;4439;4439 - Khamammet;Rajamahendravaram - Khamammet
-
 d_warangal;2028;2028 - Mahur;Duchy Warangal - Mahur
 c_vemulavada;2028;2028 - Mahur;Vemulavada - Mahur
 c_balkonda;2028;2028 - Mahur;Balkonda - Mahur
-
-c_balkonda;4444;4444 - Manidurg;Balkonda - Manidurg
-c_orangallu;4444;4444 - Manidurg;Orangallu - Manidurg
 
 d_racakonda;542;542 - Telingana;Duchy Racakonda - Telingana
 c_racakonda;542;542 - Telingana;Racakonda - Telingana
@@ -3357,25 +2838,14 @@ c_pannagallu;542;542 - Telingana;Pannagallu - Telingana
 c_medak;542;542 - Telingana;Medak - Telingana
 c_kollipake;542;542 - Telingana;Kollipake - Telingana
 
-c_racakonda;4436;4436 - Devarakonda;Racakonda - Devarakonda
-c_nilagiri;4436;4436 - Devarakonda;Nilagiri - Devarakonda
-c_pannagallu;4436;4436 - Devarakonda;Pannagallu - Devarakonda
-
 d_lanka;572;572 - Kotte;Duchy Lanka - Kotte
 c_phiti;572;572 - Kotte;Pihiti - Kotte
 c_dakhina_desa;572;572 - Kotte;Dakhina Desa - Kotte
-
-c_phiti;4408;4408 - Salavata;Pihiti - Salavata
-
-c_kotthasara;4409;4409 - Trincomale;Kotthasara - Trincomale
-
-c_rohana;4407;4407 - Ruhunu;Rohanna - Ruhunu
 
 d_lanka;2099;2099 - Kandy;Duchy Lanka - Kandy
 d_sinhala;2099;2099 - Kandy;Duchy Sinhala - Kandy
 c_rohana;2099;2099 - Kandy;Rohanna - Kandy
 c_kotthasara;2099;2099 - Kandy;Kotthasara - Kandy
-c_phiti;2099;2009 - Kandy;Pihiti - Kandy
 
 d_sinhala;2100;2100 - Vanni;Duchy Sinhala - Vanni
 c_phiti;2100;2100 - Vanni;Pihiti - Vanni
@@ -3427,13 +2897,11 @@ c_jiuquan;708;708 - Gansu;Jiuquan - Gansu
 
 c_kumul;2122;2122 - Hami;Kumul - Hami
 
-c_juyan;2191;2191 - Ejin;Juyan - Ejin
-
+c_ejin;2191;2191 - Ejin;Ejin - Ejin
 c_ejin;709;709 - Alxa;Ejin - Alxa
 
 c_beshbaliq;713;713 - Beshbaliq;Beshbaliq - Beshbaliq
 c_dunkheger;713;713 - Beshbaliq;Dunkheger - Beshbaliq
-c_monkh_kairkhan;713;713 - Beshbaliq;Monkh Khairkhan - Beshbaliq
 
 c_barkul;4206;4206 - Balikul;Barkul - Balikul
 
@@ -3444,154 +2912,77 @@ c_luntai;715;715 - Urumqi;Luntai - Urumqi
 # Mongolia
 
 c_altay;714;714 - Hoboksar;Altay - Hoboksar
-c_aylik;714;714 - Hoboksar;Aylik - Hoboksar
 
 c_muztau;1066;1066 - Altai Uriankhai;Muztau - Altai Uriankhai
-c_belukha;1066;1066 - Altai Uriankhai;Belukha - Altai Uriankhai
-c_markakol;1066;1066 - Altai Uriankhai;Markakol - Altai Uriankhai
-c_khuiten;1066;1066 - Altai Uriankhai;Khuiten - Altai Uriankhai
 
 c_tsagaannuur;718;718 - Kobdo;Tsagaannuur - Kobdo
-c_otgontenger;718;718 - Kobdo;Otgontenger - Kobdo
-c_khasagt_khairkhan;718;718 - Kobdo;Khasagt Khairkhan - Kobdo
-c_sutai;718;718 - Kobdo;Sutai - Kobdo
-c_khokh_serkh;718;718 - Kobdo;Khokh Serkh - Kobdo
-c_kyzyl;718;718 - Kobdo;Kyzyl - Kobdo
-c_tsambagarav;718;718 - Kobdo;Tsambagarav - Kobdo
-c_kharkhiraa;718;718 - Kobdo;Kharkhiraa - Kobdo
-c_uvs;718;718 - Kobdo;Uvs - Kobdo
+c_tsagaannuur;4222;4222 - Ulaangom;Tsagaannuur - Ulaangom
 
-c_terkhiin_tsagan;4222;4222 - Ulaangom;Terkhiin Tsagan - Ulaangom
-c_tarvagatai;4222;4222 - Ulaangom;Tarvagatai - Ulaangom
-
-c_kuznetsk;1065;1065 - Kuznetsk;Kuznetsk - Kuznetsk
-c_abakan;1065;1065 - Kuznetsk;Abakan - Kuznetsk
-c_tannu_ola;1065;1065 - Kuznetsk;Tannu Ola - Kuznetsk
-
-c_tom;1064;1064 - Tomsk;Tom - Tomsk
-
-c_otuken;1060;1060 - Irkutsk;Otuken - Irkutsk
-
-c_gorgol;716;716 - Tannu Uriankhai;Gorgol - Tannu Uriankhai
-c_eastern_sayan;716;716 - Tannu Uriankhai;Eastern Sayan - Tannu Uriankhai
+c_kyzyl;716;716 - Tannu Uriankhai;Kyzyl - Tannu Uriankhai
+c_otuken;716;716 - Tannu Uriankhai;Otuken - Tannu Uriankhai
 
 c_khangai;719;719 - Uliastai;Khangai - Uliastai
-c_orkhon;719;719 - Uliastai;Orkhon - Uliastai
 
 c_aj_bogd;2117;2117 - Zasagt;Aj Bogd - Zasagt
 c_ikh_bogd;2117;2117 - Zasagt;Ikh Bogd - Zasagt
-c_burkhan_buudai;2117;2117 - Zasagt;Burkhan Buudai - Zasagt
-c_suvagra_khairkhan;2117;2117 - Zasagt;Burkhan Buudai - Zasagt
 
-c_gurvan_saikhan;2193;2193 - Govi;Gurvan Saikhan - Govi
-c_gurvan_saikhan;2747;2747 - Khara Narin Ula;Gurvan Saikhan - Khara Narin Ula
-c_gurvan_saikhan;720;720 - Dorno Govi;Gurvan Saikhan - Dorno Govi
+c_ikh_bogd;2193;2193 - Govi;Ikh Bogd - Govi
 
 c_kara_khorum;2190;2190 - Qaraqorum;Kara Khorum - Qaraqorum
 
-c_delgerkhangai;4221;4221 - Dundgovi;Delgerkhangai - Dundgovi
-
-c_khovsgol;2189;2189 - Tsetserleg;Khovsgol - Tsetserleg
-c_egiin;2189;2189 - Tsetserleg;Egiin - Tsetserleg
-
-c_baygal;1057;1057 - Udinsky;Baygal - Udinsky
-c_uda;1057;1057 - Udinsky;Uda - Udinsky
-
-c_tuul;2116;2116 - Ih Huree;Tuul - Ih Huree
-c_chikoi;2116;2116 - Ih Huree;Chikoi - Ih Huree
-c_selenge;2116;2116 - Ih Huree;Selenge - Ih Huree
-
-c_khilok;4220;4220 - Khiagt;Khilok - Khiagt
+c_baygal;2189;2189 - Tsetserleg;Baygal - Tsetserleg
 
 # Tibet & Nepal
 
 # k_kashmir
 c_kasmira;508;508 - Kashmir;Kasmira - Kashmir
-c_kasmira;4449;4449 - Jammu;Kasmira - Jammu
-
+c_skardu;508;508 - Kashmir;Skardu - Kashmir
+c_gilgit;508;508 - Kashmir;Gilgit - Kashmir
 c_pamir;2073;2073 - Baltistan;Pamir - Baltistan
 c_tashkurgan;2073;2073 - Baltistan;Tashkurgan - Baltistan
-c_gilgit;2073;2073 - Baltistan;Gilgit - Baltistan
 c_kangra;509;509 - Kangra;Kangra - Kangra
 c_garhwal;511;511 - Garhwal;Garhwal - Garhwal
 c_kurmanchal;2069;2069 - Kumaon;Kurmanchal - Kumaon
 
-c_garhwal;4493;4493 - Sirmur;Garhwal - Sirmur
-
-c_skardu;4521;4521 - Skardu;Skardu - Skardu
-c_gilgit;4521;4521 - Skardu;Gilgit - Skardu
-
 # k_nepal
 c_kathmandu;557;557 - Katmandu;Kathmandu - Katmandu
-c_pokhara;2070;2070 - Chaubisi Rajya;Pokhara - Chaubisi Rajya
-c_mustang;2070;2070 - Chaubisi Rajya;Mustang - Chaubisi Rajya
-
-c_lumbini;554;554 - Baisi Rajya;Lumbini - Baisi Rajya
-
-c_kathmandu;2071;2071 - Limbuwan;Kathmandu - Limbuwan
+c_janakpur;557;557 - Katmandu;Janakpur - Katmandu
 c_limbuwan;2071;2071 - Limbuwan;Limbuwan - Limbuwan
-
-c_limbuwan;4483;4483 - Morang;Limbuwan - Morang
-
-c_janakpur;4484;4484 - Makwanpur;Janakpur - Makwanpur
-
-c_lumbini;4491;4491 - Dang;Lumbini - Dang
-
-c_pokhara;4485;4485 - Palpa;Pokhara - Palpa
-
-c_doti;4492;4492 - Doti;Doti - Doti
-c_jumla;4492;4492 - Doti;Jumla - Doti
+c_jumla;554;554 - Baisi Rajya;Jumla - Baisi Rajya
+c_doti;554;554 - Baisi Rajya;Doti - Baisi Rajya
+c_pokhara;2070;2070 - Chaubisi Rajya;Pokhara - Chaubisi Rajya
+c_lumbini;2070;2070 - Chaubisi Rajya;Lumbini - Chaubisi Rajya
+c_mustang;2070;2070 - Chaubisi Rajya;Mustang - Chaubisi Rajya
 
 # k_yarlung
 c_lhasa;677;677 - Lhasa;Lhasa - Lhasa
 c_lhunzhub;677;677 - Lhasa;Lhunzhub - Lhasa
 c_kunggar;677;677 - Lhasa;Kunggar - Lhasa
-
+c_nedong;677;677 - Lhasa;Nedong - Lhasa
+c_lhunze;677;677 - Lhasa;Lhunze - Lhasa
+c_taktse;677;677 - Lhasa;Taktse - Lhasa
+c_shigatse;676;676 - Shigatse;Shigatse - Shigatse
 c_gyantse;676;676 - Shigatse;Gyantse - Shigatse
+c_sakya;676;676 - Shigatse;Sakya - Shigatse
+c_lhatse;676;676 - Shigatse;Lhatse - Shigatse
+c_gyesar;676;676 - Shigatse;Gyesar - Shigatse
 c_paro;565;565 - Bhutan;Paro - Bhutan
+c_bumthang;565;565 - Bhutan;Bumthang - Bhutan
 c_nagchu;4205;4205 - Nagchu;Nagchu - Nagchu
 c_nagchu;4205;4205 - Nagchu;Nagchu - Nagchu
 c_nagchu;4205;4205 - Nagchu;Nagchu - Nagchu
 c_banbar;4205;4205 - Nagchu;Banbar - Nagchu
 c_bome;4205;4205 - Nagchu;Bome - Nagchu
-
-c_nedong;4517;4517 - Nedong;Nedong - Nedong
-c_taktse;4517;4517 - Nedong;Taktse - Nedong
-c_lhunze;4517;4517 - Nedong;Lhunze - Nedong
-
-c_bumthang;4481;4481 - Punakha;Bumthang - Punakha
-
-c_sakya;4514;4514 - Sakya;Sakya - Sakya
-c_lhatse;4514;4514 - Sakya;Lhatse - Sakya
-
-c_mangyul;4515;4515 - Gyirong;Mangyul - Gyirong
-c_gyesar;4515;4515 - Gyirong;Gyesar - Gyirong
-c_coqen;4515;4515 - Gyirong;Coqen - Gyirong
-
-c_zhongba;4516;4516 - Purang;Zhongba - Purang
-c_gyesar;4516;4516 - Purang;Gyesar - Purang
-
-c_shigatse;4518;4518 - Tsurphu;Shigatse - Tsurphu
-c_nyima;4518;4518 - Tsurphu;Shigatse - Tsurphu
-c_xainza;4518;4518 - Tsurphu;Shigatse - Tsurphu
-
-c_lhasa;4519;4519 - Damxung;Shigatse - Tsurphu
-c_xainza;4519;4519 - Damxung;Shigatse - Tsurphu
-
-c_rutog;4520;4520 - Rutog;Shigatse - Tsurphu
-c_kulung;4520;4520 - Rutog;Shigatse - Tsurphu
-
-#Changtang is now a wasteland
-#c_samtho;2129;2129 - Changtang;Samtho - Changtang
-#c_nyima;2129;2129 - Changtang;Nyima - Changtang
-#c_xainza;2129;2129 - Changtang;Xainza - Changtang
-#c_gerze;2129;2129 - Changtang;Gerze - Changtang
-#c_kunlun;2129;2129 - Changtang;Kunlun - Changtang
-#c_tsakha;2129;2129 - Changtang;Tsakha - Changtang
-#c_qangtang;2129;2129 - Changtang;Tsakha - Changtang
-#c_amdo;2129;2129 - Changtang;Amdo - Changtang
-#c_tanggula;2129;2129 - Changtang;Amdo - Changtang
-#c_arjin;2129;2129 - Changtang;Arjin - Changtang
+c_samtho;2129;2129 - Changtang;Samtho - Changtang
+c_nyima;2129;2129 - Changtang;Nyima - Changtang
+c_xainza;2129;2129 - Changtang;Xainza - Changtang
+c_gerze;2129;2129 - Changtang;Gerze - Changtang
+c_kunlun;2129;2129 - Changtang;Kunlun - Changtang
+c_tsakha;2129;2129 - Changtang;Tsakha - Changtang
+c_qangtang;2129;2129 - Changtang;Tsakha - Changtang
+c_amdo;2129;2129 - Changtang;Amdo - Changtang
+c_tanggula;2129;2129 - Changtang;Amdo - Changtang
+c_arjin;2129;2129 - Changtang;Arjin - Changtang
 
 # k_guge
 c_tsaparang;2128;2128 - Ngari;Tsaparang - Ngari
@@ -3599,6 +2990,10 @@ c_rutog;2128;2128 - Ngari;Rutog - Ngari
 c_gar;2128;2128 - Ngari;Gar - Ngari
 c_kyunglung;2128;2128 - Ngari;Kyunglung - Ngari
 c_gegyai;2128;2128 - Ngari;Kyunglung - Ngari
+c_purang;676;676 - Shigatse;Purang - Shigatse
+c_zhongba;676;676 - Shigatse;Zhongba - Shigatse
+c_mangyul;676;676 - Shigatse;Mangyul - Shigatse
+c_coqen;676;676 - Shigatse;Coquen - Shigatse
 c_leh;2074;2074 - Ladakh;Leh - Ladakh
 c_diskit;2074;2074 - Ladakh;Diskit - Ladakh
 c_pangong;2074;2074 - Ladakh;Pangong - Ladakh
@@ -3618,15 +3013,10 @@ c_fuqi;706;706 - Tsaidam;Fuqi - Tsaidam
 c_fuqi;4204;4204 - Anding;Fuqi - Anding
 c_delingha;706;706 - Tsaidam;Delingha - Tsaidam
 c_delingha;4204;4204 - Anding;Delingha - Anding
+c_lingtsang;705;705 - Gyegu;Lingtsang - Gyegu
+c_nangqen;705;705 - Gyegu;Nangqen - Gyegu
 c_nagormo;2134;2134 - Rebgong;Nagormo - Rebgong
 c_lenghu;2134;2134 - Rebgong;lenghu - Rebgong
 c_zadoi;2134;2134 - Rebgong;Zadoi - Rebgong
 c_qaidam;2134;2134 - Rebgong;Qaidam - Rebgong
 c_dulan;2134;2134 - Rebgong;Dulan - Rebgong
-
-c_lingtsang;705;705 - Gyegu;Lingtsang - Gyegu
-c_nangqen;705;705 - Gyegu;Nangqen - Gyegu
-c_lingtsang;705;705 - Gyegu;Lingtsang - Gyegu
-c_nangqen;705;705 - Gyegu;Nangqen - Gyegu
-c_ando;705;705 - Gyegu;Lingtsang - Gyegu
-c_tanggula;705;705 - Gyegu;Lingtsang - Gyegu

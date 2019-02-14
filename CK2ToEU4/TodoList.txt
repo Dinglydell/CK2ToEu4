@@ -19,3 +19,13 @@
 -buddhist branches
 
 -terra incognita outside of ck2 world
+
+-more complex logic for who gets to be "the europe" of EU4 - IRL europe was not really more technologically advanced than most of eurasia in 1444
+	-would like some historically plausibile way of determining who behaves as europe did historically without realying exclusively on 1444 tech level
+
+
+-make off-map sunnis a different religion if sunni crumbles during ck2
+
+-govenment reforms
+
+-generic "english civil war" for realms that had an empowered council at the end of ck2

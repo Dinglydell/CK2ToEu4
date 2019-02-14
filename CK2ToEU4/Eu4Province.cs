@@ -189,7 +189,7 @@ namespace CK2ToEU4
 		public void PostInitialise(List<CK2Title> ck2Titles)
 		{
 			var holder = ck2Titles.Where(t => t.Holder != null).GroupBy(t => t.Holder).OrderBy(group => group.Count()).First().Key;
-			//TODO: something better than this - probably should include dejure nvm it does
+			//If the province is either: the same relgion as the owner, a primary or accepted culture, or in the dejure territory of the owner then it is a core.
 			Cores.AddRange(World.GetCountriesFromCharacter(holder).Where(c => c.Religion == Religion || c.PrimaryCulture == Culture || c.AcceptedCultures.Contains(Culture) || World.Cultures[c.PrimaryCulture].Group.Cultures.Any(cul => cul.Name == Culture) || ck2Titles.Any(t => c.IsDejure(t))));// c.CountryTag != "KHA"));
 			Owner = World.GetIndependentCountryFromCharacter((CK2Character)holder);
 			if(Cores.Count == 0)

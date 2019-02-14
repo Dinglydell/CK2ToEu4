@@ -1,0 +1,11 @@
+# superregion = tech_group
+
+europe_superregion = western
+eastern_europe_superregion = eastern
+india_superregion = indian
+east_indies_superregion = chinese
+tatary_superregion = nomad_group
+china_superregion = chinese
+persia_superregion = muslim
+near_east_superregion = muslim
+africa_superregion = east_african

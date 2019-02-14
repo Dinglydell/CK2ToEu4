@@ -10,6 +10,7 @@ using System.IO;
 
 namespace CK2ToEU4
 {
+    
 	public class CK2Save : CK2World
 	{
 		public string FilePath { get; set; }
@@ -21,17 +22,18 @@ namespace CK2ToEU4
 		/// </summary>
 		public bool KeepStartDate { get; set; }
 		public Dictionary<int, CK2Revolt> CK2Revolts { get; set; }
-		public string Date { get; internal set; }
+		
 		public string ChinaDisplayName { get; set; }
 		public CK2Save(string filePath, string modPath, bool keepStartDate): base(modPath)
 		{
+            FilePath = filePath;
 			KeepStartDate = keepStartDate;
 			Console.WriteLine("Reading CK2 save file...");
 			RootList = PdxSublist.ReadFile(filePath, "CK2txt");
 			Date = RootList.KeyValuePairs["date"];
 			LoadDynasties();
 			LoadCharacters();
-			
+            LoadDynamicReligions();
 			LoadTitles();
 			LoadProvinces();
 			LoadPostCharacters();
@@ -39,8 +41,10 @@ namespace CK2ToEU4
 			//LoadWars();
 			LoadChina();
 			LoadVanillaTitleData();
-			
-		}
+            LoadReligiousData();
+
+
+        }
 
 		private void LoadPostCharacters()
 		{
@@ -133,8 +137,13 @@ namespace CK2ToEU4
 			CK2IndependentTitles = new Dictionary<string, CK2Title>();
 			CK2TopLevelVassals = new Dictionary<string, CK2Title>();
 			RootList.Sublists["title"].ForEachSublist(sub =>
-			{
-				CK2Titles.Add(sub.Key, new CK2Title(sub.Key, this, sub.Value));
+            {
+                // if it doesn't have "active = no"
+                if (!sub.Value.BoolValues.ContainsKey("active") || sub.Value.BoolValues["active"].Single())
+                {
+                    CK2Titles.Add(sub.Key, new CK2Title(sub.Key, this, sub.Value));
+                }
+				
 			});
 
 			//dyn titles 
@@ -142,7 +151,10 @@ namespace CK2ToEU4
 			{
 				if (sub.KeyValuePairs.ContainsKey("base_title"))
 				{
-					CK2Titles[sub.KeyValuePairs["title"]].BaseTitle = CK2Titles[sub.KeyValuePairs["base_title"]];
+                    if (CK2Titles.ContainsKey(sub.KeyValuePairs["title"]))
+                    {
+                        CK2Titles[sub.KeyValuePairs["title"]].BaseTitle = CK2Titles[sub.KeyValuePairs["base_title"]];
+                    }
 				}
 			});
 		}
@@ -150,19 +162,50 @@ namespace CK2ToEU4
 		private void LoadProvinces()
 		{
 			Console.WriteLine("Loading provinces...");
-			CK2Provinces = new List<CK2Province>();
+			//CK2Provinces = new List<CK2Province>();
 			RootList.Sublists["provinces"].ForEachSublist(sub =>
 			{
-				if (CK2ProvCounties.ContainsKey(sub.Key))
-				{
-					CK2Provinces.Add(new CK2Province(this, sub.Value, CK2ProvCounties[sub.Key]));
-				}
+                var id = int.Parse(sub.Key);
+                //CK2Provinces might not contain an entry if that entry is a wasteland
+                bool prov1 = false;
+                if (CK2Provinces.ContainsKey(id)) 
+                {
+                    prov1 = CK2Provinces[id].InitFromSaveFile(sub.Value);
+                }
+                
+                if (CK2ProvinceDupes.ContainsKey(id))
+                {
+                    var prov2 = CK2ProvinceDupes[id].InitFromSaveFile(sub.Value);
+                    if(!prov1 && prov2)
+                    {
+                        CK2Provinces[id] = CK2ProvinceDupes[id];
+                    }
+                }
 			});
 
 			//Console.WriteLine("Waiting for map search to complete...");
 			//Task.WhenAll(TaskPool).Wait();
 
 		}
+        private void LoadDynamicReligions()
+        {
+            Console.WriteLine("Loading dynamic religions...");
+            RootList.Sublists["religion"].ForEachSublist(sub =>
+            {
+                if (!CK2Religions.ContainsKey(sub.Key))
+                {
+                    CK2Religions[sub.Key] = new CK2Religion(sub.Key);
+                }
+            });
+        }
+        private void LoadReligiousData()
+        {
+            Console.WriteLine("Loading religious data...");
+            RootList.Sublists["religion"].ForEachSublist(sub =>
+            {
+                CK2Religions[sub.Key].initFromSave(sub.Value, this);
+            });
+        }
 
 		private void LoadCharacters()
 		{

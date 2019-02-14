@@ -137,7 +137,7 @@ type = {
 	}
 }
 
-laws = { # NOT IMPLEMENTED
+laws = {
 	centralization_0 = {
 		vassal_threshhold = -0.1
 		idea_global_autonomy_weight = -2
@@ -603,6 +603,112 @@ laws = { # NOT IMPLEMENTED
 	
 }
 
+#effect of relgions and reformed pagan traits
+religion = { #TODO implement
+#NOTE: consider removing this and making it traits of the religion instead
+	religion_defensive = {
+		
+	}
+	
+	religion_proselytizing = {
+		idea_missionary_strength_weight = 0.5
+		idea_missionary_strength_level = 0.25
+		idea_tolerance_other_weight = -0.5
+		idea_heretic_missionary_strength_weight = 0.5
+		idea_heretic_missionary_strength_level = 0.25
+	}
+	religion_dogmatic = {
+		idea_missionary_strength_weight = -0.25
+		idea_tolerance_other_weight = -0.5
+		idea_heretic_missionary_strength_weight = 0.75
+		idea_heretic_missionary_strength_level = 0.5
+	}
+	
+	religion_stable = {
+		idea_unrest_weight = 0.5
+		idea_unrest_level = 0.25
+		
+		idea_tolerance_own_weight = 0.5
+		idea_tolerance_own_level = 0.25
+		
+	}
+	
+	religion_astrology = {
+		idea_institution_spread_weight = 0.25
+		idea_institution_spread_level = 0.25
+		
+		idea_innovation_weight = 0.25
+		idea_innovation_level = 0.25
+	}
+	
+	religion_equal = { # not a national idea because it's included as part of the religion
+		idea_status_of_women_weight = -1000
+	}
+}
+# TODO: add more bloodlines (also implement in code)
+bloodline = {	#effects of bloodlines on the country
+	ragnarr_lodbrok = {
+		idea_raid_weight = 2
+		idea_raid_level = 0.5
+		
+		idea_leader_land_shock_weight = 1
+		idea_leader_land_shock_level = 0.25
+		idea_leader_land_fire_weight = 1
+		idea_leader_land_fire_level = 0.25
+	}
+	genghis_khan = {
+		idea_yearly_prestige_weight = 1
+		idea_yearly_prestige_level = 0.5
+	
+		idea_leader_land_shock_weight = 1
+		idea_leader_land_shock_level = 0.25
+		idea_leader_land_fire_weight = 1
+		idea_leader_land_fire_level = 0.25
+	}
+	
+	alexander_bloodline_01 = {
+		idea_yearly_prestige_weight = 1
+		idea_yearly_prestige_level = 0.5
+		
+		idea_province_warscore_cost_weight = 2
+		idea_province_warscore_cost_level = 1
+		
+		idea_global_manpower_weight = 1
+		idea_global_manpower_level = 0.5
+		
+	}
+	
+	grand_crusader = {
+		idea_warscore_cost_vs_other_religion_weight = 2
+		idea_warscore_cost_vs_other_religion_level = 1
+	}
+}
+
+
+#effects of artifacts in the treasury
+artifact = {
+	emerald_tablet = {
+		idea_innovation_weight = 1
+		idea_innovation_level = 0.25
+		
+		idea_institution_spread_weight = 1
+		idea_institution_spread_level = 0.25
+	}
+	
+	hermetic_handgun = {
+		idea_innovation_weight = 0.5
+		idea_innovation_level = 0.125
+	
+		idea_leader_land_fire_weight = 1
+		idea_leader_land_fire_level = 0.25
+	}
+	
+	hermetic_compass = {
+		idea_innovation_weight = 1
+		idea_innovation_level = 0.25
+	}
+}
+
 
 #ck2 provinces affecting country
 province = {
@@ -695,7 +801,7 @@ province = {
 		}
 		translation_house_1 = {
 			idea_yearly_prestige_weight = 1
-			idea_yearly_prestige_strength = 0.5
+			idea_yearly_prestige_level = 0.5
 			
 			idea_adm_innovation_weight = 1
 			idea_adm_innovation_level = 0.5
@@ -708,7 +814,7 @@ province = {
 			idea_legitimacy_level = 0.5
 			
 			idea_yearly_prestige_weight = 1
-			idea_yearly_prestige_strength = 0.5
+			idea_yearly_prestige_level = 0.5
 		}
 		pharmacology_laboratory_1 = {
 			idea_innovation_weight = 2
