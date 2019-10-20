@@ -10,21 +10,44 @@ using PdxUtil;
 
 namespace CK2ToEU4
 {
+    public class NationalIdeaGroup
+    {
+        public string Name { get; set; }
+        public List<NationalIdea> Ideas { get; set; }
 
+        public NationalIdeaGroup(PdxSublist data)
+        {
+            Name = data.Key;
+            Ideas = new List<NationalIdea>();
+            data.ForEachSublist(sub =>
+            {
+                Ideas.Add(new NationalIdea(sub.Value, this));
+            });
+        }
+
+        internal void AddLocalisation(Dictionary<string, string> locale)
+        {
+            foreach (var idea in Ideas)
+            {
+                idea.AddLocalisation(locale);
+            }
+        }
+    }
 	public class NationalIdea
 	{
 		public string Name { get; set; }
 		public string DisplayTitle { get; set; }
 		public string DisplayDesc { get; set; }
 		public List<PdxSublist> Effects { get; set; }
+        public NationalIdeaGroup Group { get; private set; }
 
-		public NationalIdea(PdxSublist data)
+        public NationalIdea(PdxSublist data, NationalIdeaGroup group)
 		{
 			Name = data.Key;
 			DisplayTitle = data.KeyValuePairs["title"];
 			DisplayDesc = data.KeyValuePairs["desc"];
 			Effects = new List<PdxSublist>();
-
+            Group = group;
 			for (var i = 0; data.Sublists.ContainsKey($"level_{i}"); i++)
 			{
 				Effects.Add(data.Sublists[$"level_{i}"]);
@@ -40,6 +63,17 @@ namespace CK2ToEU4
 			}
 		}
 	}
+
+    class NationalIdeaGroupScore {
+        public NationalIdeaGroup Group { get; set; }
+        public float Score { get; set; } 
+
+        public NationalIdeaGroupScore(NationalIdeaGroup group, float score)
+        {
+            Group = group;
+            Score = score;
+        }
+    }
 
 
 	public class Eu4Country : Eu4CountryBase
@@ -63,12 +97,14 @@ namespace CK2ToEU4
 		private Dictionary<NationalIdea, float> IdeaLevelsProvince { get; set; }
 
 		private Dictionary<string, float> GovernmentTypeWeights { get; set; }
+        private Dictionary<string, float> GovernmentReformWeights { get; set; }
 
-		public List<NationalIdea> NationalIdeas { get; set; }
+        public List<NationalIdea> NationalIdeas { get; set; }
 		public float VassalThreshhold { get; private set; }
 		public string TechGroup { get; private set; }
+        public float RenaissanceFactor { get; private set; }
 
-		public Eu4Country(Eu4World world, CK2CharacterBase holder, string tag, string file, bool vanilla, CK2Title title = null) : base(world)
+        public Eu4Country(Eu4World world, CK2CharacterBase holder, string tag, string file, bool vanilla, CK2Title title = null) : base(world)
 		{
 			title = title ?? holder.PrimaryTitle;
 			this.title = title;
@@ -84,32 +120,36 @@ namespace CK2ToEU4
 			this.holder = holder;
 
 			GovernmentRank = (byte)((title.Rank == TitleRank.kingdom) ? 2 : (title.Rank == TitleRank.empire ? 3 : 1));
-			//if (world.TitleGovernmentMapper.ContainsKey(title.Name))
-			//{
-			//	Government = world.TitleGovernmentMapper[title.Name];
-			//}
-			//else
-			//{
-			//	//TODO: proper government flavour stuff
-			////world.GovernmentMapper
-			//	//Government = "feudal_monarchy"; //world.GovernmentMapper[holder.GovernmentType];
-			//}
-			if (holder != null)
-			{
-				PrimaryCulture = world.MapCulture(holder.Culture).Name;
-				Religion = world.MapReligion(holder.Religion)?.Name;
-			}
-			AcceptedCultures = new List<string>();
-
-			CalcEffects();
+            //if (world.TitleGovernmentMapper.ContainsKey(title.Name))
+            //{
+            //	Government = world.TitleGovernmentMapper[title.Name];
+            //}
+            //else
+            //{
+            //	//TODO: proper government flavour stuff
+            ////world.GovernmentMapper
+            //	//Government = "feudal_monarchy"; //world.GovernmentMapper[holder.GovernmentType];
+            //}
+            if (holder != null)
+            {
+                var prov = holder.Titles.Where(t => t.Rank == TitleRank.county).Select(t => t.Province).FirstOrDefault();
+                PrimaryCulture = holder.Culture == prov?.Culture ? World.MapCulture(prov).Name : World.MapCulture(holder.Culture).Name;
+                Religion = World.MapReligion(holder.Religion)?.Name;
+            }
+            AcceptedCultures = new List<string>();
+            CalcEffects();
 			Government = GovernmentTypeWeights.OrderByDescending(w => w.Value).First().Key;
+            Reforms = new List<string>();
+            Reforms.Add(GovernmentReformWeights.OrderByDescending(w => w.Value).First().Key);
 
 
 		}
 
 		public void PostInitialise()
 		{
-			if ((holder?.DynastyID ?? 0) != 0 && holder.Culture.DynastyTitleNames && !World.Countries.Any(c => ((Eu4Country)c.Value).holder.DynastyID == holder.DynastyID))
+            
+
+            if ((holder?.DynastyID ?? 0) != 0 && holder.Culture.DynastyTitleNames && !World.Countries.Any(c => ((Eu4Country)c.Value).holder.DynastyID == holder.DynastyID))
 			{
 				DisplayNoun = World.CK2World.CK2Dynasties[holder.DynastyID].Name;
 				DisplayAdj = DisplayNoun;
@@ -122,6 +162,11 @@ namespace CK2ToEU4
 			{
 				// if fail to find province, pick top one
 				Capital = myProvs.OrderByDescending(p => p.Value.Development).FirstOrDefault().Key;
+                //if that still fails, pick top core
+                if(Capital == 0)
+                {
+                    Capital = World.Provinces.Where(p => p.Value.Cores.Contains(this)).OrderByDescending(p => p.Value.Development).FirstOrDefault().Key;
+                }
 			}
 			if (Capital != 0)
 			{
@@ -129,7 +174,7 @@ namespace CK2ToEU4
 				TechGroup = World.SuperRegionTechGroup[mySuperRegion.Value];
 			}
 
-			var myRebs = myProvs.Where(p => ((Eu4Province)p.Value).Revolt != null).GroupBy(p => ((Eu4Province)p.Value).Revolt);
+            var myRebs = myProvs.Where(p => ((Eu4Province)p.Value).Revolt != null).GroupBy(p => ((Eu4Province)p.Value).Revolt);
 			foreach (var reb in myRebs)
 			{
 				//	if(reb.Where(p => ((Eu4Province)p.Value).RevoltArmy).Count() == 0)
@@ -163,19 +208,22 @@ namespace CK2ToEU4
 
 			IdeaWeightsProvince = new Dictionary<NationalIdea, float>();
 			IdeaLevelsProvince = new Dictionary<NationalIdea, float>();
+            RenaissanceFactor = 0;
 			VassalThreshhold = 0;
 			GovernmentTypeWeights = new Dictionary<string, float>();
+            GovernmentReformWeights = new Dictionary<string, float>();
 			var world = (Eu4World)World;
 			var baseEffects = world.CountryEffects.Sublists["base"];
 			CalcEffects(baseEffects);
 
 
 			//type 
-			var type = world.CountryEffects.Sublists["type"];
+			
 			//Console.WriteLine(title.Holder.GovernmentType);
 			if (title.Holder != null)
 			{
-				if (type.Sublists.ContainsKey(title.Holder.GovernmentType))
+                var type = world.CountryEffects.Sublists["type"];
+                if (type.Sublists.ContainsKey(title.Holder.GovernmentType))
 				{
 					CalcEffects(type.Sublists[title.Holder.GovernmentType]);
 				}
@@ -194,28 +242,70 @@ namespace CK2ToEU4
 					CalcEffects(lawEffects.Sublists[law]);
 				}
 			}
+            
+            //religion
+            if((title.Holder?.Religion?.Features?.Count ?? 0) != 0)
+            {
+                var religionEffects = world.CountryEffects.Sublists["religion"];
+                foreach (var feature in title.Holder.Religion.Features)
+                {
+                    if (religionEffects.Sublists.ContainsKey(feature))
+                    {
+                        CalcEffects(religionEffects.Sublists[feature]);
+                    }
+                }
+            }
+
+            //artifacts
+            if((title.Holder?.Artifacts.Count ?? 0) != 0)
+            {
+                var artifactEffects = world.CountryEffects.Sublists["artifacts"];
+
+                foreach (var artifact in title.Holder.Artifacts)
+                {
+                    if (artifactEffects.Sublists.ContainsKey(artifact.Type))
+                    {
+                        CalcEffects(artifactEffects.Sublists[artifact.Type]);
+                    }
+                }
+            }
 		}
 
 		public void CalcEffects(PdxSublist effects)
 		{
-			CalcEffects(effects, IdeaWeights, IdeaLevels);
+			CalcEffects(effects, 1);
 		}
 
-		private void CalcEffects(PdxSublist effects, Dictionary<NationalIdea, float> weight, Dictionary<NationalIdea, float> level)
+        public void CalcEffects(PdxSublist effects, float multiplier)
+        {
+            CalcEffects(effects, IdeaWeights, IdeaLevels, multiplier);
+        }
+
+        private void CalcEffects(PdxSublist effects, Dictionary<NationalIdea, float> weight, Dictionary<NationalIdea, float> level)
+        {
+            CalcEffects(effects, weight, level, 1);
+
+        }
+            private void CalcEffects(PdxSublist effects, Dictionary<NationalIdea, float> weight, Dictionary<NationalIdea, float> level, float multiplier)
 		{
 			//ideas
-			foreach (var idea in World.NationalIdeas)
+			foreach (var ideaGroup in World.NationalIdeaGroups)
 			{
-				if (!weight.ContainsKey(idea))
-				{
-					weight[idea] = 0;
-				}
-				if (!level.ContainsKey(idea))
-				{
-					level[idea] = 0;
-				}
-				weight[idea] += GetFloatEffect(effects, $"idea_{idea.Name}_weight");
-				level[idea] += GetFloatEffect(effects, $"idea_{idea.Name}_level");
+                var groupWeight = GetFloatEffect(effects, $"idea_{ideaGroup.Name}_weight") * multiplier;
+                var groupLevel = GetFloatEffect(effects, $"idea_{ideaGroup.Name}_level") * multiplier;
+                foreach (var idea in ideaGroup.Ideas)
+                {
+                    if (!weight.ContainsKey(idea))
+                    {
+                        weight[idea] = 0;
+                    }
+                    if (!level.ContainsKey(idea))
+                    {
+                        level[idea] = 0;
+                    }
+                    weight[idea] += GetFloatEffect(effects, $"idea_{idea.Name}_weight") * multiplier + groupWeight;
+                    level[idea] += GetFloatEffect(effects, $"idea_{idea.Name}_level") * multiplier + groupLevel;
+                }
 			}
 
 			foreach (var gov in World.GovernmentTypes)
@@ -224,9 +314,22 @@ namespace CK2ToEU4
 				{
 					GovernmentTypeWeights[gov] = 0;
 				}
-				GovernmentTypeWeights[gov] += GetFloatEffect(effects, $"gov_{gov}");
+				GovernmentTypeWeights[gov] += GetFloatEffect(effects, $"gov_{gov}") * multiplier;
             }
-			VassalThreshhold += GetFloatEffect(effects, "vassal_threshhold");
+
+            foreach (var reform in World.GovernmentReforms)
+            {
+                if (!GovernmentReformWeights.ContainsKey(reform))
+                {
+                    GovernmentReformWeights[reform] = 0;
+                }
+                GovernmentReformWeights[reform] += GetFloatEffect(effects, $"reform_{reform}") * multiplier;
+            }
+
+			VassalThreshhold += GetFloatEffect(effects, "vassal_threshhold") * multiplier;
+
+            // renaissance
+            RenaissanceFactor += GetFloatEffect(effects, "renaissance_factor") * multiplier;
 		}
 
 		public void CalcEffectsHolding(PdxSublist effects)
@@ -266,8 +369,26 @@ namespace CK2ToEU4
 
 			data.AddSublist("trigger", trigger);
 			data.AddValue("free", "yes");
-			var ideaCandidates = IdeaWeights.OrderByDescending(id => id.Value).ThenByDescending(id => IdeaLevels[id.Key]);
-			NationalIdeas = ideaCandidates.Take(10).Select(id => id.Key).ToList();
+            var ideaCandidates = IdeaWeights.GroupBy(idea => idea.Key.Group).Select(ig => new NationalIdeaGroupScore(ig.Key, ig.Sum(id => id.Value) / ig.Count())).OrderByDescending(id => id.Score).ToList();//.ThenByDescending(id => IdeaLevels[id.Key]);
+            NationalIdeas = new List<NationalIdea>();
+            while(NationalIdeas.Count < 10)
+            {
+                var firstGroup = ideaCandidates.First();
+                var groupIdeas = firstGroup.Group.Ideas.OrderByDescending(id => IdeaWeights[id]).ThenByDescending(id => IdeaLevels[id]).ToList();
+                var index = 0;
+                for (index = 0; index < groupIdeas.Count && NationalIdeas.Contains(groupIdeas[index]); index++) ; // if it already exists, skip this one
+
+                if (index < groupIdeas.Count)
+                {
+                    NationalIdeas.Add(groupIdeas[index]);
+                } else
+                {
+                    firstGroup.Score = -1000;
+                }
+                firstGroup.Score /= 2;
+                ideaCandidates = ideaCandidates.OrderByDescending(ic => ic.Score).ToList();
+            }
+            //NationalIdeas = ideaCandidates.Take(10).Select(id => id.Key).ToList();
 
 
 			//tradition
@@ -369,6 +490,10 @@ namespace CK2ToEU4
 			var data = new PdxSublist(null, (FileName == CountryTag ? CountryTag : (CountryTag + " - " + FileName)) + ".txt");
 
 			data.AddValue("government", Government);
+            foreach (var reform in Reforms)
+            {
+                data.AddValue("add_government_reform", reform);
+            }
 			data.AddValue("government_rank", GovernmentRank.ToString());
 			data.AddValue("mercantilism", Mercantilism.ToString());
 			//TODO: tech groups
@@ -383,8 +508,10 @@ namespace CK2ToEU4
 			{
 				data.AddValue("elector", "yes");
 			}
-			data.AddValue("capital", Capital.ToString());
-
+            if (Capital != 0)
+            {
+                data.AddValue("capital", Capital.ToString());
+            }
 			if (holder != null)
 			{
 				
@@ -427,6 +554,10 @@ namespace CK2ToEU4
 			else {
 				monarchData.AddValue("dynasty", character.World.CK2Dynasties[character.DynastyID].Name);
 			}
+            if(CountryTag == "SCA")
+            {
+                Console.WriteLine();
+            }
 			monarchData.AddValue("birth_date", rulerData.Key);
 			monarchData.AddValue("adm", ((character.Attribites.Stewardship + character.Attribites.Learning) / 6).ToString());
 			monarchData.AddValue("dip", ((character.Attribites.Diplomacy + character.Attribites.Learning) / 6).ToString());
@@ -471,6 +602,10 @@ namespace CK2ToEU4
 
 		internal void MakeVassalOf(Eu4Country eu4Country)
 		{
+            if(Overlord == eu4Country.CountryTag)
+            {
+                return;
+            }
 			Overlord = eu4Country.CountryTag;
 			eu4Country.Subjects.Add(this.CountryTag);
 		}
@@ -482,10 +617,6 @@ namespace CK2ToEU4
 				localisation.Add(CountryTag, DisplayNoun);
 			}
 			var adj = DisplayAdj ?? DisplayNoun;
-			if(CountryTag == "UTS")
-			{
-				Console.WriteLine();
-			}
 			
 			localisation.Add($"{CountryTag}_ADJ", adj);
 			localisation.Add($"{CountryTag}_ideas", $"{adj} ideas");

@@ -1,0 +1,228 @@
+# Effects of the nature/doctrine/leadership of reformed pagan religions:
+
+#natures: 
+religion_peaceful = {
+	country = {
+		global_unrest = -1
+	}
+	
+	country_as_secondary = {
+		global_unrest = -1
+	}
+}
+
+religion_warlike = {
+	country = {
+		manpower_recovery_speed = 0.1
+	}
+	country_as_secondary = {
+		manpower_recovery_speed = 0.1
+	}
+}
+
+religion_defensive = {
+	country = {
+		defensiveness = 0.1
+	}
+	
+	provinces = {
+		local_missionary_strength = -0.02
+	}
+}
+
+religion_proselytizing = {
+	country = {
+		global_missionary_strength = 0.01
+	}
+}
+
+religion_dogmatic = {
+	country = {
+		tolerance_own = 1
+	}
+}
+
+religion_cosmopolitan = {
+	misguided_heretic = yes
+	country = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+}
+
+
+#doctrines
+
+religion_holy_family = { # Divine Union
+	country = {
+		legitimacy = 1
+	}
+	country = {
+		legitimacy = 1
+	}
+}
+
+religion_harems = { # Polygamy
+	country = {
+		heir_chance = 1.0
+	}
+	
+	country_as_secondary = {
+		heir_chance = 1.0
+	}
+}
+
+religion_meritocratic = { # Meritocracy
+	country = {
+		advisor_cost = -0.1
+		#monarch_administrative_power = 1 #maybe?
+	}
+	
+	country_as_secondary = {
+		advisor_cost = -0.1
+	}
+}
+
+religion_stable = { # Stability
+	county = {
+		stability_cost_modifier
+	}
+	country_as_secondary = {
+		stability_cost_modifier = -1
+	}
+}
+
+religion_jizya = { # Religious Tax
+	country = {
+		tolerance_heathen = 1		
+	}
+}
+
+religion_monastic = { # Monastic
+	country = {
+		clergy_loyalty = 0.1
+	}
+}
+
+religion_syncretic = { # Syncretism
+	uses_harmony = yes
+}
+
+religion_haruspicy = { # Haruspicy
+	country = {
+		land_morale = 0.1
+	}
+	country_as_secondary = {
+		land_morale = 0.05
+	}
+}
+religion_astrology = {
+	country = {
+		innovativeness_gain = 0.1
+	}
+}
+
+religion_patriarchal = {
+	country = {
+		female_advisor_chance = -1
+	}
+}
+
+religion_equal = {
+	country = {
+		may_recruit_female_generals = yes
+		female_advisor_chance = 0.5
+	}
+	country_as_secondary = {
+		may_recruit_female_generals = yes
+		female_advisor_chance = 0.5
+	}
+}
+
+religion_matriarchal = {
+	country = {
+		may_recruit_female_generals = yes
+		female_advisor_chance = 1
+	}
+}
+
+religion_ritual_sacrifice = { # Bloodthirsty gods
+	#TODO
+}
+
+religion_adventuring = { # Daring
+	country = {
+		#TODO
+	}
+}
+
+religion_seafaring = { # Sea-bound
+	country = {
+		ship_cost = -0.1
+	}
+}
+
+religion_relentless = { # Unrelenting
+	country = {
+		discipline = 0.05
+	}
+}
+
+religion_animistic = {
+	country = {
+		tolerance_own = 2
+		loot_amount = 0.25
+	}
+}
+
+religion_beatification = { # Ancestor veneration
+	# TODO
+}
+
+religion_feature_norse = { # Sons of ragnarok
+	country = {
+		ship_cost = -0.1
+	}
+}
+
+religion_feature_west_african = {
+	fetishist_cult = yes
+	country = {
+		tolerance_heathen = 1
+	}
+}
+
+#TODO - the other old-pagan specific doctrines
+
+
+# Leadership
+
+religion_temporal_head = {
+	uses_anglican_power = yes				# Uses church power/aspect mechanics
+		
+	aspects = {
+		divorce_consort_aspect
+		gain_consort_aspect
+		dissolve_monasteries_aspect
+		monopoly_aspect
+		stability_aspect
+	}
+	aspects_name = ANGLICAN_ASPECTS
+}
+
+religion_theocratic_head = { # Hierocratic
+	# TODO - maybe it could have its own papacy?
+}
+
+religion_autocephaly = {
+	country = {
+		global_autonomy = -0.01
+	}
+}
+
+religion_no_leader = {
+	country = { # TODO - not satisfied with this
+		tolerance_heretic = 1
+	}
+	personal_deity = yes
+}

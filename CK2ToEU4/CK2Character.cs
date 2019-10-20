@@ -48,5 +48,20 @@ namespace CK2ToEU4
 			//
 			//return totalStrengthCache;
 		}
-	}
+
+        internal bool IsDejureVassalOf(CK2CharacterBase liege)
+        {
+            foreach (var title in Titles)
+            {
+                foreach (var liegeTitle in liege.Titles)
+                {
+                    if (title.IsDejureVassalOf(liegeTitle))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+    }
 }

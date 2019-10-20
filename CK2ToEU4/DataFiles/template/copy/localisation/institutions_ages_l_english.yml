@@ -37,5 +37,5 @@
   tooltip_convert_to_vic_3:0 "Has confirmed vic3"
   tooltip_vic_3_released:0 "Victoria III has been released"
   tooltip_every_neighbour_has_uni_or_parliament:0 "Every owned neighbour province has a University or a seat in Parliament"
-  tooltip_age_of_industrialism_trigger:0 "A great power has embraced every instution at tech 30/30/30 with at least 20 provinces prospering with a manufactory"
-  tooltip_age_of_industrialism_trigger_rule_britannia:0 "A great power has embraced every instution at tech 30/30/30 with at least 15 manufactories, at least 5 of which are prospering furnaces"
+  tooltip_age_of_industrialism_trigger:0 "A great power has embraced every instution at tech 30/30/30 with at least 20 manufactories, at least 5 of which are prospering"
+  tooltip_age_of_industrialism_trigger_rule_britannia:0 "A great power has embraced every instution at tech 30/30/30 with at least 15 manufactories, at least 3 of which are prospering furnaces"

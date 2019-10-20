@@ -1,0 +1,102 @@
+parliamentary_civil_war = {
+	potential = {
+		#OR = {
+		#	AND = {
+		#		tag = ENG
+		#		NOT = { exists = GBR }
+		#	}
+		#	tag = GBR
+		#}
+		NOT = { has_country_flag = parliamentary_civil_war_happened }
+		has_reform = english_monarchy
+		is_free_or_tributary_trigger = yes
+		is_lesser_in_union = no
+		
+		#normal_or_historical_nations = yes
+	}
+
+	
+	
+	can_start = {
+		current_age = age_of_absolutism
+		has_any_disaster = no
+		OR = {
+			NOT = { stability = 1 }
+			AND = {
+				current_size_of_parliament = 20
+				NOT = { stability = 2 }
+			}
+		}
+	}
+	
+	
+	can_stop = {
+		stability = 3
+		OR = {
+			has_any_disaster = yes
+			NOT = { has_reform = english_monarchy }
+		}
+	}
+	
+	
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { legitimacy = 50 }
+		} 
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1
+			current_debate = support_ruling_dynasty
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy = 75 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 5
+		} 
+	}
+	
+	modifier = {
+		global_unrest = 9
+	}	
+	
+	can_end = {
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { average_unrest = 1 }
+		stability = 1
+	}
+
+	
+	on_start = parliamentary_civil_war.1
+	on_end = parliamentary_civil_war.100
+	
+	on_monthly = {
+		events = {
+			
+		}
+		
+		random_events = {
+			1000 = 0
+			#100 = parliamentary_civil_war.2 # Self-denying Ordinance and New Model Army
+			100 = parliamentary_civil_war.3 # Religious minorities side with parliament (against player)
+			100 = parliamentary_civil_war.4 # Religious minorities side with royalists (against player)
+			100 = parliamentary_civil_war.5 # Guarantee religious minorities?
+			100 = parliamentary_civil_war.6 # The <minority> Rebellion
+			100 = parliamentary_civil_war.7 # The <minority> Rebellion 
+			100 = parliamentary_civil_war.8 # Zealots side with parliament (with player)
+			100 = parliamentary_civil_war.9 # Zealots side with royalists (with player)
+			100 = parliamentary_civil_war.10 # Zealots unhappy with appeasement
+			100 = parliamentary_civil_war.11 # Zealots join royalists (against player)
+			100 = parliamentary_civil_war.12 # Zealouts join parliament (against player)
+		}
+	}
+}
+

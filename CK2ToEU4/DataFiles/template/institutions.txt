@@ -825,8 +825,9 @@ global_trade = {
 		is_island = no
 		
 		OR = {
-			has_province_modifier = center_of_trade_modifier
-			has_province_modifier = inland_center_of_trade_modifier
+			#province_has_center_of_trade_of_level = 3
+			#province_has_center_of_trade_of_level = 2
+			province_trade_power = 30
 			is_capital = yes
 			highest_value_trade_node = yes
 		}
@@ -853,7 +854,26 @@ global_trade = {
 
 	
 	embracement_speed = {
-	
+		modifier = {
+			factor = 0.4 #Not scaled
+			is_prosperous = yes
+			province_trade_power = 15
+		}
+		modifier = {
+			factor = 0.8 #Not Scaled
+			is_prosperous = yes
+			province_trade_power = 25
+		}
+		modifier = {
+			factor = 1.2 #Not Scaled
+			is_prosperous = yes
+			province_trade_power = 35
+		}
+		modifier = {
+			factor = 1.6 #Not Scaled
+			is_prosperous = yes
+			province_trade_power = 45
+		}
 		modifier = {
 			factor = 0.02
 			scale = yes
@@ -873,27 +893,33 @@ global_trade = {
 			has_building = stock_exchange
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.1
 			scale = yes
+			potential = {
+				OR = {
+					province_has_center_of_trade_of_level = 2
+					province_has_center_of_trade_of_level = 1
+				}
+			}
 			is_prosperous = yes
-			has_province_modifier = inland_center_of_trade_modifier
+			custom_trigger_tooltip = {
+				OR = {
+					province_has_center_of_trade_of_level = 2
+					province_has_center_of_trade_of_level = 1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
 			scale = yes
 			potential = {
 				OR = {
-					has_province_modifier = inland_center_of_trade_modifier
-					has_province_modifier = center_of_trade_modifier
+					province_has_center_of_trade_of_level = 3
 				}
 			}
 			is_prosperous = yes
 			custom_trigger_tooltip = {
-				tooltip = tooltip_center_of_trade_spread
-				OR = {
-					has_province_modifier = inland_center_of_trade_modifier
-					has_province_modifier = center_of_trade_modifier
-				}
+				province_has_center_of_trade_of_level = 3
 			}
 		}
 		
@@ -901,7 +927,7 @@ global_trade = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				has_dlc = "The Cossacks"
+				owner = { has_estate = estate_burghers }
 			}
 			is_prosperous = yes
 			custom_trigger_tooltip = {

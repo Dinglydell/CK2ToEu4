@@ -271,6 +271,11 @@ country_event = { # trigger all for the next 4 months
 	is_triggered_only = yes
 	immediate = {
         
+		# handle innovativeness
+		country_event = {
+			id = dynamic_tech.6
+		}
+		
 		country_event = {
 			id = dynamic_tech.1
 		}
@@ -297,6 +302,8 @@ country_event = { # trigger all for the next 4 months
 		#	id = dynamic_tech.3
 		#	days = 150
 		#}
+		
+
         
 			
 	}
@@ -362,125 +369,115 @@ country_event = {
 	picture = INVENTION_eventPicture
 	trigger = {
 		NOT = { has_global_flag = end_of_game }
-		any_country = {
-			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
-				is_great_power = yes
-			
-				else = { 
-					custom_trigger_tooltip = {
-						tooltip = tooltip_top_gp
-						is_great_power = yes
-						NOT = {
-							great_power_rank = 5
-						}
-					}
-				}
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
 			}
-			
-			custom_trigger_tooltip = {
-				tooltip = tooltip_every_institution
-				has_institution = feudalism
-				has_institution = renaissance
-				has_institution = new_world_i
-				has_institution = printing_press
-				has_institution = global_trade
-				has_institution = manufactories
-				has_institution = enlightenment
-			}
-			
-			adm_tech = 30
-			dip_tech = 30
-			mil_tech = 30
-			custom_trigger_tooltip = {
-				tooltip = tooltip_capital_prospers_with_manufactory
-				capital_scope = {
-					is_prosperous = yes
-					OR = {
-						has_building = wharf
-						has_building = weapons
-						has_building = textile
-						has_building = plantations
-						has_building = tradecompany
-						has_building = mills
-						has_building = furnace
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
+			is_great_power = yes
+		
+			else = { 
 				custom_trigger_tooltip = {
-					tooltip = tooltip_provinces_prospering_with_furnace
+					tooltip = tooltip_top_gp
+					is_great_power = yes
+					NOT = {
+						great_power_rank = 5
+					}
+				}
+			}
+		}
+		
+		custom_trigger_tooltip = {
+			tooltip = tooltip_every_institution
+			has_institution = feudalism
+			has_institution = renaissance
+			has_institution = new_world_i
+			has_institution = printing_press
+			has_institution = global_trade
+			has_institution = manufactories
+			has_institution = enlightenment
+		}
+		
+		adm_tech = 30
+		dip_tech = 30
+		mil_tech = 30
+		custom_trigger_tooltip = {
+			tooltip = tooltip_capital_prospers_with_manufactory
+			capital_scope = {
+				is_prosperous = yes
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_provinces_prospering_with_furnace
+				calc_true_if = {
+					all_owned_province = {
+						has_building = furnace
+						is_prosperous = yes
+					}
+				
+					amount = 3
+				}
+				calc_true_if = {
+						all_owned_province = {
+							OR = {
+								has_building = wharf
+								has_building = weapons
+								has_building = textile
+								has_building = plantations
+								has_building = tradecompany
+								has_building = mills
+								#has_building = furnace
+							}
+							#is_prosperous = yes
+						}
+				
+						amount = 20
+					}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = tooltip_provinces_prospering_with_any_manufactory
 					calc_true_if = {
 						all_owned_province = {
-							has_building = furnace
+							OR = {
+								has_building = wharf
+								has_building = weapons
+								has_building = textile
+								has_building = plantations
+								has_building = tradecompany
+								has_building = mills
+								has_building = furnace
+							}
 							is_prosperous = yes
 						}
-					
+				
 						amount = 5
 					}
 					calc_true_if = {
-							all_owned_province = {
-								OR = {
-									has_building = wharf
-									has_building = weapons
-									has_building = textile
-									has_building = plantations
-									has_building = tradecompany
-									has_building = mills
-									#has_building = furnace
-								}
-								#is_prosperous = yes
+						all_owned_province = {
+							OR = {
+								has_building = wharf
+								has_building = weapons
+								has_building = textile
+								has_building = plantations
+								has_building = tradecompany
+								has_building = mills
+								has_building = furnace
 							}
-					
-							amount = 10
+							#is_prosperous = yes
 						}
-				}
-				else = {
-					custom_trigger_tooltip = {
-						tooltip = tooltip_provinces_prospering_with_any_manufactory
-						calc_true_if = {
-							all_owned_province = {
-								OR = {
-									has_building = wharf
-									has_building = weapons
-									has_building = textile
-									has_building = plantations
-									has_building = tradecompany
-									has_building = mills
-									has_building = furnace
-								}
-								is_prosperous = yes
-							}
-					
-							amount = 5
-						}
-						calc_true_if = {
-							all_owned_province = {
-								OR = {
-									has_building = wharf
-									has_building = weapons
-									has_building = textile
-									has_building = plantations
-									has_building = tradecompany
-									has_building = mills
-									has_building = furnace
-								}
-								#is_prosperous = yes
-							}
-					
-							amount = 20
-						}
+				
+						amount = 20
 					}
 				}
 			}
-
-			
 		}
+        
+		
+		
 	}
 	
 	immediate = {
@@ -492,3 +489,99 @@ country_event = {
 		add_prestige = 5
 	}
 }
+
+# add innovativeness for being ahead
+country_event = {
+	id = dynamic_tech.6
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		has_dlc = "Rule Britannia"
+		
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					which = dt_adm_ahead_penalty
+					value = 1
+				}
+			}
+			change_innovativeness = 0.01
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = dt_dip_ahead_penalty
+					value = 1
+				}
+			}
+			change_innovativeness = 0.01
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = dt_mil_ahead_penalty
+					value = 1
+				}
+			}
+			change_innovativeness = 0.01
+		}
+		#set_variable = {
+		#	which = dt_innovative_amt
+		#	which = dt_adm_ahead_penalty
+		#}
+		#country_event = {
+		#	id = dynamic_tech.7
+		#}
+		#
+		#set_variable = {
+		#	which = dt_innovative_amt
+		#	which = dt_dip_ahead_penalty
+		#}
+		#country_event = {
+		#	id = dynamic_tech.7
+		#}
+		#set_variable = {
+		#	which = dt_innovative_amt
+		#	which = dt_mil_ahead_penalty
+		#}
+		#country_event = {
+		#	id = dynamic_tech.7
+		#}
+	
+	}
+	
+	option = {
+		name = dynamic_tech.6.a
+	}
+	
+	
+}
+
+## recursively add innovativeness
+#country_event = {
+#	id = dynamic_tech.7
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		change_variable = {
+#			which = dt_innovative_amt
+#			value = -0.5
+#		}
+#		change_innovativeness = 0.005
+#		if = {
+#			limit = {
+#				check_variable = {
+#					which = dt_innovative_amt
+#					value = 0.5
+#				}
+#			}
+#			country_event = {
+#				id = dynamic_tech.7
+#			}
+#		}
+#		
+#	}
+#}

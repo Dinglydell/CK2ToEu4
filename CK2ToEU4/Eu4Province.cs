@@ -25,7 +25,8 @@ namespace CK2ToEU4
 
 		public string Revolt { get; set; }
 		public string RevoltLeader { get; private set; }
-		public int RevoltArmy { get; set; }
+        public List<CK2Title> CK2Titles { get; private set; }
+        public int RevoltArmy { get; set; }
 
 		//used to calcuate integer value
 		private float baseTax;
@@ -49,16 +50,19 @@ namespace CK2ToEU4
 			{
 				LatentTradeGoods.AddRange(sub.Values);
 			}));
+            if (history.FloatValues.ContainsKey("center_of_trade"))
+            {
+                CentreOfTradeWeight += 0.25f * history.GetFloat("center_of_trade");
+            }
 			history.Sublists.ForEach("add_permanent_province_modifier", (sub) =>
 			{
 				var mod = sub.KeyValuePairs["name"];
-				if (mod == "center_of_trade_modifier" || mod == "inland_center_of_trade_modifier")
+				if (mod.Contains("estuary_modifier"))
 				{
-					CentreOfTradeWeight += 0.5f;
+					CentreOfTradeWeight += 0.25f;
 				}
-				else {
-					Modifiers.Add(mod);
-				}
+				Modifiers.Add(mod);
+				
 			});
 			
 		}
@@ -69,6 +73,7 @@ namespace CK2ToEU4
 
 		internal void Initialise(List<CK2Title> ck2Titles)
 		{
+            CK2Titles = ck2Titles;
 			RevoltArmy = -1;
 			baseTax = 1;
 			baseProduction = 1;
@@ -143,11 +148,7 @@ namespace CK2ToEU4
 
 			Culture = cultures.Count == 0 ? null : cultures.OrderByDescending(r => r.Value).First().Key.Name;
 
-			if(CentreOfTradeWeight >= 1)
-			{
-				//TODO: inland centres of trade
-				Modifiers.Add("center_of_trade_modifier");
-			}
+		
 			BaseTax = (int)baseTax;
 			BaseProduction = (int)baseProduction;
 			BaseManpower = (int)baseManpower;
@@ -221,7 +222,19 @@ namespace CK2ToEU4
 			{
 				((Eu4Country)Owner).NumProvinces++;
 				var provCountryEffects = World.CountryEffects.Sublists["province"];
-				var provCountryModifiers = provCountryEffects.Sublists["modifiers"];
+
+                //values
+                if (provCountryEffects.Sublists.ContainsKey("values"))
+                {
+                    var values = provCountryEffects.Sublists["values"];
+                    if (values.Sublists.ContainsKey("technology"))
+                    {
+                        ((Eu4Country)Owner).CalcEffects(values.Sublists["technology"], TotalTech);
+                    }
+                } 
+                //CalcEffects(values.Sublists["technology"], TotalTech * multiplier);
+
+                var provCountryModifiers = provCountryEffects.Sublists["modifiers"];
 				var prov = title.Province;
 				foreach (var mod in prov.Modifiers)
 				{
@@ -294,11 +307,12 @@ namespace CK2ToEU4
 			if (title.Rank == TitleRank.county)
 			{
 				var countyList = World.ProvinceEffects.Sublists["county"];
-				//TODO: values
+                //values
+                var values = countyList.Sublists["values"];
+                CalcEffects(values.Sublists["technology"], TotalTech * multiplier);
 
-
-				// hospital
-				var hospital = countyList.Sublists["hospital"];
+                // hospital
+                var hospital = countyList.Sublists["hospital"];
 				if (title.Province.Hospital)
 				{
 					CalcEffects(hospital, multiplier);
@@ -414,6 +428,11 @@ namespace CK2ToEU4
 			{
 				data.AddValue("trade_goods", TradeGood);
 			}
+
+            if(CentreOfTradeWeight >= 1)
+            {
+                data.AddValue("center_of_trade", ((int)Math.Min(3, CentreOfTradeWeight)).ToString());
+            }
 
 			foreach (var mod in Modifiers)
 			{

@@ -1,0 +1,104 @@
+﻿l_english:
+ parliamentary_civil_war:0 "Parliamentary Civil War"
+
+ parliamentary_civil_war.1.t:0 "[Root.GetAdjective] Parliamentary Civil War"
+ parliamentary_civil_war.1.d:0 "Tensions between parliament and the monarch have finally erupted into an all out civil war. The parliamentarians want to give more power to parliament, whereas the royalists believe power should belong to the King. Who should we side with?"
+ parliamentary_civil_war.1.a:0 "Parliamentarians"
+ parliamentary_civil_war.1.b:0 "Royalists"
+ 
+ parliamentary_civil_war.3.t:0 "Religious Minorities Join the Royalists"
+ parliamentary_civil_war.3.d:0 "Disgruntled with the way we have treated them, religious minorities in $COUNTRY$ have declared their support for the royalists!"
+ parliamentary_civil_war.3.a:0 "Try to appease them"
+ parliamentary_civil_war.3.b:0 "They will be dealt with"
+ parliamentary_civil_war.3.c:0 "Leave no infidel alive!"
+ 
+ parliamentary_civil_war.4.t:0 "Religious Minorities Join the Parliamentarians"
+ parliamentary_civil_war.4.d:0 "Disgruntled with the way we have treated them, religious minorities in $COUNTRY$ have declared their support for the parliamentarians!"
+ parliamentary_civil_war.4.a:0 "Try to appease them"
+ parliamentary_civil_war.4.b:0 "They will be dealt with"
+ parliamentary_civil_war.4.c:0 "Leave no infidel alive!"
+ 
+ parliamentary_civil_war.5.t:0 "Support Religious Minorities?"
+ parliamentary_civil_war.5.d:0 "It is no secret that religious minorities are not treated well in most parts of $COUNTRY$. Perhaps if we guarantee their rights they may join our cause?"
+ parliamentary_civil_war.5.a:0 "We will guarantee their rights"
+ parliamentary_civil_war.5.b:0 "We will do no such thing!"
+ 
+ parliamentary_civil_war.6.t:0 "The [Root.revoltCulture] Rebellion"
+ parliamentary_civil_war.6.d:0 "The [Root.revoltCulture] are tired of decades of oppression and demand reparation. If we do not comply, they will most likely join the royalists."
+ parliamentary_civil_war.6.a:0 "Give in to their demands"
+ parliamentary_civil_war.6.b:0 "Let them revolt"
+ 
+ parliamentary_civil_war.7.t:0 "The $PROVINCECULTURE$ Rebellion"
+ parliamentary_civil_war.7.d:0 "$PROVINCECULTURE$ are tired of decades of oppression and demand reparation. If we do not comply, they will most likely join the parliamentarians."
+ parliamentary_civil_war.7.a:0 "Give in to their demands"
+ parliamentary_civil_war.7.b:0 "Let them revolt"
+ 
+ parliamentary_civil_war.8.t:0 "Zealots join the Parliamentarians"
+ parliamentary_civil_war.8.d:0 "Disgusted by the royalists' relationship with religiou minorities, zealous $COUNTRY_RELIGION$ nobles have declared their support for us."
+ parliamentary_civil_war.8.a:0 "Good."
+ 
+ parliamentary_civil_war.9.t:0 "Zealots join the Royalists"
+ parliamentary_civil_war.9.d:0 "Disgusted by the parliamentarians' relationship with religiou minorities, zealous $COUNTRY_RELIGION$ nobles have declared their support for us."
+ parliamentary_civil_war.9.a:0 "Good."
+ 
+ parliamentary_civil_war.10.t:0 "Zealots unhappy with appeasement"
+ parliamentary_civil_war.10.d:0 "Zealots $COUNTRY_RELIGION$ nobles have declared the disatisfaction with our handling of religious minorities."
+ parliamentary_civil_war.10.a:0 "Make sure the zealots don't undermine our fragile relationship with the minorities"
+ parliamentary_civil_war.10.b:0 "The zealots are right, crush the infidels!"
+ 
+ parliamentary_civil_war.11.t:0 "Zealots join the Royalists"
+ parliamentary_civil_war.11.d:0 "Disgusted by our decision to side with religious minorities, the more zealous $COUNTRY_RELIGION$ nobles have declared their support for the royalists! They are prepared to rise up unless we revoke the guarantee of minority rights."
+ parliamentary_civil_war.11.a:0 "Revoke the guarantee."
+ parliamentary_civil_war.11.b:0 "Maintain the guarantee."
+ 
+ parliamentary_civil_war.12.t:0 "Zealots join the Parliamentarians"
+ parliamentary_civil_war.12.d:0 "Disgusted by our decision to side with religious minorities, the more zealous $COUNTRY_RELIGION$ nobles have declared their support for the parliamentarians! They are prepared to rise up unless we revoke the guarantee of minority rights."
+ parliamentary_civil_war.12.a:0 "Revoke the guarantee."
+ parliamentary_civil_war.12.b:0 "Maintain the guarantee."
+ 
+ parliamentary_civil_war.100.t:0 "End of the $COUNTRY_ADJ$ Parliamentary Civil War"
+ parliamentary_civil_war.100.d:0 "The $COUNTRY_ADJ$ Civil War is finally over as [Root.Monarch.GetName] and [Root.Monarch.GetHerHis] supporters have crushed the opposing faction and entrenched their prefered type of government."
+ parliamentary_civil_war.100.a:0 "Order has finally been restored."
+ 
+ parliamentary_civil_war.21.t:0 "Parliamentarian Victory"
+ parliamentary_civil_war.21.d:0 "As the civil war that has plagued our land has come to an end we stand at a crossroad. Some feel that this would be the ideal time to re-establish a monarchy in our lands, albeit one governed by a strict constitution and laws to prevent the situation that lead to our recent turmoil. Others argue that the time has come to do away with the monarchy altogether and establish a modern republic built around the old principles of the $COUNTRY_ADJ$ Parliament."
+ parliamentary_civil_war.21.a:0 "Let us found a Constitutional Republic!"
+ parliamentary_civil_war.21.b:0 "A modern Monarchy it is."
+ 
+ parliamentary_civil_war.22.t:0 "The Legacy of The Lord Protector"
+ parliamentary_civil_war.22.d:0 "With the death of our Lord Protector the question remains how our country should progress. Some feel that this would be the ideal time to re-establish a monarchy in our lands, albeit one governed by a strict constitution and laws to prevent the situation that lead to the Civil War we have just left behind us. Others argue that the time has come to do away with the monarchy altogether and establish a modern republic built around the old principles of the $COUNTRY_ADJ$ Parliament."
+ parliamentary_civil_war.22.a:0 "Let us found a Constitutional Republic!"
+ parliamentary_civil_war.22.b:0 "A modern Monarchy it is."
+ 
+ parliamentary_civil_war.23.t:0 "A question of minority rights"
+ parliamentary_civil_war.23.d:0 "During the $COUNTRY_ADJ$ Parliamentary Civil War, we promised to guarantee the rights of religious minorities. [Root.Monarch.GetName], ever a zealous $COUNTRY_RELIGION$, feels this is absurd - but trampling on old promises could have consequences."
+ parliamentary_civil_war.23.a:0 "Infidels can never have rights!"
+ parliamentary_civil_war.23.b:0 "A promise is a promise."
+ 
+ parliamentary_civil_war.24.t:0 "A question of minority rights"
+ parliamentary_civil_war.24.d:0 "During the $COUNTRY_ADJ$ Parliamentary Civil War, we promised to guarantee the rights of religious minorities. There is a growing sentiment amoung $COUNTRY_RELIGION$ nobles that this was a huge mistake. They believe it should be revoked."
+ parliamentary_civil_war.24.a:0 "They are right! Infidels shouldn't have rights!"
+ parliamentary_civil_war.24.b:0 "A promise is a promise."
+ 
+ dd_religious_minorities_guaranteed:0 "Religious Minorities Guaranteed"
+ desc_dd_religious_minorities_guaranteed:0 "The rights of religious minorities in $COUNTRY$ are guaranteed."
+ 
+ dd_religious_minorities_agitated:0 "Religious Minorities Agitated"
+ desc_dd_religious_minorities_agitated:0 "Refusing to guarantee the rights of religious minorities has left them agitated."
+ 
+ dd_religion_undermined:0 "Religion undermined"
+ desc_dd_religion_undermined:0 "[Root.Monarch.GetName] believes the religion in $COUNTRY$ is being undermined by the guarantee of religious minorities."
+ 
+ dd_zealots_displeased:0 "Zealots Displeased"
+ desc_dd_zealots_displeased:0 "Powerful $COUNTRY_RELIGION$ zealots in $COUNTRY$ are displeased with the way [Root.Monarch.GetName] has handled religious minorities."
+ 
+ dd_religious_zeal:0 "Religious Zeal"
+ desc_dd_religious_zeal:0 "[Root.Monarch.GetName] is waging war against infidels in $COUNTRY$."
+ 
+ dd_religious_zealot_support_royalists:0 "Royalist Zealot Support"
+ desc_dd_religious_zealot_support_royalists:0 "Powerful zealous nobles have rallied to support the royalists in the ongoing civil war."
+ 
+ dd_religious_zealot_support_parliamentarians:0 "Parliamentarian Zealot Support"
+ desc_dd_religious_zealot_support_parliamentarians:0 "Powerful zealous nobles have rallied to support the parliamentarians in the ongoing civil war."
+ 
+ dd_end_of_parliamentary_civil_war:0 "Until the end of the [Root.GetAdjective] Parliamentary Civil War"

@@ -1,843 +1,1123 @@
 # TODO: some ideas should reduce the weight of other ideas when selected first (eg adm_tech_cost ideas decreasing weight of general tech cost)
+# should group ideas and average scores based on group, then from the top group select the idea with the highest score - then half the score for that group and repeat
 
 # name of the key here determines how it is referenced in countryEffects.txt
 # eg. idea_global_autonomy_weight = 1
-global_autonomy = { 
-	title = "Centralisation"
-	desc = ""
-	on_select = { # selecting an idea can affect the weight of other ideas
-		#example:
-		#idea_vassal_income_weight = -0.1
+# note this also applies to groups
+# eg. idea_centralisation_group_weight = 1
+# this will increase the weight of all ideas in the group
+centralisation_group = {
+	global_autonomy = { 
+		title = "Centralisation"
+		desc = ""
+		on_select = { # selecting an idea can affect the weight of other ideas
+			#example:
+			#idea_vassal_income_weight = -0.1
+		}
+		
+		level_0 = { # effect with with 0 strength
+			global_autonomy = -0.01
+		}
+		level_1 = { # effect with 1 strength
+			global_autonomy = -0.025
+		}
+		level_2 = {
+			global_autonomy = -0.05
+		}
+	}
+	absolutism = {
+		title = "Absolutism"
+		desc = ""
+		level_0 = {
+			yearly_absolutism = 0.05
+		}
+		level_1 = {
+			yearly_absolutism = 0.1
+		}
+		level_2 = {
+			yearly_absolutism = 0.15
+		}
+		level_3 = {
+			yearly_absolutism = 0.25
+		}
+		level_4 = {
+			yearly_absolutism = 0.5
+		}
+	}
+}
+
+tax_income_group = {
+	vassal_income = {
+		title = "Vassal Income"
+		desc = ""
+		level_0 = {
+			vassal_income = 0.15
+		}
+		level_1 = {
+			vassal_income = 0.25
+		}
+		level_2 = {
+			vassal_income = 0.25
+			global_tax_modifier = 0.05
+		}
+		level_3 = {
+			vassal_income = 0.25
+			global_tax_modifier = 0.1
+		}
+		level_4 = {
+			vassal_income = 0.25
+			global_tax_modifier = 0.15
+		}
 	}
 	
-	level_0 = { # effect with with 0 strength
-		global_autonomy = -0.01
-	}
-	level_1 = { # effect with 1 strength
-		global_autonomy = -0.025
-	}
-	level_2 = {
-		global_autonomy = -0.05
-	}
-}
-
-
-vassal_income = {
-	title = "Vassal Income"
-	desc = ""
-	level_0 = {
-		vassal_income = 0.15
-	}
-	level_1 = {
-		vassal_income = 0.25
-	}
-	level_2 = {
-		vassal_income = 0.25
-		global_tax_modifier = 0.05
-	}
-	level_3 = {
-		vassal_income = 0.25
-		global_tax_modifier = 0.1
-	}
-	level_4 = {
-		vassal_income = 0.25
-		global_tax_modifier = 0.15
+	global_tax = {
+		title = "Taxes"
+		desc = ""
+		
+		level_0 = {
+			global_tax_modifier = 0.05
+		}
+		level_1 = {
+			global_tax_modifier = 0.1
+		}
+		level_2 = {
+			global_tax_modifier = 0.15
+		}
+		level_3 = {
+			global_tax_modifier = 0.2
+		}
+		level_4 = {
+			global_tax_modifier = 0.25
+		}
 	}
 }
 
-yearly_prestige = {
-	title = "Yearly Prestige"
-	desc = ""
-	level_0 = {
-		prestige  = 0.25
+prestige_group = {
+	yearly_prestige = {
+		title = "Yearly Prestige"
+		desc = ""
+		level_0 = {
+			prestige  = 0.25
+		}
+		level_1 = {
+			prestige = 0.5
+		}
+		level_2 = {
+			prestige = 1
+		}
+		level_3 = {
+			prestige = 1.5
+		}
+		level_4 = {
+			prestige = 2
+		}
 	}
-	level_1 = {
-		prestige = 0.5
-	}
-	level_2 = {
-		prestige = 1
-	}
-	level_3 = {
-		prestige = 1.5
-	}
-	level_4 = {
-		prestige = 2
-	}
-}
-
-trade_efficiency = {
-	title = "Trade Efficiency"
-	desc = ""
-	
-	level_0 = {
-		trade_efficiency = 0.05
-	}
-	level_1 = {
-		trade_efficiency = 0.1
-	}
-	level_2 = {
-		trade_efficiency = 0.15
-	}
-	level_3 = {
-		trade_efficiency = 0.2
-	}
-}
-
-vassal_manpower = {
-	title = "Vassal Levies"
-	desc = ""
-	
-	level_0 = {
-		vassal_forcelimit_bonus = 0.5
-	}
-	level_1 = {
-		vassal_forcelimit_bonus = 1
-	}
-	level_2 = {
-		vassal_forcelimit_bonus = 1
-		global_manpower_modifier = 0.1
-	}
-	level_3 = {
-		vassal_forcelimit_bonus = 1
-		global_manpower_modifier = 0.2
-	}
-	level_4 = {
-		vassal_forcelimit_bonus = 1
-		global_manpower_modifier = 0.25
+	legitimacy = {
+		title = "Legitimate Monarchs"
+		
+		desc = ""
+		
+		level_0 = {
+			legitimacy = 0.5
+		}
+		level_1 = {
+			legitimacy = 1
+		}
+		level_2 = {
+			legitimacy = 1.5
+		}
+		level_3 = {
+			legitimacy = 2
+		}
 	}
 }
 
-tolerance_other = {
-	title = "Tolerance of Heathens"
-	desc = ""
-	level_0 = {
-		tolerance_heathen = 0.5
+trade_group = {
+	trade_efficiency = {
+		title = "Trade Efficiency"
+		desc = ""
+		
+		level_0 = {
+			trade_efficiency = 0.05
+		}
+		level_1 = {
+			trade_efficiency = 0.1
+		}
+		level_2 = {
+			trade_efficiency = 0.15
+		}
+		level_3 = {
+			trade_efficiency = 0.2
+		}
 	}
-	level_1 = {
-		tolerance_heathen = 1
+	trade_power = {
+		title = "Trade Power"
+		desc = ""
+		level_0 = {
+			global_trade_power = 0.05
+		}
+		level_1 = {
+			global_trade_power = 0.1
+		}
+		level_2 = {
+			global_trade_power = 0.15
+		}
+		level_3 = {
+			global_trade_power = 0.2
+		}
+		level_4 = {
+			global_trade_power = 0.25
+		}
 	}
-	level_2 = {
-		tolerance_heathen = 1.5
-	}
-	level_3 = {
-		tolerance_heathen = 2
-	}
-	level_4 = {
-		tolerance_heathen = 2.5
-	}
-	level_5 = {
-		tolerance_heathen = 3
-	}
-}
-
-
-
-institution_spread = {
-	title = "Institution spread"
-	desc = ""
-	
-	level_0 = {
-		global_institution_spread = 0.05
-	}
-	level_1 = {
-		global_institution_spread = 0.1
-	}
-	level_2 = {
-		global_institution_spread = 0.15
-	}
-	level_3 = {
-		global_institution_spread = 0.15
-		embracement_cost = -0.05
-	}
-	level_4 = {
-		global_institution_spread = 0.15
-		embracement_cost = -0.1
-	}
-}
-
-global_tax = {
-	title = "Taxes"
-	desc = ""
-	
-	level_0 = {
-		global_tax_modifier = 0.05
-	}
-	level_1 = {
-		global_tax_modifier = 0.1
-	}
-	level_2 = {
-		global_tax_modifier = 0.15
-	}
-	level_3 = {
-		global_tax_modifier = 0.2
-	}
-	level_4 = {
-		global_tax_modifier = 0.25
+	merchants = {
+		title = "Additional Merchants"
+		desc = ""
+		level_0 = {
+			merchants = 1
+		}
+		level_1 = {
+			merchants = 2
+		}
 	}
 }
 
-global_manpower = {
-	title = "Manpower"
-	desc = ""
-	level_0 = {
-		global_manpower_modifier = 0.05
+manpower_group = {
+	vassal_manpower = {
+		title = "Vassal Levies"
+		desc = ""
+		
+		level_0 = {
+			vassal_forcelimit_bonus = 0.5
+		}
+		level_1 = {
+			vassal_forcelimit_bonus = 1
+		}
+		level_2 = {
+			vassal_forcelimit_bonus = 1
+			global_manpower_modifier = 0.1
+		}
+		level_3 = {
+			vassal_forcelimit_bonus = 1
+			global_manpower_modifier = 0.2
+		}
+		level_4 = {
+			vassal_forcelimit_bonus = 1
+			global_manpower_modifier = 0.25
+		}
 	}
-	level_1 = {
-		global_manpower_modifier = 0.1
-	}
-	level_2 = {
-		global_manpower_modifier = 0.15
-	}
-	level_3 = {
-		global_manpower_modifier = 0.2
-	}
-	level_4 = {
-		global_manpower_modifier = 0.25
-	}
-}
-
-status_of_women = {
-	title = "Women's Rights"
-	desc = ""
-	
-	level_0 = {
-		female_advisor_chance = 0.15
-	}
-	level_1 = {
-		female_advisor_chance = 0.25
-	}
-	level_2 = {
-		female_advisor_chance = 0.4
-	}
-	level_3 = {
-		female_advisor_chance = 0.5
-		may_recruit_female_generals = yes
-	}
-}
-
-absolutism = {
-	title = "Absolutism"
-	desc = ""
-	level_0 = {
-		yearly_absolutism = 0.05
-	}
-	level_1 = {
-		yearly_absolutism = 0.1
-	}
-	level_2 = {
-		yearly_absolutism = 0.15
-	}
-	level_3 = {
-		yearly_absolutism = 0.25
-	}
-	level_4 = {
-		yearly_absolutism = 0.5
-	}
-}
-
-innovation = {
-	title = "Innovation"
-	desc = ""
-	level_0 = {
-		technology_cost = -0.025
-		idea_cost = -0.025
-	}
-	level_1 = {
-		technology_cost = -0.05
-		idea_cost = -0.05
-	}
-	level_2 = {
-		technology_cost = -0.1
-		idea_cost = -0.1
-	}
-	level_3 = {
-		technology_cost = -0.15
-		idea_cost = -0.15
-	}
-	level_4 = {
-		technology_cost = -0.2
-		idea_cost = -0.2
-	}
-}
-
-
-goods_produced = {
-	title = "Production of Goods"
-	desc = ""
-	level_0 = {
-		global_trade_goods_size_modifier = 0.05
-	}
-	level_1 = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	level_2 = {
-		global_trade_goods_size_modifier = 0.15
-	}
-	level_3 = {
-		global_trade_goods_size_modifier = 0.2
-	}
-}
-
-global_production = {
-	title = "Efficient Production"
-	desc = ""
-	
-	level_0 = {
-		production_efficiency = 0.05
-	}
-	level_1 = {
-		production_efficiency = 0.1
-	}
-	level_2 = {
-		production_efficiency = 0.15
-	}
-	level_3 = {
-		production_efficiency = 0.2
-	}
-	level_4 = {
-		production_efficiency = 0.25
-	}
-}
-
-defensiveness = {
-	title = "Defensiveness"
-	desc = ""
-	
-	level_0 = {
-		defensiveness = 0.05
-	}
-	level_1 = {
-		defensiveness = 0.1
-	}
-	level_2 = {
-		defensiveness = 0.15
-	}
-	level_4 = {
-		defensiveness = 0.2
-	}
-	level_4 = {
-		defensiveness = 0.2
-		garrison_size = 0.05
-	}
-	level_5 = {
-		defensiveness = 0.2
-		garrison_size = 0.1
-	}
-}
-
-infantry_power = {
-	title = "Infantry Power"
-	desc = ""
-	
-	level_0 = {
-		infantry_power = 0.05
-	}
-	level_1 = {
-		infantry_power = 0.1
-	}
-	level_2 = {
-		infantry_power = 0.15
-	}
-	level_3 = {
-		infantry_power = 0.2
-	}
-	level_4 = {
-		infantry_power = 0.2
-		discipline = 0.025
-	}
-	level_5 = {
-		infantry_power = 0.2
-		discipline = 0.05
-	}
-}
-
-cavalry_power = {
-	title = "Cavalry Power"
-	desc = ""
-	
-	level_0 = {
-		cavalry_power = 0.1
-	}
-	level_1 = {
-		cavalry_power = 0.15
-	}
-	level_2 = {
-		cavalry_power = 0.2
-	}
-	level_3 = {
-		cavalry_power = 0.25
-	}
-	level_4 = {
-		cavalry_power = 0.3
-	}
-	level_5 = {
-		cavalry_power = 0.33
-		cav_to_inf_ratio = 0.10
-	}
-}
-
-trade_power = {
-	title = "Trade Power"
-	desc = ""
-	level_0 = {
-		global_trade_power = 0.05
-	}
-	level_1 = {
-		global_trade_power = 0.1
-	}
-	level_2 = {
-		global_trade_power = 0.15
-	}
-	level_3 = {
-		global_trade_power = 0.2
-	}
-	level_4 = {
-		global_trade_power = 0.25
-	}
-}
-
-
-saloirs = {
-	title = "Sailors"
-	desc = ""
-	level_0 = {
-		global_sailors_modifier = 0.1
-	}
-	level_1 = {
-		global_sailors_modifier = 0.15
-	}
-	level_2 = {
-		global_sailors_modifier = 0.2
-	}
-	level_3 = {
-		global_sailors_modifier = 0.25
-	}
-	level_4 = {
-		global_sailors_modifier = 0.25
-		ship_durability = 0.05
-	}
-	level_5 = {
-		global_sailors_modifier = 0.25
-		ship_durability = 0.1
-	}
-}
-
-ship_cost = {
-	title = "Ship cost"
-	desc = ""
-	
-	level_0 = {
-		global_ship_cost = -0.05
-	}
-	level_1 = {
-		global_ship_cost = -0.1
-	}
-	level_2 = {
-		global_ship_cost = -0.15
-	}
-	level_3 = {
-		global_ship_cost = -0.2
+	global_manpower = {
+		title = "Manpower"
+		desc = ""
+		level_0 = {
+			global_manpower_modifier = 0.05
+		}
+		level_1 = {
+			global_manpower_modifier = 0.1
+		}
+		level_2 = {
+			global_manpower_modifier = 0.15
+		}
+		level_3 = {
+			global_manpower_modifier = 0.2
+		}
+		level_4 = {
+			global_manpower_modifier = 0.25
+		}
 	}
 	
+	manpower_recovery_speed = {
+		title = "Manpower Recovery"
+		desc = ""
+		level_0 = {
+			manpower_recovery_speed = 0.05
+		}
+		level_1 = {
+			manpower_recovery_speed = 0.1
+		}
+		level_2 = {
+			manpower_recovery_speed = 0.15
+		}
+		level_3 = {
+			manpower_recovery_speed = 0.2
+		}
+		level_4 = {
+			manpower_recovery_speed = 0.25
+		}
+	}
 }
 
-adm_innovation = {
-	title = "Administrative Innovation"
-	desc = ""
-	level_0 = {
-		adm_tech_cost_modifier = -0.05
+tolerance_minority_group = {
+	tolerance_other = {
+		title = "Tolerance of Heathens"
+		desc = ""
+		level_0 = {
+			tolerance_heathen = 0.5
+		}
+		level_1 = {
+			tolerance_heathen = 1
+		}
+		level_2 = {
+			tolerance_heathen = 1.5
+		}
+		level_3 = {
+			tolerance_heathen = 2
+		}
+		level_4 = {
+			tolerance_heathen = 2.5
+		}
+		level_5 = {
+			tolerance_heathen = 3
+		}
 	}
-	level_1 = {
-		adm_tech_cost_modifier = -0.1
+	tolerance_heretic = {
+		title = "Tolerance of Heretics"
+		desc = ""
+		level_0 = {
+			tolerance_heretic = 0.5
+		}
+		level_1 = {
+			tolerance_heretic = 1
+		}
+		level_2 = {
+			tolerance_heretic = 1.5
+		}
+		level_3 = {
+			tolerance_heretic = 2
+		}
+		level_4 = {
+			tolerance_heretic = 2.5
+		}
+		level_5 = {
+			tolerance_heretic = 3
+		}
 	}
-	level_2 = {
-		adm_tech_cost_modifier = -0.15
+	religious_unity = {
+		title = "Religious Unity"
+		desc = ""
+		level_0 = {
+			religious_unity = 0.1
+		}
+		level_1 = {
+			religious_unity = 0.15
+		}
+		level_2 = {
+			religious_unity = 0.2
+		}
+		level_3 = {
+			religious_unity = 0.25
+		}
 	}
-	level_3 = {
-		adm_tech_cost_modifier = -0.2
+}
+
+
+technology_group = {
+	institution_spread = {
+		title = "Institution spread"
+		desc = ""
+		
+		level_0 = {
+			global_institution_spread = 0.05
+		}
+		level_1 = {
+			global_institution_spread = 0.1
+		}
+		level_2 = {
+			global_institution_spread = 0.15
+		}
+		level_3 = {
+			global_institution_spread = 0.15
+			embracement_cost = -0.05
+		}
+		level_4 = {
+			global_institution_spread = 0.15
+			embracement_cost = -0.1
+		}
 	}
-	level_4 = {
-		adm_tech_cost_modifier = -0.25
+	innovation = {
+		title = "Innovation"
+		desc = ""
+		level_0 = {
+			technology_cost = -0.025
+			idea_cost = -0.025
+		}
+		level_1 = {
+			technology_cost = -0.05
+			idea_cost = -0.05
+		}
+		level_2 = {
+			technology_cost = -0.1
+			idea_cost = -0.1
+		}
+		level_3 = {
+			technology_cost = -0.15
+			idea_cost = -0.15
+		}
+		level_4 = {
+			technology_cost = -0.2
+			idea_cost = -0.2
+			innovativeness_gain = 0.5
+		}
+	}
+	adm_innovation = {
+		title = "Administrative Innovation"
+		desc = ""
+		level_0 = {
+			adm_tech_cost_modifier = -0.05
+		}
+		level_1 = {
+			adm_tech_cost_modifier = -0.1
+		}
+		level_2 = {
+			adm_tech_cost_modifier = -0.15
+		}
+		level_3 = {
+			adm_tech_cost_modifier = -0.2
+		}
+		level_4 = {
+			adm_tech_cost_modifier = -0.25
+		}
+		
+	}
+	dip_innovation = {
+		title = "Diplomatic Innovation"
+		desc = ""
+		level_0 = {
+			dip_tech_cost_modifier = -0.05
+		}
+		level_1 = {
+			dip_tech_cost_modifier = -0.1
+		}
+		level_2 = {
+			dip_tech_cost_modifier = -0.15
+		}
+		level_3 = {
+			dip_tech_cost_modifier = -0.2
+		}
+		level_4 = {
+			dip_tech_cost_modifier = -0.25
+		}
+		
 	}
 	
+	mil_innovation = {
+		title = "Military Innovation"
+		desc = ""
+		level_0 = {
+			mil_tech_cost_modifier = -0.05
+		}
+		level_1 = {
+			mil_tech_cost_modifier = -0.1
+		}
+		level_2 = {
+			mil_tech_cost_modifier = -0.15
+		}
+		level_3 = {
+			mil_tech_cost_modifier = -0.2
+		}
+		level_4 = {
+			mil_tech_cost_modifier = -0.25
+		}
+		
+	}
 }
-dip_innovation = {
-	title = "Diplomatic Innovation"
-	desc = ""
-	level_0 = {
-		dip_tech_cost_modifier = -0.05
+
+
+women_group = {
+	status_of_women = {
+		title = "Women's Rights"
+		desc = ""
+		
+		level_0 = {
+			female_advisor_chance = 0.15
+		}
+		level_1 = {
+			female_advisor_chance = 0.25
+		}
+		level_2 = {
+			female_advisor_chance = 0.4
+		}
+		level_3 = {
+			female_advisor_chance = 0.5
+			may_recruit_female_generals = yes
+		}
 	}
-	level_1 = {
-		dip_tech_cost_modifier = -0.1
-	}
-	level_2 = {
-		dip_tech_cost_modifier = -0.15
-	}
-	level_3 = {
-		dip_tech_cost_modifier = -0.2
-	}
-	level_4 = {
-		dip_tech_cost_modifier = -0.25
+}
+
+
+production_group = {
+	goods_produced = {
+		title = "Production of Goods"
+		desc = ""
+		level_0 = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		level_1 = {
+			global_trade_goods_size_modifier = 0.1
+		}
+		level_2 = {
+			global_trade_goods_size_modifier = 0.15
+		}
+		level_3 = {
+			global_trade_goods_size_modifier = 0.2
+		}
 	}
 	
+	global_production = {
+		title = "Efficient Production"
+		desc = ""
+		
+		level_0 = {
+			production_efficiency = 0.05
+		}
+		level_1 = {
+			production_efficiency = 0.1
+		}
+		level_2 = {
+			production_efficiency = 0.15
+		}
+		level_3 = {
+			production_efficiency = 0.2
+		}
+		level_4 = {
+			production_efficiency = 0.25
+		}
+	}
 }
 
-mil_innovation = {
-	title = "Military Innovation"
-	desc = ""
-	level_0 = {
-		mil_tech_cost_modifier = -0.05
+
+defense_group = {
+	defensiveness = {
+		title = "Defensiveness"
+		desc = ""
+		
+		level_0 = {
+			defensiveness = 0.05
+		}
+		level_1 = {
+			defensiveness = 0.1
+		}
+		level_2 = {
+			defensiveness = 0.15
+		}
+		level_4 = {
+			defensiveness = 0.2
+		}
+		level_4 = {
+			defensiveness = 0.2
+			garrison_size = 0.05
+		}
+		level_5 = {
+			defensiveness = 0.2
+			garrison_size = 0.1
+		}
 	}
-	level_1 = {
-		mil_tech_cost_modifier = -0.1
+	hostile_attrition = {
+		title = "Attrition for Enemies"
+		desc = ""
+		
+		level_0 = {
+			hostile_attrition = 0.5
+		}
+		level_1 = {
+			hostile_attrition = 1
+		}
+		level_2 = {
+			hostile_attrition = 1.5
+		}
+		level_3 = {
+			hostile_attrition = 2
+		}
 	}
-	level_2 = {
-		mil_tech_cost_modifier = -0.15
-	}
-	level_3 = {
-		mil_tech_cost_modifier = -0.2
-	}
-	level_4 = {
-		mil_tech_cost_modifier = -0.25
+	garrison_size = {
+		title = "Bigger Garrisons"
+		desc = ""
+		level_0 = {
+			garrison_size = 0.05
+		}
+		level_1 = {
+			garrison_size = 0.1
+		}
+		level_2 = {
+			garrison_size = 0.15
+		}
+		level_3 = {
+			garrison_size = 0.2
+		}
+		level_4 = {
+			garrison_size = 0.25
+		}
 	}
 	
-}
-
-tolerance_own = {
-	title = "The True Faith"
-	desc = ""
-	level_0 = {
-		tolerance_own = 0.5
-	}
-	level_1 = {
-		tolerance_own = 1
-	}
-	level_2 = {
-		tolerance_own = 1.5
-	}
-	level_3 = {
-		tolerance_own = 2
-	}
-	level_4 = {
-		tolerance_own = 2.5
-	}
-	level_5 = {
-		tolerance_own = 3
-	}
-}
-
-faith_institution_spread = {
-	title = "Faithful Institutions"
-	desc = ""
 	
-	level_0 = {
-		institution_spread_from_true_faith = 0.025
-	}
-	level_1 = {
-		institution_spread_from_true_faith = 0.05
-	}
-	level_2 = {
-		institution_spread_from_true_faith = 0.075
-	}
-	level_3 = {
-		institution_spread_from_true_faith = 0.1
-	}
-	level_4 = {
-		institution_spread_from_true_faith = 0.1
-		tolerance_own = 0.5
-	}
-	level_5 = {
-		institution_spread_from_true_faith = 0.1
-		tolerance_own = 1
-	}
-}
-
-
-army_morale = {
-	title = "Morale"
-	desc = ""
-	
-	level_0 = {
-		land_morale = 0.05
-	}
-	level_1 = {
-		land_morale = 0.1
-	}
-	level_2 = {
-		land_morale = 0.15
-	}
-	level_3 = {
-		land_morale = 0.2
-	}
-}
-
-discipline = {
-	title = "Discipline"
-	desc = ""
-	
-	level_0 = {
-		discipline = 0.05
-	}
-	level_1 = {
-		discipline = 0.075
-	}
-	level_2 = {
-		discipline = 0.1
-	}
-	level_3 = {
-		discipline = 0.125
-	}
-}
-
-cavalry_cost = {
-	title = "More Cavalry"
-	desc = ""
-	
-	level_0 = {
-		cavalry_cost = -0.05
-	}
-	level_1 = {
-		cavalry_cost = -0.1
-	}
-	level_2 = {
-		cavalry_ship_cost = -0.15
-	}
-	level_3 = {
-		cavalry_cost = -0.2
-	}
-}
-
-
-
-artillery_power = {
-	title = "Artillery Power"
-	desc = ""
-	
-	level_0 = {
-		artillery_power = 0.05
-	}
-	level_1 = {
-		artillery_power = 0.1
-	}
-	level_2 = {
-		artillery_power = 0.15
-	}
-	level_3 = {
-		artillery_power = 0.2
-	}
-	level_4 = {
-		artillery_power = 0.25
-	}
-	level_5 = {
-		artillery_power = 0.25
-		backrow_artillery_damage = 0.1
-	}
-}
-
-unrest = {
-	title = "Placated Populace"
-	desc = ""
-	
-	level_0 = {
-		global_unrest = -0.5
-	}
-	level_1 = {
-		global_unrest = -1
-	}
-	level_2 = {
-		global_unrest = -1.5
-	}
-	level_3 = {
-		global_unrest = -2
-	}
-}
-
-development_cost = {
-	title = "Efficient Development"
-	desc = ""
-	
-	level_0 = {
-		development_cost = -0.05
-	}
-	level_1 = {
-		development_cost = -0.1
-	}
-	level_2 = {
-		development_cost = -0.15
-	}
-	level_3 = {
-		development_cost = -0.2
-	}
 	
 }
 
-legitimacy = {
-	title = "Legitimate Monarchs"
-	
-	desc = ""
-	
-	level_0 = {
-		legitimacy = 0.5
-	}
-	level_1 = {
-		legitimacy = 1
-	}
-	level_2 = {
-		legitimacy = 1.5
-	}
-	level_3 = {
-		legitimacy = 2
-	}
-}
-
-merchants = {
-	title = "Additional Merchants"
-	desc = ""
-	level_0 = {
-		merchants = 1
-	}
-	level_1 = {
-		merchants = 2
-	}
-}
-
-missionary_strength = {
-	title = "Stonger Missionaries"
-	desc = ""
-	
-	level_0 = {
-		global_missionary_strength = 0.01
-	}
-	level_1 = {
-		global_missionary_strength = 0.02
-	}
-	level_2 = {
-		global_missionary_strength = 0.03
-	}
-	level_3 = {
-		global_missionary_strength = 0.03
-		missionaries = 1
-	}
-}
-heretic_missionary_strength = {
-	title = "No Heresy"
-	desc = ""
-	
-	level_0 = {
-		global_heretic_missionary_strength = 0.01
-	}
-	level_1 = {
-		global_heretic_missionary_strength = 0.02
-	}
-	level_2 = {
-		global_heretic_missionary_strength = 0.03
-	}
-	level_3 = {
-		global_heretic_missionary_strength = 0.03
-		missionaries = 1
-	}
-}
-
-raid = {
-	title = "Raiding"
-	desc = ""
-	
-	level_0 = {
-		may_perform_slave_raid = yes
-	}
-	level_1 = {
-		may_perform_slave_raid = yes
-		light_ship_cost = -0.1
-	}
-	level_2 = {
-		may_perform_slave_raid = yes
-		light_ship_cost = -0.2
-	}
-}
-
-leader_land_shock = {
-	title = "Shocking Lead"
-	desc = ""
-	level_0 = {
-		leader_land_shock = 1
-	}
-	level_1 = {
-		leader_land_shock = 1
-	}
-	level_2 = {
-		leader_land_shock = 2
-	}
-}
-
-leader_land_fire = {
-	title = "Firing lead"
-	desc = ""
-	level_0 = {
-		leader_land_fire = 1
-	}
-	level_1 = {
-		leader_land_fire = 1
-	}
-	level_2 = {
-		leader_land_fire = 2
+unit_power_group = {
+	infantry_power = {
+		title = "Infantry Power"
+		desc = ""
+		
+		level_0 = {
+			infantry_power = 0.05
+		}
+		level_1 = {
+			infantry_power = 0.1
+		}
+		level_2 = {
+			infantry_power = 0.15
+		}
+		level_3 = {
+			infantry_power = 0.2
+		}
+		level_4 = {
+			infantry_power = 0.2
+			discipline = 0.025
+		}
+		level_5 = {
+			infantry_power = 0.2
+			discipline = 0.05
+		}
 	}
 	
-}
-
-core_creation  = {
-	title = "Cheaper Cores"
-	desc = ""
-	level_0 = {
-		core_creation = 0.05
-	}
-	level_1 = {
-		core_creation = 0.1
-	}
-	level_2 = {
-		core_creation = 0.15
-	}
-	level_3 = {
-		core_creation = 0.2
-	}
-}
-
-province_warscore_cost = {
-	title = "Mass Conquest"
-	desc = ""
-	
-	level_0 = {
-		province_warscore_cost = 0.1
-	}
-	level_1 = {
-		province_warscore_cost = 0.15
-	}
-	level_2 = {
-		province_warscore_cost = 0.2
-	}
-	level_3 = {
-		province_warscore_cost = 0.25
-	}
-}
-
-warscore_cost_vs_other_religion = {
-	title = "Religious Conquests"
-	desc = ""
-	
-	level_0 = {
-		province_warscore_cost = 0.1
-	}
-	level_1 = {
-		province_warscore_cost = 0.15
-	}
-	level_2 = {
-		province_warscore_cost = 0.2
-	}
-	level_3 = {
-		province_warscore_cost = 0.25
+	cavalry_power = {
+		title = "Cavalry Power"
+		desc = ""
+		
+		level_0 = {
+			cavalry_power = 0.1
+		}
+		level_1 = {
+			cavalry_power = 0.15
+		}
+		level_2 = {
+			cavalry_power = 0.2
+		}
+		level_3 = {
+			cavalry_power = 0.25
+		}
+		level_4 = {
+			cavalry_power = 0.3
+		}
+		level_5 = {
+			cavalry_power = 0.33
+			cav_to_inf_ratio = 0.10
+		}
 	}
 	
+	artillery_power = {
+		title = "Artillery Power"
+		desc = ""
+		
+		level_0 = {
+			artillery_power = 0.05
+		}
+		level_1 = {
+			artillery_power = 0.1
+		}
+		level_2 = {
+			artillery_power = 0.15
+		}
+		level_3 = {
+			artillery_power = 0.2
+		}
+		level_4 = {
+			artillery_power = 0.25
+		}
+		level_5 = {
+			artillery_power = 0.25
+			backrow_artillery_damage = 0.1
+		}
+	}
+}
+
+ship_group = {
+	saloirs = {
+		title = "Sailors"
+		desc = ""
+		level_0 = {
+			global_sailors_modifier = 0.1
+		}
+		level_1 = {
+			global_sailors_modifier = 0.15
+		}
+		level_2 = {
+			global_sailors_modifier = 0.2
+		}
+		level_3 = {
+			global_sailors_modifier = 0.25
+		}
+		level_4 = {
+			global_sailors_modifier = 0.25
+			ship_durability = 0.05
+		}
+		level_5 = {
+			global_sailors_modifier = 0.25
+			ship_durability = 0.1
+		}
+	}
+	
+	ship_cost = {
+		title = "Ship cost"
+		desc = ""
+		
+		level_0 = {
+			global_ship_cost = -0.05
+		}
+		level_1 = {
+			global_ship_cost = -0.1
+		}
+		level_2 = {
+			global_ship_cost = -0.15
+		}
+		level_3 = {
+			global_ship_cost = -0.2
+		}
+		
+	}
+}
+
+faithful_group = {
+	tolerance_own = {
+		title = "The True Faith"
+		desc = ""
+		level_0 = {
+			tolerance_own = 0.5
+		}
+		level_1 = {
+			tolerance_own = 1
+		}
+		level_2 = {
+			tolerance_own = 1.5
+		}
+		level_3 = {
+			tolerance_own = 2
+		}
+		level_4 = {
+			tolerance_own = 2.5
+		}
+		level_5 = {
+			tolerance_own = 3
+		}
+	}
+	
+	faith_institution_spread = {
+		title = "Faithful Institutions"
+		desc = ""
+		
+		level_0 = {
+			institution_spread_from_true_faith = 0.025
+		}
+		level_1 = {
+			institution_spread_from_true_faith = 0.05
+		}
+		level_2 = {
+			institution_spread_from_true_faith = 0.075
+		}
+		level_3 = {
+			institution_spread_from_true_faith = 0.1
+		}
+		level_4 = {
+			institution_spread_from_true_faith = 0.1
+			tolerance_own = 0.5
+		}
+		level_5 = {
+			institution_spread_from_true_faith = 0.1
+			tolerance_own = 1
+		}
+	}
+}
+morale_group = {
+	army_morale = {
+		title = "Morale"
+		desc = ""
+		
+		level_0 = {
+			land_morale = 0.1
+		}
+		level_1 = {
+			land_morale = 0.15
+		}
+		level_2 = {
+			land_morale = 0.2
+		}
+		level_3 = {
+			land_morale = 0.25
+		}
+	}
+}
+discipline_group = {
+	discipline = {
+		title = "Discipline"
+		desc = ""
+		
+		level_0 = {
+			discipline = 0.05
+		}
+		level_1 = {
+			discipline = 0.075
+		}
+		level_2 = {
+			discipline = 0.1
+		}
+		level_3 = {
+			discipline = 0.125
+		}
+	}
+}
+unit_cost_group = {
+
+	infantry_cost = {
+		title = "More Infantry"
+		desc = ""
+		
+		level_0 = {
+			infantry_cost = -0.05
+		}
+		level_1 = {
+			infantry_cost = -0.1
+		}
+		level_2 = {
+			infantry_cost = -0.15
+		}
+		level_3 = {
+			infantry_cost = -0.2
+		}
+	}
+	cavalry_cost = {
+		title = "More Cavalry"
+		desc = ""
+		
+		level_0 = {
+			cavalry_cost = -0.05
+		}
+		level_1 = {
+			cavalry_cost = -0.1
+		}
+		level_2 = {
+			cavalry_cost = -0.15
+		}
+		level_3 = {
+			cavalry_cost = -0.2
+		}
+	}
+	artillery_cost = {
+		title = "More Artillery"
+		desc = ""
+		
+		level_0 = {
+			artillery_cost = -0.05
+		}
+		level_1 = {
+			artillery_cost = -0.1
+		}
+		level_2 = {
+			artillery_cost = -0.15
+		}
+		level_3 = {
+			artillery_cost = -0.2
+		}
+	}
+}
+
+stability_group = {
+	unrest = {
+		title = "Placated Populace"
+		desc = ""
+		
+		level_0 = {
+			global_unrest = -0.5
+		}
+		level_1 = {
+			global_unrest = -1
+		}
+		level_2 = {
+			global_unrest = -1.5
+		}
+		level_3 = {
+			global_unrest = -2
+		}
+	}
+	stability_cost = {
+		title = "Placatable Populace"
+		desc = ""
+		
+		level_0 = {
+			stability_cost_modifier = -0.05
+		}
+		level_1 = {
+			stability_cost_modifier = -0.1
+		}
+		level_2 = {
+			stability_cost_modifier = -0.15
+		}
+		level_3 = {
+			stability_cost_modifier = -0.2
+		}
+	}
+}
+
+development_group = {
+	development_cost = {
+		title = "Efficient Development"
+		desc = ""
+		
+		level_0 = {
+			development_cost = -0.05
+		}
+		level_1 = {
+			development_cost = -0.1
+		}
+		level_2 = {
+			development_cost = -0.15
+		}
+		level_3 = {
+			development_cost = -0.2
+		}
+		
+	}
+	build_cost = {
+		title = "More Building"
+		desc = ""
+		
+		level_0 = {
+			build_cost = -0.05
+		}
+		level_1 = {
+			build_cost = -0.1
+		}
+		level_2 = {
+			build_cost = -0.15
+		}
+		level_3 = {
+			build_cost = -0.2
+		}
+	}
 }
 
 
+
+missionary_group = {
+	missionary_strength = {
+		title = "Stonger Missionaries"
+		desc = ""
+		
+		level_0 = {
+			global_missionary_strength = 0.01
+		}
+		level_1 = {
+			global_missionary_strength = 0.02
+		}
+		level_2 = {
+			global_missionary_strength = 0.03
+		}
+		level_3 = {
+			global_missionary_strength = 0.03
+			missionaries = 1
+		}
+	}
+	heretic_missionary_strength = {
+		title = "No Heresy"
+		desc = ""
+		
+		level_0 = {
+			global_heretic_missionary_strength = 0.01
+		}
+		level_1 = {
+			global_heretic_missionary_strength = 0.02
+		}
+		level_2 = {
+			global_heretic_missionary_strength = 0.03
+		}
+		level_3 = {
+			global_heretic_missionary_strength = 0.03
+			missionaries = 1
+		}
+	}
+	
+	missionaries = {
+		title = "Additional Missionaries"
+		desc = ""
+		level_0 = {
+			missionaries = 1
+		}
+		level_1 = {
+			missionaries = 2
+		}
+	}
+}
+raid_group = {
+	raid = {
+		title = "Raiding"
+		desc = ""
+		
+		level_0 = {
+			may_perform_slave_raid = yes
+		}
+		level_1 = {
+			may_perform_slave_raid = yes
+			light_ship_cost = -0.1
+		}
+		level_2 = {
+			may_perform_slave_raid = yes
+			light_ship_cost = -0.2
+		}
+	}
+}
+leader_group = {
+	leader_land_shock = {
+		title = "Shocking Lead"
+		desc = ""
+		level_0 = {
+			leader_land_shock = 1
+		}
+		level_1 = {
+			leader_land_shock = 1
+		}
+		level_2 = {
+			leader_land_shock = 2
+		}
+	}
+	
+	leader_land_fire = {
+		title = "Firing lead"
+		desc = ""
+		level_0 = {
+			leader_land_fire = 1
+		}
+		level_1 = {
+			leader_land_fire = 1
+		}
+		level_2 = {
+			leader_land_fire = 2
+		}
+		
+	}
+}
+
+conquest_group = {
+	core_creation  = {
+		title = "Cheaper Cores"
+		desc = ""
+		level_0 = {
+			core_creation = 0.05
+		}
+		level_1 = {
+			core_creation = 0.1
+		}
+		level_2 = {
+			core_creation = 0.15
+		}
+		level_3 = {
+			core_creation = 0.2
+		}
+	}
+	
+	province_warscore_cost = {
+		title = "Mass Conquest"
+		desc = ""
+		
+		level_0 = {
+			province_warscore_cost = 0.1
+		}
+		level_1 = {
+			province_warscore_cost = 0.15
+		}
+		level_2 = {
+			province_warscore_cost = 0.2
+		}
+		level_3 = {
+			province_warscore_cost = 0.25
+		}
+	}
+	
+	warscore_cost_vs_other_religion = {
+		title = "Religious Conquests"
+		desc = ""
+		
+		level_0 = {
+			province_warscore_cost = 0.1
+		}
+		level_1 = {
+			province_warscore_cost = 0.15
+		}
+		level_2 = {
+			province_warscore_cost = 0.2
+		}
+		level_3 = {
+			province_warscore_cost = 0.25
+		}
+		
+	}
+	
+	ae_impact = {
+		title = "Less Aggressive Expansion"
+		desc = ""
+		
+		level_0 = {
+			ae_impact = -0.05
+		}
+		level_1 = {
+			ae_impact = -0.1
+		}
+		level_2 = {
+			ae_impact = -0.15
+		}
+		level_3 = {
+			ae_impact = -0.2
+		}
+	}
+
+}
+
+diplomatic_group = {
+	diplomats = {
+		title = "Additional Diplomats"
+		desc = ""
+		
+		level_0 = {
+			diplomats = 1
+		}
+		level_1 = {
+			diplomats = 2
+		}
+	}
+	diplomatic_reputation = {
+		title = "Diplomatic Reputation"
+		desc = ""
+		level_0 = {
+			diplomatic_reputation = 0.5
+		}
+		level_1 = {
+			diplomatic_reputation = 1
+		}
+		level_2 = {
+			diplomatic_reputation = 1.5
+		}
+		level_3 = {
+			diplomatic_reputation = 2
+		}
+	}
+	improve_relations = {
+		title = "Improved Relations"
+		desc = ""
+		
+		level_0 = {
+			improve_relation_modifier = 0.05
+		}
+		
+		level_1 = {
+			improve_relation_modifier = 0.1
+		}
+		
+		level_2 = {
+			improve_relation_modifier = 0.15
+		}
+		
+		level_3 = {
+			improve_relation_modifier = 0.2
+		}
+	}
+	
+}
 
 # TODO NOTE: maybe do a church power style thing that gives the appropriate religious bonus

@@ -34,5 +34,5 @@
   mil_ahead_7:0 "Overwhelmingly ahead of time in Military Technology"
   
   dynamic_tech.5.t:0 "The Industrial Revolution"
-  dynamic_tech.5.d:0 "Over the last few decades, technological progress in [Root.GetName] has been increasing at an alarming rate. More and more work is being done by machines rather than muscle, and goods are being produced on a massive scale. The industrial revolution has begun."
   dynamic_tech.5.a:0 "This changes everything."
+  dynamic_tech.5.d:0 "Over the last few decades, technological progress in [Root.GetName] has been increasing at an alarming rate. With the invention of the steam engine, more and more tasks that have always had to be carried out with muscle are now being completed by machine.  Manufactories are producing goods on a scale never seen before and having taken advantage of this new wave of production, a new class of wealthy investors has been born. The industrial revolution has begun."

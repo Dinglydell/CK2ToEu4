@@ -31,8 +31,10 @@ namespace CK2ToEU4
 			Console.WriteLine("Reading CK2 save file...");
 			RootList = PdxSublist.ReadFile(filePath, "CK2txt");
 			Date = RootList.KeyValuePairs["date"];
+            Console.WriteLine(RootList.Sublists.ContainsKey("artifacts"));
 			LoadDynasties();
 			LoadCharacters();
+            LoadArtifacts();
             LoadDynamicReligions();
 			LoadTitles();
 			LoadProvinces();
@@ -46,7 +48,12 @@ namespace CK2ToEU4
 
         }
 
-		private void LoadPostCharacters()
+        private void LoadArtifacts()
+        {
+            
+        }
+
+        private void LoadPostCharacters()
 		{
 			foreach (var character in CK2Characters)
 			{

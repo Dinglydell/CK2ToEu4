@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CK2Helper;
 using System.Text.RegularExpressions;
+using PdxUtil;
 
 namespace CK2ToEU4
 {
@@ -168,7 +169,7 @@ namespace CK2ToEU4
         /// Prefix letter for dynamic country tag
         /// </summary>
         private readonly string[] LetterPrefixes = new string[] { "X", "Y", "Z", "A", "B", "D" };
-        private readonly int CULTURE_SPLIT_THRESHHOLD = 10000;
+        // private readonly int CULTURE_SPLIT_THRESHHOLD = 10000;
         /// <summary>
         /// The proportion of provinces of a culture/group that need to be part of the same thing in order for the culture to be named after that thing
         /// </summary>
@@ -186,12 +187,12 @@ namespace CK2ToEU4
         public Dictionary<string, string> CultureMapper { get; set; }
 
         public Dictionary<string, string> RevoltMapper { get; set; }
-        public PdxSublist TechGroupMap { get; private set; }
+        public PdxSublist TechGroups { get; private set; }
         public Dictionary<Eu4SuperRegion, string> SuperRegionTechGroup { get; set; }
 
         public CK2Save CK2World { get; private set; }
         public int NumCustomCountries { get; set; }
-        public List<NationalIdea> NationalIdeas { get; set; }
+        public List<NationalIdeaGroup> NationalIdeaGroups { get; set; }
         public PdxSublist ProvinceEffects { get; set; }
 
         internal Eu4Culture MapCulture(CK2Culture culture)
@@ -220,7 +221,7 @@ namespace CK2ToEU4
 
 
         public PdxSublist CountryEffects { get; set; }
-        public string TechiestRegion { get; private set; }
+        public string RenaissanceRegion { get; private set; }
         public CK2Title HRE { get; internal set; }
         public HashSet<string> TakenTags { get; private set; }
         public string StartDate { get { return CK2World.KeepStartDate ? CK2World.Date : "1444.11.1"; } }
@@ -263,9 +264,31 @@ namespace CK2ToEU4
             {
                 Formables = groups.Select(g => g.OrderBy(h => h.Key.Rank).First()).ToDictionary(f => f.Key, f => f.Value);
             }
-
+            HandleReformedPagans();
             WriteMod();
         }
+
+        private void HandleReformedPagans()
+        {
+            var paganEffects = PdxSublist.ReadFile("paganEffects.txt");
+
+            foreach (var rel in CK2World.CK2Religions)
+            {
+                if(rel.Key == "west_african_pagan_reformed")
+                {
+                    Console.WriteLine();
+                }
+                if (rel.Value.Features != null)
+                {
+                    var eu4Rel = MapReligion(rel.Value);
+                    foreach (var feature in rel.Value.Features)
+                    {
+                        eu4Rel.AddEffects(paganEffects.Sublists[feature]);
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Throws all EU4 Cultures out the window and generates an entirely new set of cultures based on the distribution of provinces, religions, realms and CK2 cultures
         /// </summary>
@@ -276,9 +299,8 @@ namespace CK2ToEU4
             var cultures = new List<CohesiveSet<CK2Province>>();
 
             var groupedProvs = CK2World.CK2Provinces.GroupBy(p => p.Value.Culture.Group);
-            foreach (var gp in groupedProvs)
+            Parallel.ForEach(groupedProvs, gp =>
             {
-
                 Console.WriteLine($"Generating {gp.Key.Name} cultures...");
                 var cultureGenerator = new SetGenerator<CK2Province>(gp.Select(p => p.Value), (provA, provB) =>
                 {
@@ -316,17 +338,22 @@ namespace CK2ToEU4
 
                     return distance;
                 });
-                var groupCultures = cultureGenerator.GenerateSets(1000);
-                cultures.AddRange(groupCultures);
-
-            }
+                var groupCultures = cultureGenerator.GenerateSets(1200);
+                lock (cultures)
+                {
+                    cultures.AddRange(groupCultures);
+                }
+                Console.WriteLine($"Created {groupCultures.Count} cultures for {gp.Key.Name}.");
+            });
             Console.WriteLine("Grouping cultures...");
             var groupGenerator = new SetGenerator<CohesiveSet<CK2Province>>(cultures, (setA, setB) =>
             {
                 return setA.GetDistance(setA.CentralElement, setB.CentralElement);
             });
-            var cultureGroups = groupGenerator.GenerateSets(2000);
+            var cultureGroups = groupGenerator.GenerateSets(2400);
             Console.WriteLine($"Generated {cultures.Count} cultures in {cultureGroups.Count} groups.");
+            CultureGroups = new Dictionary<string, Eu4CultureGroup>();
+            Cultures = new Dictionary<string, Eu4Culture>();
             var nonAlphanumeric = new Regex("[^a-zA-Z0-9-]");
             foreach (var group in cultureGroups)
             {
@@ -342,13 +369,12 @@ namespace CK2ToEU4
                     var culDisplay = FindCulturalName(cul.Content, cul.CentralElement, groupDisplay);
 
                     var culName = nonAlphanumeric.Replace(culDisplay.ToLower(), "");
-                    if (culName == "german")
-                    {
-                        Console.WriteLine();
-                    }
+
                     if (Cultures.ContainsKey(culName))
                     {
-                        culDisplay = $"{cul.CentralElement.CountyTitle.DisplayAdj} {culDisplay}";
+                        if (!Cultures[culName].IsVanilla) {
+                            culDisplay = $"{cul.CentralElement.CountyTitle.DisplayAdj} {culDisplay}";
+                        } 
                         culName = $"{culName}_{cul.CentralElement.CountyTitle.Name}";
                     }
                     var eu4Culture = eu4Group.AddCulture(culName, this, false, culDisplay);
@@ -480,15 +506,15 @@ namespace CK2ToEU4
         private void FindSuperRegionTech()
         {
             // assign tech groups to superregions
-            TechGroupMap = PdxSublist.ReadFile("tech_groups.txt");
+            var techGroupMap = PdxSublist.ReadFile("tech_groups.txt");
             SuperRegionTechGroup = new Dictionary<Eu4SuperRegion, string>();
-            foreach (var sr in TechGroupMap.KeyValuePairs)
+            foreach (var sr in techGroupMap.KeyValuePairs)
             {
                 SuperRegionTechGroup[SuperRegions[sr.Key]] = sr.Value;
                 //n += techiest.Count() / techGroupMap.Length;
             }
             // calculate tech value each tech group should have
-            var techGroups = PdxSublist.ReadFile(GetFilesFor("common").Where(p => Path.GetFileName(p) == "technology.txt").Single());
+            TechGroups = PdxSublist.ReadFile(GetFilesFor("common").Where(p => Path.GetFileName(p) == "technology.txt").Single());
             //total tech of provinces in this group
             var groupTech = new Dictionary<string, float>();
             //total number of provinces in this group
@@ -507,20 +533,20 @@ namespace CK2ToEU4
                         groupProvs[techGroup] = 0;
                     }
                     groupTech[techGroup] += sr.Value.Regions == null ? 0 : sr.Value.Regions.Sum(r => r.Areas == null ? 0 : r.Areas.Sum(a => a.Provinces.Sum(p => ((Eu4Province)Provinces[p]).TotalTech)));
-                    groupProvs[techGroup] += sr.Value.Regions.Sum(r => r.Areas == null ? 0 : r.Areas.Sum(a => a.Provinces.Count));
+                    groupProvs[techGroup] += sr.Value.Regions.Sum(r => r.Areas == null ? 0 : r.Areas.Sum(a => a.Provinces.Where(p => (((Eu4Province)Provinces[p]).CK2Titles?.Count ?? 0) != 0).Count()));
                 }
             }
             // tech per province in each group, in order from most tech to least
             var techiest = groupTech.Where(r => !r.Key.Contains("sea") && r.Value > 0).Select(p => new KeyValuePair<string, float>(p.Key, p.Value / groupProvs[p.Key])).OrderByDescending(r => r.Value);
 
             Console.WriteLine($"The techiest group is {techiest.First().Key}. ({techiest.First().Value})");
-
-            var highestLevel = techiest.First().Value;
+            //TODO: consider making this not a burried magic number
+            var highestLevel = 75;//techiest.First().Value;
 
             foreach (var tech in techiest)
             {
-                var groupSub = techGroups.Sublists[tech.Key];
-                var level = (int)Math.Ceiling(tech.Value / highestLevel);
+                var groupSub = TechGroups.Sublists["groups"].Sublists[tech.Key];
+                var level = (int)(3 * tech.Value / highestLevel);
                 //TODO: create a better way of editting float values
                 groupSub.FloatValues["start_level"][0] = level;
                 Console.WriteLine($"Tech group {tech.Key} had level {tech.Value} in CK2 so starts with tech level {level}.");
@@ -586,6 +612,38 @@ namespace CK2ToEU4
 
             }
             Directory.CreateDirectory($@"{modPath}\common");
+            Directory.CreateDirectory($@"{modPath}\common\religions");
+
+            //religion
+            Console.WriteLine("Writing reformed pagan religions...");
+            var religionsData = GetFilesFor(@"common\religions").Select(rf => PdxSublist.ReadFile(rf));
+            var editedFiles = new HashSet<PdxSublist>();
+            foreach (var rel in Religions)
+            {
+                if (rel.Value.Effects != null)
+                {
+                    // find the file that has this relgion group in it
+                    var editCandidates = editedFiles.Where(r => r.Sublists.ContainsKey(rel.Value.Group.Name));
+                    var groupFile = editCandidates.FirstOrDefault() ?? religionsData.Where(r => r.Sublists.ContainsKey(rel.Value.Group.Name)).Single();
+                    rel.Value.Effects.AddValue("icon", rel.Value.Icon.ToString());
+                    var colData = new PdxSublist();
+                    colData.AddValue(rel.Value.Colour.Red.ToString());
+                    colData.AddValue(rel.Value.Colour.Green.ToString());
+                    colData.AddValue(rel.Value.Colour.Blue.ToString());
+                    rel.Value.Effects.AddSublist("color", colData);
+                    groupFile.Sublists[rel.Value.Group.Name].Sublists[rel.Key] = rel.Value.Effects;
+                    
+                    editedFiles.Add(groupFile);
+                }
+            }
+            foreach (var file in editedFiles)
+            {
+                using (var stream = new StreamWriter($@"{modPath}\common\religions\{Path.GetFileName(file.Key)}"))
+                {
+                    file.WriteToFile(stream);
+                }
+            }
+
             Directory.CreateDirectory($@"{modPath}\common\countries");
             Directory.CreateDirectory($@"{modPath}\common\country_tags");
 
@@ -600,7 +658,7 @@ namespace CK2ToEU4
             Console.WriteLine("Writing technology.txt...");
             using (var file = new StreamWriter($@"{modPath}\common\technology.txt"))
             {
-                TechGroupMap.WriteToFile(file);
+                TechGroups.WriteToFile(file);
             }
             // countries
             Console.WriteLine("Writing country files...");
@@ -682,7 +740,7 @@ namespace CK2ToEU4
 
             //institutions
 
-            var instFile = File.ReadAllText(@"template\institutions.txt").Replace("%HIGHEST_TECH_REGION%", TechiestRegion);
+            var instFile = File.ReadAllText(@"template\institutions.txt").Replace("%HIGHEST_TECH_REGION%", RenaissanceRegion);
             Directory.CreateDirectory($@"{modPath}\common\institutions");
             File.WriteAllText($@"{modPath}\common\institutions\00_Core.txt", instFile);
 
@@ -704,7 +762,7 @@ namespace CK2ToEU4
                 cg.Value.AddLocalisation(locale);
 
             }
-            foreach (var idea in NationalIdeas)
+            foreach (var idea in NationalIdeaGroups)
             {
                 idea.AddLocalisation(locale);
             }
@@ -840,15 +898,12 @@ namespace CK2ToEU4
 
         private void SetupInstitutions()
         {
-            var regionTech = new Dictionary<string, float>();
-            foreach (var region in Regions)
-            {
-                regionTech[region.Key] = region.Value.Areas == null ? 0 : region.Value.Areas.Sum(a => a.Provinces.Sum(p => ((Eu4Province)Provinces[p]).TotalTech)) / region.Value.Areas.Sum(a => a.Provinces.Count);
-            }
-            var techiest = regionTech.OrderByDescending(r => r.Value);
-
-            TechiestRegion = techiest.First().Key;
-            Console.WriteLine("The most technologically advanced region is " + TechiestRegion);
+            var regionRenaissanceFactor = Countries.Where(c => c.Value.Capital != 0).GroupBy(c => Provinces[c.Value.Capital].Area.Region).Select(g => new KeyValuePair<string, float>(g.Key.Name, g.Sum(c => ((Eu4Country)c.Value).RenaissanceFactor) / (float)Math.Sqrt((g.Key.Areas.Sum(a => a.Provinces.Count) * g.Count())) ));
+            var superregionRenaissanceFactor = Countries.Where(c => c.Value.Capital != 0 && Provinces[c.Value.Capital].Area.Region.SuperRegion != null).GroupBy(c => Provinces[c.Value.Capital].Area.Region.SuperRegion).Select(g => new KeyValuePair<string, float>(g.Key.Name, g.Sum(c => ((Eu4Country)c.Value).RenaissanceFactor) / (g.Key.Regions.Sum(r => r.Areas.Sum(a => a.Provinces.Count)) * g.Count())));
+            var renaissanceOrder = regionRenaissanceFactor.OrderByDescending(r => r.Value);
+            var superregionOrder = superregionRenaissanceFactor.OrderByDescending(r => r.Value);
+            RenaissanceRegion = renaissanceOrder.First().Key;
+            Console.WriteLine("The renaissance region is " + RenaissanceRegion);
 
 
 
@@ -889,7 +944,7 @@ namespace CK2ToEU4
             {
                 return null;
             }
-            if (holder.ID == 1274212)
+            if (holder.ID == 1549424)
             {
                 Console.WriteLine();
             }
@@ -909,12 +964,17 @@ namespace CK2ToEU4
                     }
                     if (holder.Religion != holder.Liege.Religion)
                     {
-                        vassalThreshhold -= 0.05f;
+                        vassalThreshhold -= 0.075f;
                     }
                     if (holder.Culture != holder.Liege.Culture)
                     {
-                        vassalThreshhold -= 0.05f;
+                        vassalThreshhold -= 0.075f;
                     }
+                    if (!holder.IsDejureVassalOf(holder.Liege))
+                    {
+                        vassalThreshhold -= 0.075f;
+                    }
+
                     if (!holder.PrimaryTitle.IsRevolt && liegeStrength * vassalThreshhold < strength)
                     {
                         //we're stronk! become a vassal
@@ -1121,12 +1181,12 @@ namespace CK2ToEU4
 
         private void LoadEffects()
         {
-            NationalIdeas = new List<NationalIdea>();
+            NationalIdeaGroups = new List<NationalIdeaGroup>();
             var nis = PdxSublist.ReadFile("nationalIdeas.txt");
 
             nis.ForEachSublist(sub =>
             {
-                NationalIdeas.Add(new NationalIdea(sub.Value));
+                NationalIdeaGroups.Add(new NationalIdeaGroup(sub.Value));
             });
 
             ProvinceEffects = PdxSublist.ReadFile("provinceEffects.txt");

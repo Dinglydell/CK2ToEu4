@@ -5,6 +5,7 @@
 # centre_of_trade_weight = <value>
 # increases likelyhood of province getting a centre of trade
 # if total value >= 1, centre of trade is added
+# TODO: for every integer above 1, add an extra level to the CoT
 # NOTE: at present, provinces with a centre of trade in vanilla EU4 get +0.5 weight
 
 # maybe have national ideas weighted from this too
@@ -15,6 +16,10 @@ county = {
 	values = {
 		prosperity = {
 			#todo
+		}
+		
+		technology = { 
+			
 		}
 	}
 	
@@ -108,11 +113,15 @@ county = {
 			base_tax = 0.5
 			base_production = 0.5
 			base_tax = 0.5
+			
+			renaissance_factor = 10
 		}
 		great_library_province = {
 			base_tax = 0.5
 			base_production = 0.5
 			base_tax = 0.5
+			
+			renaissance_factor = 10
 		}
 		center_of_worship_province = {
 			base_tax = 1

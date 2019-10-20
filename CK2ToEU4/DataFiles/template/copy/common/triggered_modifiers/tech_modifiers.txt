@@ -17,6 +17,7 @@ adm_ahead_0 = {
 	adm_tech_cost_modifier = 0.1
 	production_efficiency = 0.05
 	yearly_corruption = -0.01
+	innovativeness_gain = 0.001
 }
 adm_ahead_1 = {
 	potential = {
@@ -48,6 +49,7 @@ adm_ahead_1 = {
 	adm_tech_cost_modifier = 0.25
 	production_efficiency = 0.1
 	yearly_corruption = -0.02
+	innovativeness_gain = 0.05
 }
 adm_ahead_2 = {
 	potential = {
@@ -79,6 +81,7 @@ adm_ahead_2 = {
 	adm_tech_cost_modifier = 0.5
 	production_efficiency = 0.15
 	yearly_corruption = -0.03
+	innovativeness_gain = 0.1
 }
 adm_ahead_3 = {
 	potential = {
@@ -110,6 +113,7 @@ adm_ahead_3 = {
 	adm_tech_cost_modifier = 0.8
 	production_efficiency = 0.2
 	yearly_corruption = -0.04
+	innovativeness_gain = 0.15
 }
 adm_ahead_4 = {
 	potential = {
@@ -141,6 +145,7 @@ adm_ahead_4 = {
 	adm_tech_cost_modifier = 1.25
 	production_efficiency = 0.25
 	yearly_corruption = -0.05
+	innovativeness_gain = 0.2
 }
 adm_ahead_5 = {
 	potential = {
@@ -172,6 +177,7 @@ adm_ahead_5 = {
 	adm_tech_cost_modifier = 1.75
 	production_efficiency = 0.25
 	yearly_corruption = -0.06
+	innovativeness_gain = 0.25
 }
 adm_ahead_6 = {
 	potential = {
@@ -203,6 +209,7 @@ adm_ahead_6 = {
 	adm_tech_cost_modifier = 2.5
 	production_efficiency = 0.25
 	yearly_corruption = -0.06
+	innovativeness_gain = 0.5
 }
 adm_ahead_7 = {
 	potential = {
@@ -234,6 +241,7 @@ adm_ahead_7 = {
 	adm_tech_cost_modifier = 4
 	production_efficiency = 0.25
 	yearly_corruption = -0.06
+	innovativeness_gain = 1
 }
 
 
@@ -256,6 +264,7 @@ dip_ahead_0 = {
 	dip_tech_cost_modifier = 0.1
 	trade_efficiency = 0.05
 	yearly_corruption = -0.01
+	innovativeness_gain = 0.001
 }
 dip_ahead_1 = {
 	potential = {
@@ -287,6 +296,7 @@ dip_ahead_1 = {
 	dip_tech_cost_modifier = 0.25
 	trade_efficiency = 0.1
 	yearly_corruption = -0.02
+	innovativeness_gain = 0.05
 }
 dip_ahead_2 = {
 	potential = {
@@ -318,6 +328,7 @@ dip_ahead_2 = {
 	dip_tech_cost_modifier = 0.5
 	trade_efficiency = 0.15
 	yearly_corruption = -0.03
+	innovativeness_gain = 0.1
 }
 dip_ahead_3 = {
 	potential = {
@@ -349,6 +360,7 @@ dip_ahead_3 = {
 	dip_tech_cost_modifier = 0.8
 	trade_efficiency = 0.2
 	yearly_corruption = -0.04
+	innovativeness_gain = 0.15
 }
 dip_ahead_4 = {
 	potential = {
@@ -380,6 +392,7 @@ dip_ahead_4 = {
 	dip_tech_cost_modifier = 1.25
 	trade_efficiency = 0.25
 	yearly_corruption = -0.05
+	innovativeness_gain = 0.2
 }
 dip_ahead_5 = {
 	potential = {
@@ -411,6 +424,7 @@ dip_ahead_5 = {
 	dip_tech_cost_modifier = 1.75
 	trade_efficiency = 0.25
 	yearly_corruption = -0.06
+	innovativeness_gain = 0.25
 }
 dip_ahead_6 = {
 	potential = {
@@ -442,6 +456,7 @@ dip_ahead_6 = {
 	dip_tech_cost_modifier = 2.5
 	trade_efficiency = 0.25
 	yearly_corruption = -0.06
+	innovativeness_gain = 0.5
 }
 dip_ahead_7 = {
 	potential = {
@@ -473,6 +488,7 @@ dip_ahead_7 = {
 	dip_tech_cost_modifier = 4
 	trade_efficiency = 0.25
 	yearly_corruption = -0.06
+	innovativeness_gain = 1
 }
 ## Military tech
 mil_ahead_0 = {
@@ -491,6 +507,7 @@ mil_ahead_0 = {
 		}
 	}
 	mil_tech_cost_modifier = 0.1
+	innovativeness_gain = 0.001
 
 }
 mil_ahead_1 = {
@@ -521,6 +538,7 @@ mil_ahead_1 = {
 		}
 	}
 	mil_tech_cost_modifier = 0.25
+	innovativeness_gain = 0.05
 
 }
 mil_ahead_2 = {
@@ -551,6 +569,7 @@ mil_ahead_2 = {
 		}
 	}
 	mil_tech_cost_modifier = 0.5
+	innovativeness_gain = 0.1
 
 }
 mil_ahead_3 = {
@@ -581,6 +600,7 @@ mil_ahead_3 = {
 		}
 	}
 	mil_tech_cost_modifier = 0.8
+	innovativeness_gain = 0.15
 	
 }
 mil_ahead_4 = {
@@ -611,6 +631,7 @@ mil_ahead_4 = {
 		}
 	}
 	mil_tech_cost_modifier = 1.25
+	innovativeness_gain = 0.2
 	
 }
 mil_ahead_5 = {
@@ -641,6 +662,7 @@ mil_ahead_5 = {
 		}
 	}
 	mil_tech_cost_modifier = 1.75
+	innovativeness_gain = 0.25
 	
 }
 mil_ahead_6 = {
@@ -671,6 +693,7 @@ mil_ahead_6 = {
 		}
 	}
 	mil_tech_cost_modifier = 2.5
+	innovativeness_gain = 0.5
 	
 }
 mil_ahead_7 = {
@@ -701,5 +724,6 @@ mil_ahead_7 = {
 		}
 	}
 	mil_tech_cost_modifier = 4
+	innovativeness_gain = 1
 	
 }

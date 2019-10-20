@@ -1,0 +1,954 @@
+# Civil war over the power of parliament - a generic equivalent to the English Civil War
+
+# Things to add: "religious minority question" event, giving the option to safeguard the rights of religious minorities (for a cost) in exchange for their support in the civil war
+# similar events to this one - maybe an equivalent for minority cultures as well as the ultimatum event
+
+namespace = parliamentary_civil_war
+
+#The start
+country_event = {
+	id = parliamentary_civil_war.1
+	title = "parliamentary_civil_war.1.t"
+	desc = "parliamentary_civil_war.1.d"
+	picture = CIVIL_WAR_eventPicutre
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	immediate = {
+		hidden_effect = {
+			add_stability = -3
+			set_country_flag = parliamentary_civil_war_happened
+			random_owned_province = {
+				limit = {
+					is_in_capital_area = yes
+					has_owner_accepted_culture = yes
+					NOT = { units_in_province = 1 }
+					is_capital = no
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	
+	option = {			# Parliamentarians
+		name = "flavor_eng.EVTOPTA9225"
+		ai_chance = { factor = 50 }
+		set_country_flag = supports_parliamentarians
+		add_yearly_manpower = -2.5
+		remove_country_modifier = eng_court_star_chamber
+		if = {
+			limit = { has_heir = yes }
+			hidden_effect = {
+				kill_heir = yes
+			}
+		}
+		change_government = republic
+		add_government_reform = presidential_despot_reform
+		define_ruler = {
+			MIL = 4
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			hidden_effect = { add_ruler_personality = strict_personality }
+		}
+		set_ruler_flag = cromwell_flag
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+				has_owner_accepted_culture = yes
+				NOT = { units_in_province = 1 }
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+			}
+		}
+	}
+	option = {			# Royalists
+		name = "flavor_eng.EVTOPTB9225"
+		ai_chance = { factor = 50 }
+		set_country_flag = supports_royalists
+		add_yearly_manpower = -2.5
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+				has_owner_accepted_culture = yes
+				NOT = { units_in_province = 1 }
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+				#leader = "Oliver Cromwell"
+			}
+		}
+	}
+	
+}
+
+
+
+# religious minorities side with parliamentarians
+country_event = {
+	id = parliamentary_civil_war.3
+	title = "parliamentary_civil_war.3.t"
+	desc = "parliamentary_civil_war.3.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = supports_royalists
+		NOT = { has_country_flag = religious_minorities_support_opponents }
+		NOT = { has_country_modifier = dd_religious_minorities_guaranteed }
+		any_owned_province = {
+			NOT = { religion = ROOT }
+			unrest = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	immediate = {
+		set_country_flag = religious_minorities_support_parliamentarians
+	}
+	option = { # appease them
+		name = "parliamentary_civil_war.3.a"
+		add_years_of_income = -0.25
+		set_country_flag = appeased_religious_minorities
+	}
+	option = { # Crush them
+		name = "parliamentary_civil_war.3.b"
+		random_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+				unrest = 1
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+	}
+	
+	option = { # Leave no infidel alive
+		name = "parliamentary_civil_war.3.c"
+		trigger = {  ruler_has_personality = zealot_personality }
+		highlight = yes
+		add_country_modifier = {
+			name = dd_religious_zeal
+			duration = 3000
+		}
+
+		every_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+				unrest = 1
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+		
+	}
+}
+
+# Religious minorities side with royalists
+country_event = {
+	id = parliamentary_civil_war.4
+	title = "parliamentary_civil_war.4.t"
+	desc = "parliamentary_civil_war.4.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = supports_parliamentarians
+		NOT = { has_country_flag = religious_minorities_support_opponents }
+		NOT = { has_country_modifier = dd_religious_minorities_guaranteed }
+		any_owned_province = {
+			NOT = { religion = ROOT }
+			unrest = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	immediate = {
+		set_country_flag = religious_minorities_support_royalists
+	}
+	option = { # appease them
+		name = "parliamentary_civil_war.4.a"
+		add_years_of_income = -0.25
+		set_country_flag = appeased_religious_minorities
+	}
+	option = { # Crush them
+		name = "parliamentary_civil_war.4.b"
+		random_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+				unrest = 1
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+	}
+	
+	option = { # Leave no infidel alive
+		name = "parliamentary_civil_war.4.c"
+		trigger = {  ruler_has_personality = zealot_personality }
+		highlight = yes
+		add_country_modifier = {
+			name = dd_religious_zeal
+			duration = 3000
+		}
+
+		every_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+				unrest = 1
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+		
+	}
+}
+
+# Support religious minorities?
+country_event = {
+	id = parliamentary_civil_war.5
+	title = "parliamentary_civil_war.5.t"
+	desc = "parliamentary_civil_war.5.d"
+	picture = CIVIL_WAR_eventPicutre
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			NOT = { religion = ROOT }
+			NOT = { tolerance_to_this = 1 }
+		}
+		NOT = {  ruler_has_personality = zealot_personality }
+		NOT = { has_country_flag = had_religious_minorities_event } 
+		NOT = { has_country_flag = religious_minorities_support_royalists }
+		NOT = { has_country_flag = religious_minorities_support_parliamentarians }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = had_religious_minorities_event
+
+	}
+	
+	option = { # Promise rights for religious minorities
+		name = "parliamentary_civil_war.5.a"
+		ai_chance = { factor = 50 }
+		#add_years_of_income = -0.25
+		
+		every_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+				
+			}
+			ROOT = {
+					add_manpower = 1
+			}
+		}
+		add_country_modifier = { 
+			name = dd_religious_minorities_guaranteed
+			duration = -1
+		}
+	}
+	
+	option = { # Don't
+		name = "parliamentary_civil_war.5.b"
+		ai_chance = {
+			factor = 50 
+			modifier = {
+				factor = 0
+				ruler_has_personality = tolerant_personality
+			}
+			
+		}
+	
+		add_country_modifier = { 
+			name = dd_religious_minorities_agitated
+			duration = 1200
+		}
+	}
+	
+	
+}
+
+
+# The Rebellion in {minority}
+# ({minority} declares support for royalists)
+# If the royalists win this will cause an event that gives the option to add them as an accepted culture
+# i.e. the minority supports the royalists in exchange for their acceptance
+country_event = {
+	id = parliamentary_civil_war.6
+	title = "parliamentary_civil_war.6.t"
+	desc = "parliamentary_civil_war.6.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = supports_parliamentarians
+		
+		any_owned_province = {
+			has_owner_accepted_culture = no
+			unrest = 1
+			NOT = { has_province_flag = had_minority_royalist_rebellion }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_owner_accepted_culture = no
+				unrest = 1
+				NOT = { has_province_flag = had_minority_royalist_rebellion }
+			}
+			
+			export_to_variable = {
+				which = revoltCulture
+				value = culture
+				who = ROOT
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture = variable:Root:revoltCulture
+				#unrest = 1
+			}
+			set_province_flag = had_minority_royalist_rebellion
+		}
+		
+	}
+	
+	option = { # Give into demands
+		name = "parliamentary_civil_war.6.a"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -0.25
+		
+		add_accepted_culture = variable:Root:revoltCulture
+		add_dip_power = -100
+	}
+	
+	option = { # let them revolt
+		name = "parliamentary_civil_war.6.b"
+		ai_chance = { factor = 50 }
+		owner = {
+			every_owned_province = {
+				limit = {
+					culture = variable:Root:revoltCulture
+					unrest = 1
+					NOT = { has_province_flag = had_minority_royalist_rebellion }
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
+	}
+}
+
+# The Rebellion in {minority}
+# ({minority} declares support for parliamentarians)
+# If the parliamentarians win this will cause an event that gives the option to add them as an accepted culture
+# i.e. the minority supports the parliamentarians in exchange for their acceptance
+province_event = {
+	id = parliamentary_civil_war.7
+	title = "parliamentary_civil_war.7.t"
+	desc = "parliamentary_civil_war.7.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { has_country_flag = supports_royalists} 
+		
+		has_owner_accepted_culture = no
+		unrest = 1
+		NOT = { has_province_flag = had_minority_parliamentarian_rebellion }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		owner = {
+			every_owned_province = {
+				limit = {
+					culture = ROOT
+					#unrest = 1
+				}
+				set_province_flag = had_minority_parliamentarian_rebellion
+			}
+		}
+	}
+	
+	option = { # Give into demands
+		name = "parliamentary_civil_war.7.a"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -0.25
+		add_accepted_culture = ROOT
+		add_dip_power = -100
+	}
+	
+	option = { # let them revolt
+		name = "parliamentary_civil_war.7.b"
+		ai_chance = { factor = 50 }
+		owner = {
+			every_owned_province = {
+				limit = {
+					culture = ROOT
+					unrest = 1
+					NOT = { has_province_flag = had_minority_parliamentarian_rebellion }
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Zealots join the parliamentarians
+	id = parliamentary_civil_war.8
+	title = "parliamentary_civil_war.8.t"
+	desc = "parliamentary_civil_war.8.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = dd_religious_zealot_support_parliamentarians }
+		has_country_flag = supports_parliamentarians
+		has_country_flag = religious_minorities_support_royalists
+		NOT = { has_country_flag = appeased_religious_minorities }
+		NOT = { full_idea_group = humanist_ideas }
+	}
+	
+	immediate = {
+		set_country_flag = zealots_support_parliamentarians
+	}
+	
+	option = {
+		name = "parliamentary_civil_war.8.a"
+		
+		add_country_modifier = {
+			name= dd_religious_zealot_support_parliamentarians
+			duration = -1
+			desc = dd_end_of_parliamentary_civil_war
+		}
+	}
+}
+
+country_event = { # Zealots join the royalists
+	id = parliamentary_civil_war.9
+	title = "parliamentary_civil_war.9.t"
+	desc = "parliamentary_civil_war.9.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = dd_religious_zealot_support_royalists }
+		has_country_flag = supports_royalists
+		has_country_flag = religious_minorities_support_parliamentarians
+		NOT = { has_country_flag = appeased_religious_minorities }
+		NOT = { full_idea_group = humanist_ideas }
+	}
+	
+	immediate = {
+		set_country_flag = zealots_support_royalists
+	}
+	
+	option = {
+		name = "parliamentary_civil_war.9.a"
+		
+		add_yearly_manpower = 0.2
+		
+		add_country_modifier = {
+			name= dd_religious_zealot_support_royalists
+			duration = -1
+			desc = dd_end_of_parliamentary_civil_war
+		}
+	}
+}
+
+country_event = { # Zealots unhappy with appeasement
+	id = parliamentary_civil_war.10
+	title = "parliamentary_civil_war.10.t"
+	desc = "parliamentary_civil_war.10.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		#NOT = { has_country_flag = zealots_support_royalists }
+		#has_country_flag = supports_royalists
+		has_country_flag = appeased_religious_minorities
+	}
+	
+	immediate = {
+		set_country_flag = zealots_support_royalists
+		clr_country_flag = appeased_religious_minorities
+	}
+	
+	option = { # guarantee religious minority rights
+		name = "parliamentary_civil_war.10.a"
+		
+		add_country_modifier = { 
+			name = dd_religious_minorities_guaranteed
+			duration = -1
+		}
+		
+		add_country_modifier = {
+			name = dd_zealots_displeased
+			duration = -1
+			desc = dd_end_of_parliamentary_civil_war
+		}
+	}
+	
+	option = {	# crush the religious minorities
+		name = "parliamentary_civil_war.10.b"
+		if = {
+			limit = {
+				has_country_flag = supports_parliamentarians
+			}
+			add_country_modifier = {
+				name= dd_religious_zealot_support_parliamentarians
+				duration = -1
+				desc = dd_end_of_parliamentary_civil_war
+			}
+			else = {
+				add_country_modifier = {
+					name= dd_religious_zealot_support_royalists
+					duration = -1
+					desc = dd_end_of_parliamentary_civil_war
+				}
+			}
+		}
+
+		every_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+				unrest = 1
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+		
+	}
+}
+
+#Zealots join the royalists (opposing side)
+
+country_event = {
+	id = parliamentary_civil_war.11
+	title = "parliamentary_civil_war.11.t"
+	desc = "parliamentary_civil_war.11.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_modifier = dd_religious_minorities_guaranteed
+		has_country_flag = supports_parliamentarians
+		NOT = { has_country_flag = zealots_support_royalists }
+		NOT = { full_idea_group = humanist_ideas }
+	}
+	
+	immediate = {
+		set_country_flag = zealots_support_royalists
+	}
+	
+	option = { # Revoke the guarantee
+		name = parliamentary_civil_war.11.a
+		remove_country_modifier = dd_religious_minorities_guaranteed
+		add_country_modifier = { 
+			name = dd_religious_minorities_agitated
+			duration = 2000
+		}
+		clr_country_flag = zealots_support_royalists
+		add_yearly_manpower = -0.1
+	}
+	
+	option = { # Maintain the guarantee
+		name = parliamentary_civil_war.11.b
+		
+		random_owned_province = {
+			limit = {
+				religion = ROOT
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+			}
+		}
+	}
+}
+
+#Zealots join the parliamentarians (opposing side)
+
+country_event = {
+	id = parliamentary_civil_war.12
+	title = "parliamentary_civil_war.12.t"
+	desc = "parliamentary_civil_war.12.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_modifier = dd_religious_minorities_guaranteed
+		has_country_flag = supports_royalists
+		NOT = { has_country_flag = zealots_support_parliamentarians }
+		NOT = { full_idea_group = humanist_ideas }
+	}
+	
+	immediate = {
+		set_country_flag = zealots_support_parliamentarians
+	}
+	
+	option = { # Revoke the guarantee
+		name = parliamentary_civil_war.12.a
+		remove_country_modifier = dd_religious_minorities_guaranteed
+		add_country_modifier = { 
+			name = dd_religious_minorities_agitated
+			duration = 2000
+		}
+		clr_country_flag = zealots_support_parliamentarians
+		add_yearly_manpower = -0.1
+	}
+	
+	option = { # Maintain the guarantee
+		name = parliamentary_civil_war.12.b
+		
+		random_owned_province = {
+			limit = {
+				religion = ROOT
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+			}
+		}
+	}
+}
+
+# The digger movement
+country_event = {
+	id = parliamentary_civil_war.13
+	title = "parliamentary_civil_war.13.t"
+	desc = "parliamentary_civil_war.13.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	trigger = {
+		NOT = { has_country_flag = digger_movement }
+	}
+	
+	immediate = {
+		set_country_flag = digger_movement
+	}
+	
+	option = { # Deal with them
+		name = "parliamentary_civil_war.13.a"
+		
+		# rebels
+	}
+	
+	option = { # What harm can they do?
+		name = "parliamentary_civil_war.13.b"
+		
+		# unrest
+	}
+}
+
+
+# End of the Parliamentary Civil War
+country_event = {
+	id = parliamentary_civil_war.100
+	title = "parliamentary_civil_war.100.t"
+	desc = "parliamentary_civil_war.100.d"
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		remove_country_modifier = dd_religious_zealot_support
+		remove_country_modifier = dd_zealots_displeased
+		# minority events
+	}
+		
+	option = {			# Order has finally been restored
+		name = "parliamentary_civil_war.100.a"
+		trigger = { has_country_flag = supports_royalists }
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+		}
+		if = {
+			limit = { has_reform = english_monarchy }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+		}			
+		clr_country_flag = supports_royalists
+		add_prestige = 50
+		add_absolutism = 10
+		add_stability = 2
+	}
+	
+	option = {			# Order has finally been restored
+		name = "parliamentary_civil_war.100.a"
+		trigger = { has_country_flag = supports_parliamentarians }
+		clr_country_flag = supports_parliamentarians
+		add_prestige = 50
+		add_stability = 2
+		if = {
+			limit = {
+				NOT = { has_ruler_flag = cromwell_flag }
+			}
+			country_event = { id = parliamentary_civil_war.21 }
+		}
+		if = {
+			limit = {
+				has_ruler_flag = cromwell_flag
+			}
+			set_country_flag = parliamentary_civil_war_won_by_parliamentarians
+		}
+	}
+}
+
+
+# Parliamentarian Victory
+country_event = {
+	id = parliamentary_civil_war.21
+	title = "parliamentary_civil_war.21.t"
+	desc = "parliamentary_civil_war.21.d"
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {			# A Republic
+		name = "parliamentary_civil_war.21.a"
+		ai_chance = { factor = 25 }
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		change_government_reform_progress = 100
+		add_government_reform = parliamentary_reform
+		set_legacy_government = constitutional_republic
+	}
+	option = {			# A Monarchy
+		name = "parliamentary_civil_war.21.b"
+		ai_chance = { factor = 75 }
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		add_government_reform = english_monarchy
+		add_government_reform = parliamentary_reform
+		set_legacy_government = constitutional_monarchy
+	}
+}
+
+#Parliamentarian Victory - Death of Cromwell
+country_event = {
+	id = parliamentary_civil_war.22
+	title = "parliamentary_civil_war.22.t"
+	desc = "parliamentary_civil_war.22.d"
+	picture = BATTLE_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = parliamentary_civil_war_won_by_parliamentarians
+		NOT = { has_ruler_flag = cromwell_flag }
+		NOT = { has_reform = parliamentary_reform }
+	}
+	
+	option = {			# A Republic
+		name = "parliamentary_civil_war.21.a"
+		ai_chance = { factor = 25 }
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		change_government_reform_progress = 100
+		add_government_reform = parliamentary_reform
+		set_legacy_government = constitutional_republic
+	}
+	option = {			# A Monarchy
+		name = "parliamentary_civil_war.21.b"
+		ai_chance = { factor = 75 }
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		add_government_reform = english_monarchy
+		add_government_reform = parliamentary_reform
+		set_legacy_government = constitutional_monarchy
+	}
+}
+
+
+# Repeal religious minority support post-civil war flavour event
+country_event = {
+	id = parliamentary_civil_war.23
+	title = "parliamentary_civil_war.23.t"
+	desc = "parliamentary_civil_war.23.d"
+	picture = LIBERUM_VETO_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = dd_religious_minorities_guaranteed
+		has_any_disaster =  no
+		ruler_has_personality = zealot_personality
+
+	}
+	
+	option = {
+		name = "parliamentary_civil_war.23.a"
+		highlight = yes
+		trigger = { ruler_has_personality = zealot_personality }
+		ai_chance = { factor = 10 }
+		remove_country_modifier = dd_religious_minorities_guaranteed
+		add_ruler_modifier = {
+			name = dd_religious_zeal
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 2
+			}
+			
+		}
+	}
+	
+	option = {
+		name = "parliamentary_civil_war.23.c"
+		add_ruler_modifier = {
+			name = dd_religion_undermined
+		}
+		add_stability = -1
+	}
+}
+
+# Repeal religious minority support due to religious ideas post-civil war flavour event
+country_event = {
+	id = parliamentary_civil_war.24
+	title = "parliamentary_civil_war.24.t"
+	desc = "parliamentary_civil_war.24.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = dd_religious_minorities_guaranteed
+		has_any_disaster =  no
+		full_idea_group = religious_ideas
+	}
+	
+	option = {
+		name = "parliamentary_civil_war.24.a"
+		#highlight = yes
+		#trigger = { ruler_has_personality = zealot_personality }
+		ai_chance = { factor = 50 }
+		add_stability_or_adm_power = yes
+		remove_country_modifier = dd_religious_minorities_guaranteed
+		
+		random_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "parliamentary_civil_war.24.c"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			name = dd_zealots_displeased
+			duration = 1000
+		}
+		add_stability = -1
+	}
+}
